@@ -1,2 +1,2 @@
 # HolidayHackChallenge2020
-KringleCon 2020 writeup 
+2020 SANS Holiday Hack Challenge write-up
