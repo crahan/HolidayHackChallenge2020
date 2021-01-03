@@ -2,13 +2,12 @@
 
 ## Introduction
 
+![Going on an adventure](./img/misc/going_on_an_adventure.gif){: align=left }
 Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchallenge.com/2020/) write-up. This is now the third time I've travelled to the North Pole to attend KringleCon and help out Santa and the elves in solving all sorts of hacking shennanigans. It has really become one of those event I look forward to with a lot of anticipation each year! :hugging_face: 
 
 There's 3 main sections: this page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I was able to find (Jason is back... twice).
-
-Finally, I hope you have as much fun reading as I did writing! :smiley:
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I was able to find (Jason is back... twice). Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
 !!! note "50-page submission limit"
     New this year is the requirement to keep the total write-up length under 50 pages. While I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams, my primary goal for this write-up is to help others learn and be a resource that remains relevant for a long time. I'll do my best to keep the irrelevant banter down to a minimum but there's no cutting corners when it comes to sharing knowledge and learning!
