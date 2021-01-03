@@ -1,0 +1,91 @@
+site_name: "2020 SANS HHC Write-Up"
+site_author: Thomas Bouve
+copyright: Copyright &copy; 2020 <a href="https://n00.be">Thomas Bouve</a>
+theme:
+  icon:
+    logo: fontawesome/regular/snowflake
+  name: material
+  features:
+    - navigation.instant
+    - toc.integrate
+    #- navigation.sections
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.instant
+    #- navigation.sections
+    #- navigation.expand
+  palette:
+    scheme: default
+    #primary: indigo
+    #accent: indigo
+    #scheme: slate
+    primary: red
+    accent: red
+extra:
+  #generator: false
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/crahan
+      name: CraHan on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/crahan
+      name: CraHan on GitHub
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/crahan/
+      name: CraHan on Instagram
+extra_css:
+  - css/extra.css
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - meta
+  - footnotes
+  - def_list
+  - toc:
+      permalink: ⚓︎
+      #toc_depth: 3
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      #linenums: true
+      #linenums_style: table
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+- Welcome: 'index.md'
+- Objectives:
+  - Gift List: 'objectives/o1.md'
+  - S3 Bucket: 'objectives/o2.md'
+  - Password Recovery: 'objectives/o3.md'
+  - Santavator: 'objectives/o4.md'
+  - HID Lock: 'objectives/o5.md'
+  - Splunk: 'objectives/o6.md'
+  - CAN-D-BUS: 'objectives/o7.md'
+  - Tag Generator: 'objectives/o8.md'
+  - ARP Shenanigans: 'objectives/o9.md'
+  - Fingerprint Sensor: 'objectives/o10.md'
+  - Naughty/Nice List Pt.1: 'objectives/o11.md'
+  - Naughty/Nice List Pt.2:  'objectives/o12.md'
+- Terminal Hints:
+  - Kringle Kiosk: 'hints/h2.md'
+  - Linux Primer: 'hints/h3.md'
+  - Unscape Tmux: 'hints/h4.md'
+  - Speaker UNPrep: 'hints/h5a.md'
+  - 33.6kbps: 'hints/h5b.md'
+  - Sort-o-Matic: 'hints/h6.md'
+  - CAN-Bus Investigation: 'hints/h7.md'
+  - Redis Bug Hunt:  'hints/h8.md'
+  - Scapy Prepper: 'hints/h9.md'
+  - The Elf C0de: 'hints/h10.md'
+  - Snowball Fight: 'hints/h11.md'
+- Easter Eggs: 'misc/easter_eggs.md'
+- Custom Scripts: 'misc/custom_scripts.md'

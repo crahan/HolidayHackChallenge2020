@@ -1,0 +1,18 @@
+img.right {
+    float: right; 
+    margin: 0px 0px 15px 25px;
+}
+
+img.left {
+    float: left; 
+    margin: 0px 25px 15px 0px;
+}
+
+img.elf_avatar {
+    float: right; 
+    margin: 10px 0px 15px 25px;
+}
+
+p.caption {
+    font-size: small;
+}
