@@ -51,7 +51,7 @@ To the North and slightly off to the East of the swag booth you can pass through
 
 ## Santa Discounts
 
-When you talk to the SANS.edu and RSA Conference booth NPCs as Santa, they'll give you a discount code. Also, the NPCs manning the conference booths all have actual names. Can we get a round of applause for Brian, Peaches, Geek, Jeff, and Kulj, please?
+When you talk to the SANS.edu and RSA Conference booth NPCs as Santa, they'll give you a discount code. Also, the NPCs manning the conference booths all have actual names. Can we get a round of applause for Brian, Peaches, Geek, Jeff, and Kulj, please? :clap:
 
 !!! quote "Geek - SANS.edu booth"
     Hi Santa!
