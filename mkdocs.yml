@@ -87,5 +87,4 @@ nav:
   - Scapy Prepper: 'hints/h9.md'
   - The Elf C0de: 'hints/h10.md'
   - Snowball Fight: 'hints/h11.md'
-- Easter Eggs: 'misc/easter_eggs.md'
-- Custom Scripts: 'misc/custom_scripts.md'
+- Easter Eggs: 'easter_eggs.md'
