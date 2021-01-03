@@ -39,7 +39,7 @@ The New Jersey Turnpike also plays a key role in the movie [Being John Malkovich
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oY7F8m4fo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-A reference to the *Zat You, Santa Claus?* [Louis Armstrong song](https://www.youtube.com/watch?v=f0oY7F8m4fo).
+A reference to *Zat You, Santa Claus?* by [Louis Armstrong](https://www.youtube.com/watch?v=f0oY7F8m4fo).
 
 
 ## Secret Garden
