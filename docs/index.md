@@ -65,7 +65,7 @@ Even with less than 50 pages, there's still quite a bit of information to read t
 
 ## Map & Directory
 
-No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard. The [nail NPC](./easter_eggs.md#nail-npc) and [Jason](./easter_eggs.md#jason), both located on the scaffolding on the front lawn, were added to the directory as well.
+No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard. [Jason](./easter_eggs.md#jason), located next to the bucket on the scaffolding on the front lawn, was added to the directory as well.
 
 === "Map"
 
@@ -126,7 +126,6 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
     | Jewel Loggins         | -     | Front Lawn             | -                                      | 
     | Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          |
     | Pepper Minstix        |       | Front Lawn             | [Unscape Tmux](./hints/h4.md)          |
-    | Nail                  | -     | Front Lawn             | -                                      | 
     | Bow Ninecandle        | 2     | Talks Lobby            | -                                      | 
     | Morcel Nougat         | 2     | Speaker UNPreparedness | -                                      | 
     | Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) |
