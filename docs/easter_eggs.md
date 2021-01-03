@@ -181,7 +181,7 @@ In the [33.6kbps Terminal challenge](./hints/h5b.md), the `SCHHRRHHRTHRTR` [soun
 
 ![Snowball Fight error](./img/misc/snowball_fight_error.png)
 
-The error screen when you lose a [Snowball Fight](./hints/h11.md) game displays a QR code which leads to the [CounterHack website](https://www.counterhack.com) and the error code `501_PEBKAC_ERR_4EVA`, which basically translates to [Problem Exists Between Keyboard and Chair](https://www.urbandictionary.com/define.php?term=pebkac), Error, and Forever. In other words, user error. Pretty sure that if you contact the support elf and pass them the error code, they'd laugh at you. :smile:
+The error screen when you lose a [Snowball Fight](./hints/h11.md) game displays a QR code which leads to the [CounterHack website](https://www.counterhack.com) and the error code `501_PEBKAC_ERR_4EVA`, which translates to [Problem Exists Between Keyboard and Chair](https://www.urbandictionary.com/define.php?term=pebkac), Error, and Forever. In other words, user error. Pretty sure that if you contact the support elf and pass them the error code, they'd laugh at you. :smile:
 
 
 ## WebSocket Codes
