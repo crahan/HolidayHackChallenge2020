@@ -23,7 +23,7 @@ When the title of this year's event was [announced on Twitter](https://twitter.c
 
 ## Being John Malkovich
 
-The idea of going to an in-between floor (i.e., 1.5) and ending up in the mind and body of another person (i.e., Santa) is a direct reference to the movie [Being John Malkovich](https://en.wikipedia.org/wiki/Being_John_Malkovich). In the movie, directed by Spike Jonze and written by Charlie Kaufman, a puppeteer discovers a portal on a floor between the 7th and 8th that leads literally into the head of movie star John Malkovich, similar to how we go to a floor between the 1st and 2nd floors and ultimately end up in Santa's body. 
+The idea of going to an in-between floor (i.e., 1.5) and ending up in the body of another person (i.e., Santa) is a direct reference to the movie [Being John Malkovich](https://en.wikipedia.org/wiki/Being_John_Malkovich). In the movie, directed by Spike Jonze and written by Charlie Kaufman, a puppeteer discovers a portal on a floor between the 7th and 8th that leads literally into the head of movie star John Malkovich, similar to how we go to a floor between the 1st and 2nd floors and ultimately end up being Santa. 
 
 
 ## New Jersey Turnpike
@@ -42,11 +42,11 @@ The New Jersey Turnpike also plays a key role in the movie [Being John Malkovich
 A reference to *Zat You, Santa Claus?* by [Louis Armstrong](https://www.youtube.com/watch?v=f0oY7F8m4fo).
 
 
-## Secret Garden
+## Garden Party
 
-![Secret Garden](./imgs/../img/misc/secret_garden.png)
+![Garden Party](./imgs/../img/misc/garden_party.png)
 
-To the North and slightly off to the East of the swag booth you can pass through the hedge to enter the 'secret garden'. The NPC behind the booth is named *npc-evanbooth*, Counter Hack's [resident builder, architect, developer, and challenge designer](https://www.counterhack.com/expert-pen-testers). The clip that's playing is the [original video](https://www.youtube.com/watch?v=3Nkb3g-yySs) for what later became the [Dimitri Finds Out meme](https://knowyourmeme.com/memes/dimitri-finds-out). You can't go there as Santa though. 
+To the North and slightly off to the East of the swag booth you can pass through the hedge to enter a secret area. The NPC behind the booth is named *npc-evanbooth*, Counter Hack's [resident builder, architect, developer, and challenge designer](https://www.counterhack.com/expert-pen-testers). The clip that's playing is the [original video](https://www.youtube.com/watch?v=3Nkb3g-yySs) for what later became the [Dimitri Finds Out meme](https://knowyourmeme.com/memes/dimitri-finds-out). You can't go there as Santa though. 
 
 
 ## Santa Discounts
