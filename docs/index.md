@@ -24,7 +24,7 @@ Even with less than 50 pages, there's still quite a bit of information to read t
 ## Answers
 
 !!! done "1. Uncover Santa's Gift List - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `proxmark`
+    `Proxmark`
 
 !!! done "2. Investigate S3 Bucket - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
     `North Pole: The Frostiest Place on Earth`
@@ -33,15 +33,15 @@ Even with less than 50 pages, there's still quite a bit of information to read t
     `santapass`
 
 !!! done "4. Operate the Santavator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    See [this example configuration](./img/objectives/o4/completed.png) using a nut (found in front of the Santavator) and the green light bulb (found in the courtyard).
+    See [this example configuration](./img/objectives/o4/green_activated.png) using the hex nut found in front of the Santavator and the green light bulb found in the Courtyard.
 
 !!! done "5. Open HID Lock - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `lf hid sim -r 2006e22f13 (Shinny Upatree's card)`
+    Use `lf hid sim -r 2006e22f13` to impersonate Shinny Upatree's badge
 
 !!! done "6. Splunk Challenge - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
     `The Lollipop Guild`
 
-!!! done "7. Solve the Sleigh's CAN-D-BUS - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
+!!! done "7. Solve the Sleigh's CAN-D-BUS Problem - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
     `19B Equals 0000000F2057`
 
     `080 Less 000000000000`
@@ -64,7 +64,7 @@ Even with less than 50 pages, there's still quite a bit of information to read t
 
 ## Map & Directory
 
-No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard. [Jason](./easter_eggs.md#jason), located next to the bucket on the scaffolding on the front lawn, was added to the directory as well.
+No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the dark hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard. [Jason](./easter_eggs.md#jason), located next to the bucket on the scaffolding on the front lawn, was added to the directory as well.
 
 === "Map"
 
@@ -110,6 +110,9 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
 
 === "Directory"
 
+    !!! tip "Quick tip"
+        You can sort the table data by clicking on the table headers.
+
     | Name                  | Floor | Room                   | Terminal Hint                          |
     | :-------------------- | :---- | : -------------------- | :------------------------------------- | 
     | Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h10.md)         |
@@ -124,7 +127,7 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
     | Bubble Lightington    | 1     | Courtyard              | -                                      | 
     | Jewel Loggins         | -     | Front Lawn             | -                                      | 
     | Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          |
-    | Pepper Minstix        |       | Front Lawn             | [Unscape Tmux](./hints/h4.md)          |
+    | Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4.md)          |
     | Bow Ninecandle        | 2     | Talks Lobby            | -                                      | 
     | Morcel Nougat         | 2     | Speaker UNPreparedness | -                                      | 
     | Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) |

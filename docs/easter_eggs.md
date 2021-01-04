@@ -3,7 +3,7 @@ It's amazing how many references and easter eggs you can find once you start loo
 
 ## Three French Hens
 
-When the title of this year's event was [announced on Twitter](https://twitter.com/KringleCon/status/1331629434865131523) a pattern emerged. Last year was named *KringleCon 2: Turtle Doves*, this time it's *KringleCon 3: French Hens*. The titles appear to be taken from the [Twelve Days of Christmas](https://www.metrolyrics.com/twelve-days-of-christmas-lyrics-christmas-carols.html) carol. Anyone see a pattern? :smile:
+When the title of this year's event was [announced on Twitter](https://twitter.com/KringleCon/status/1331629434865131523) a pattern emerged. Last year was named *KringleCon 2: Turtle Doves*, this time it's *KringleCon 3: French Hens*. The titles appear to be taken from the [Twelve Days of Christmas](https://www.metrolyrics.com/twelve-days-of-christmas-lyrics-christmas-carols.html) carol.
 
 !!! abstract "The Twelve Days Of Christmas"
     ...<br/>
@@ -101,15 +101,15 @@ Jason himself actually [tweeted a hint](https://twitter.com/BanjoCrashland/statu
 
 ![Santa portrait items](./img/misc/santa_portrait_items.jpg)
 
-The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist daughter Jessica Skoudis (who is also mentioned in the final credits). The initials on the portrait not only refer to *Jack Frost: Santa*, as per the narrative, but are in fact Jessica's initials. The items in the portrait appear to refer to [past Holiday Hack Challenge events](https://holidayhackchallenge.com/past-challenges/).
+The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist daughter Jessica Skoudis (who is also mentioned in the final credits). The initials on the portrait not only refer to *Jack Frost: Santa*, as per the narrative, but are in fact Jessica's initials. The items on the desk are references to [past Holiday Hack Challenge events](https://holidayhackchallenge.com/past-challenges/).
 
-| #   | Item           | Holiday Hack Challenge                                                                                              |
-| :-: | :------------- | :-------------------------------------------------------------------------------------------------------------------|
-| 1   | Challenge coin | First introduced as an award in HHC 2019                                                                            |
-| 2   | Tardis         | Seen on the [dorm wall](https://n00.be/HolidayHackChallenge2019/misc/interesting_ui/#dorm-access-code) in HHC 2019  |
-| 3   | Cranberry Pi   | First appeared in HHC 2018                                                                                          |
-| 4   | Gnome legs     | Also [Created by Jessica Skoudis](https://twitter.com/edskoudis/status/675068303430295553) and featured in HHC 2015 |
-| 5   | Enigma machine | Seen in [an image](./img/misc/hhc2012.jpg) for HHC 2012                                                             |
+| #  | Item           | Holiday Hack Challenge                                                                                              |
+| :- | :------------- | :-------------------------------------------------------------------------------------------------------------------|
+| 1  | Challenge coin | First introduced as an award in HHC 2019                                                                            |
+| 2  | Tardis         | Seen on the [dorm wall](https://n00.be/HolidayHackChallenge2019/misc/interesting_ui/#dorm-access-code) in HHC 2019  |
+| 3  | Cranberry Pi   | First appeared in HHC 2018                                                                                          |
+| 4  | Gnome legs     | Also [created by Jessica Skoudis](https://twitter.com/edskoudis/status/675068303430295553) and featured in HHC 2015 |
+| 5  | Enigma machine | Seen in [an image](./img/misc/hhc2012.jpg) for HHC 2012                                                             |
 
 
 ## Proxmark Email
@@ -164,6 +164,8 @@ Looks like Jack Frost replaced all the paintings with artwork of himself! :laugh
 
 
 ## Black Badge
+
+![Black badge](./img/misc/black_badge.png)
 
 Santa has a black conference badge which is a nod to the [DEF CON Black Badge](https://www.defcon.org/html/links/dc-black-badge.html).
 
@@ -228,7 +230,7 @@ The vending machine's name is a reference to *release the Kraken*. [The kraken](
 
 ## Naughty/Nice Reports
 
-Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on objectives 11a and 11b. Below are just a few of examples from the 1547 reports.
+Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on [objective 11](./objectives/o11.md) and [objective 12](./objectives/o12.md). Below are just a few of examples from the 1547 reports.
 
 !!! quote "Elf-on-the-shelf #10830630836554719419"
     Unbelievably, for the second time this year, I saw Shamicka leaving less than a swallow of orange juice in the container and putting it back into the refrigerator.
