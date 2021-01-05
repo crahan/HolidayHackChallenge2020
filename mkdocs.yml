@@ -33,6 +33,7 @@ extra:
       name: CraHan on Instagram
 extra_css:
   - css/asciinema-player.css
+  - css/extra.css
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - js/tables.js
@@ -46,7 +47,7 @@ markdown_extensions:
   - def_list
   - toc:
       permalink: ⚓︎
-      #toc_depth: 3
+      toc_depth: 2
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.details

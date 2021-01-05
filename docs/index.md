@@ -3,11 +3,11 @@
 ## Introduction
 
 ![Going on an adventure](./img/misc/going_on_an_adventure.gif){: align=left }
-Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchallenge.com/2020/) write-up. This is now the third time I've travelled to the North Pole to attend KringleCon and help out Santa and the elves in solving all sorts of hacking shennanigans. It has really become one of those event I look forward to with a lot of anticipation each year! :hugging_face: 
+Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchallenge.com/2020/) write-up. This is now the third time I've had the privilege of traveling to the North Pole to attend KringleCon and help out Santa and the elves in solving all sorts of hacking shennanigans. It has really become one of those event I look forward to with a lot of anticipation each year! :hugging_face: 
 
 There's 3 main sections: this page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I was able to find (Jason is back... twice). Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I came across (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice). Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
 !!! note "50-page submission limit"
     New this year is the requirement to keep the total write-up length under 50 pages. While I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams, my primary goal for this write-up is to help others learn and be a resource that remains relevant for a long time. I'll do my best to keep the irrelevant banter down to a minimum but there's no cutting corners when it comes to sharing knowledge and learning!
@@ -36,7 +36,7 @@ Even with less than 50 pages, there's still quite a bit of information to read t
     See [this example configuration](./img/objectives/o4/green_activated.png) using the hex nut found in front of the Santavator and the green light bulb found in the Courtyard.
 
 !!! done "5. Open HID Lock - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    Use `lf hid sim -r 2006e22f13` to impersonate Shinny Upatree's badge
+    Use `lf hid sim -r 2006e22f13` to unlock the door using Shinny Upatree's badge information.
 
 !!! done "6. Splunk Challenge - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
     `The Lollipop Guild`
@@ -142,9 +142,10 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
     | Tinsel Upatree        | 3     | Santa's Office         | -                                      | 
 
 
-## Narrative
 
-!!! Abstract ""
+## Conclusion
+
+!!! Abstract "Narrative"
     KringleCon back at the castle, set the stage...
 
     But it's under construction like my GeoCities page.
@@ -172,9 +173,6 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
     All the rotting, plotting, low conniving streaming from that skull.
 
     Holiday Hackers, they're no slackers, returned Jack a big, old null!
-
-
-## Conclusion
 
 We already knew from last year's [narrative](https://n00.be/HolidayHackChallenge2019/#narrative) and [cliffhanger](https://n00.be/HolidayHackChallenge2019/#kringlecon-3) that Jack Frost was in cahoots with the Tooth Fairy, silently working from the shadows. This year we got to unravel his evil plan and actually stop him! Jack Frost not only tried to prevent the expansion of Santa’s Castle but he also gave Santa a magical portrait so he could become him and destroy the holidays! :open_mouth:
 

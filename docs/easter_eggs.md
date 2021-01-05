@@ -112,29 +112,6 @@ The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist d
 | 5  | Enigma machine | Seen in [an image](./img/misc/hhc2012.jpg) for HHC 2012                                                             |
 
 
-## Proxmark Email
-
-![Proxmark email](./img/misc/proxmark_email.png)
-
-In the Wrapping Room there's an email message hanging on the left wall from [Iceman](https://github.com/iceman1001), addressed to Chris Elgee.
-
-!!! abstract "Proxmark email"
-    To: Chris Elgee<br/>
-    Re: Proxmark in Holiday Hack Challenge
-
-    Hey Chris!
-
-    Proxmark3 is a open name, belonging to the
-    community, no trademark as I know of. The
-    copyright could arguably belong to Jonathan
-    Westhus when he created the first versions
-    some 14 years ago. He has never ex-
-    pressed any claims for the name. So feel
-    free to add it in your challenge :)
-
-    /Iceman
-
-
 ## Painting Peephole Trope
 
 Someone peering through the eyes of a painting is a [common TV trope](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole) and is used in a [lot of movies and TV series](https://www.youtube.com/watch?v=JGz_ymaGJPI). The Scooby-Doo animated series [used it extensively](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole), for example.
@@ -161,6 +138,29 @@ done
 ```
 
 Looks like Jack Frost replaced all the paintings with artwork of himself! :laughing:
+
+
+## Proxmark Email
+
+![Proxmark email](./img/misc/proxmark_email.png)
+
+In the Wrapping Room there's an email message hanging on the left wall from [Iceman](https://github.com/iceman1001), addressed to Chris Elgee.
+
+!!! abstract "Proxmark email"
+    To: Chris Elgee<br/>
+    Re: Proxmark in Holiday Hack Challenge
+
+    Hey Chris!
+
+    Proxmark3 is a open name, belonging to the
+    community, no trademark as I know of. The
+    copyright could arguably belong to Jonathan
+    Westhus when he created the first versions
+    some 14 years ago. He has never ex-
+    pressed any claims for the name. So feel
+    free to add it in your challenge :)
+
+    /Iceman
 
 
 ## Black Badge
@@ -226,6 +226,13 @@ Colonel Stars, played by Jim Carrey, also says it in [Kickass 2](https://www.imd
 ## Release the Snacken
 
 The vending machine's name is a reference to *release the Kraken*. [The kraken](https://en.wikipedia.org/wiki/Kraken) is a legendary sea monster of gigantic size and cephalopod-like appearance in Scandinavian folklore. The phrase comes from the 1981 movie The Clash of the Titans (and its 2010 remake) and is known for being a [meme](https://knowyourmeme.com/memes/release-the-kraken) as well.
+
+
+## The Lollipop Guild
+
+The adversary group that Santa feared would attack KringleCon is a reference to [The Wizard of Oz](https://www.youtube.com/watch?v=XBsf8qsxs2M).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XBsf8qsxs2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Naughty/Nice Reports
