@@ -74,8 +74,8 @@ nav:
   - Tag Generator: 'objectives/o8.md'
   - ARP Shenanigans: 'objectives/o9.md'
   - Fingerprint Sensor: 'objectives/o10.md'
-  - Naughty/Nice List Pt.1: 'objectives/o11.md'
-  - Naughty/Nice List Pt.2:  'objectives/o12.md'
+  - Naughty/Nice List Pt.1: 'objectives/o11a.md'
+  - Naughty/Nice List Pt.2:  'objectives/o11b.md'
 - Terminal Hints:
   - Kringle Kiosk: 'hints/h2.md'
   - Linux Primer: 'hints/h3.md'
@@ -89,3 +89,4 @@ nav:
   - Scapy Prepper: 'hints/h9.md'
   - Snowball Fight: 'hints/h11.md'
 - Easter Eggs: 'easter_eggs.md'
+- ASCII Map: 'map.md'

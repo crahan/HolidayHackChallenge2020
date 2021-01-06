@@ -11,8 +11,8 @@ A few additional things worth pointing out are the [reverse shell](./objectives/
 
 Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
-??? note "50-page submission limit"
-    New this year is the requirement to keep the total write-up length under 50 pages. While I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams, my primary goal for this write-up is to help others learn and be a resource that remains relevant for a long time. I'll do my best to keep the irrelevant banter down to a minimum but there's no cutting corners when it comes to sharing knowledge and learning!
+!!! note "50-page submission limit"
+    I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams. To find a good middle ground between preventing information overload and creating something that can stand on its own as a learning resource some parts, like the *navigation tip* below, are collapsed by default. Skipping over these will not take away from understanding the solution, but feel free to click on these enties to expand them.
 
 ??? tip "Navigation tip"
     Even with less than 50 pages, there's still quite a bit of information to read through. To make things a little easier, you can use ++"P"++ or ++","++ to go to the previous section, ++"N"++ or ++"."++ to navigate to the next section, and ++"S"++, ++"F"++, or ++"/"++ to open up the search dialog.
@@ -61,86 +61,33 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
     fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb
 
 
-## Map & Directory
+## Challenges
 
-No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the dark hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard.
+| Name                  | Floor | Room                   | Terminal Hint                          | Related Objective                               |
+| :-------------------- | :---- | : -------------------- | :------------------------------------- | :---------------------------------------------- |
+| Jingle Ringford       | -     | NJTP                   | -                                      | [Gift List](./objectives/o1.md)                 |
+| Shinny Upatree        | -     | Front Lawn             | [Kringle Kiosk](./hints/h2.md)         | [Investigate S3 Bucket](./objectives/o2.md)     |
+| Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          | [Password Recovery](./objectives/o3.md)         |
+| Sparkle Redberry      | 1     | Castle Entry           | -                                      | [Operate Santavator](./objectives/o4.md)        |
+| Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4a.md)         | [Operate Santavator](./objectives/o4.md)        |
+| Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h4b.md)         | [Operate Santavator](./objectives/o4.md)        |
+| Bushy Evergreen       | 2     | Talks Lobby            | [Speaker UNPrep](./hints/h5a.md)       | [Open HID Lock](./objectives/o5.md)             |
+| Fitzy Shortstack      | 1     | Kitchen                | [33.6kbps](./hints/h5b.md)             | [Open HID Lock](./objectives/o5.md)             |
+| Angel Candysalt       | 1     | Great Room             | -                                      | [Splunk Challenge](./objectives/o6.md)          |
+| Minty Candycane       | 1.5   | Workshop               | [Sort-o-Matic](./hints/h6.md)          | [Splunk Challenge](./objectives/o6.md)          |
+| Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) | [CAN-D-BUS](./objectives/o7.md)                 |
+| Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        | [Tag Generator](./objectives/o8.md)             |
+| Noel Boetie           | 1.5   | Wrapping Room          | -                                      | [Tag Generator](./objectives/o8.md)             |
+| Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         | [ARP Shenanigans](./objectives/o9.md)           |
+| Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Fingerprint sensor](./objectives/o10.md)       |
+| Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11.md)       | [Naughty/Nice List Part 1](./objectives/o11a.md) and [Part 2](./objectives/o11b.md)|
 
-??? info "Map"
-
-    ```
-     __       _    --------------
-    |__)_  _ (_   | NetWars Room |
-    | \(_)(_)|    |              |
-                  |            * |
-                   --------------
-
-    __  __                              __  __
-     _)|_                                _)|_          -------
-    /__|        Tracks                  __)|          |Balcony|
-                1 2 3 4 5 6 7                          -------
-     -------    -------------                             |
-    |Speaker|--| Talks Lobby |                        --------
-    |Unprep |  |             |                       |Santa's |
-     -------    ------       |                       |Office  |
-                      |      |                        --    --
-                      |     *|                          |  |
-                       ------                           |   ---
-                                                        |    * |
-        __                ------                         ------
-     /||_                |Garden|
-      ||                 |Party |
-                          ------ 
-                            |                     __ __           --------
-      --------------------------              /| |_ |_           |Wrapping|
-     |        Courtyard         |              |.__)|            |  Room  |
-      --------------------------                                  -------- 
-        |                    |                                       |
-     ------    --------    ------                         ----    --------
-    |Dining|--|Kitchen |--|Great |                       |    |--|Workshop|
-    |      |   --------   |      |                       |    |  |        |
-    | Room |--|      * |--| Room |                       |    |  |        |
-    |      |  |Entryway|  |      |                       |    |  |        |
-     ------    --------    ------                        | .. |  |        |
-                   |                                      ----   | *      |
-               ----------                                         --------
-              |Front Lawn|       NOTE: * denotes Santavator
-               ----------
-    ```
-
-??? info "Directory"
-
-    | Name                  | Floor | Room                   | Terminal Hint                          | Related Objective                               |
-    | :-------------------- | :---- | : -------------------- | :------------------------------------- | :---------------------------------------------- |
-    | Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h4b.md)         | [Operate Santavator](./objectives/o4.md)        |
-    | Noel Boetie           | 1     | Wrapping Room          | -                                      | [Tag Generator](./objectives/o8.md)             |
-    | Ginger Breddie        | 1     | Castle Entry           | -                                      | -                                               |
-    | Minty Candycane       | 1.5   | Workshop               | [Sort-o-Matic](./hints/h6.md)          | [Splunk Challenge](./objectives/o6.md)          |
-    | Angel Candysalt       | 1     | Great Room             | -                                      | [Splunk Challenge](./objectives/o6.md)          |
-    | Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11.md)       | [Naughty/Nice List Part 1](./objectives/o11.md) |
-    | Bushy Evergreen       | 2     | Talks Lobby            | [Speaker UNPrep](./hints/h5a.md)       | [Open HID Lock](./objectives/o5.md)             |
-    | Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        | [Tag Generator](./objectives/o8.md)             |
-    | Bubble Lightington    | 1     | Courtyard              | -                                      | -                                               |
-    | Jewel Loggins         | -     | Front Lawn             | -                                      | -                                               |
-    | Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          | [Password Recovery](./objectives/o3.md)         |
-    | Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4a.md)         | [Operate Santavator](./objectives/o4.md)        |
-    | Bow Ninecandle        | 2     | Talks Lobby            | -                                      | -                                               |
-    | Morcel Nougat         | 2     | Speaker UNPreparedness | -                                      | -                                               |
-    | Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) | [CAN-D-BUS](./objectives/o7.md)                 |
-    | Sparkle Redberry      | 1     | Castle Entry           | -                                      | [Operate Santavator](./objectives/o4.md)        |
-    | Jingle Ringford       | -     | NJTP                   | -                                      | [Gift List](./objectives/o1.md)                 |
-    | Piney Sappington      | 1     | Castle Entry           | -                                      | -                                               |
-    | Chimney Scissorsticks | 2     | Talks Lobby            | -                                      | -                                               |
-    | Fitzy Shortstack      | 1     | Kitchen                | [33.6kbps](./hints/h5b.md)             | [Open HID Lock](./objectives/o5.md)             |
-    | Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         | [ARP Shenanigans](./objectives/o9.md)           |
-    | Eve Snowshoes         | 3     | Santa's Balcony        | -                                      | -                                               |
-    | Shinny Upatree        | -     | Front Lawn             | [Kringle Kiosk](./hints/h2.md)         | [Investigate S3 Bucket](./objectives/o2.md)     |
-    | Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Fingerprint sensor](./objectives/o10.md)       |
 
 
 
 ## Conclusion
 
-!!! Abstract "Narrative"
+??? Abstract "Narrative"
     KringleCon back at the castle, set the stage...
 
     But it's under construction like my GeoCities page.
