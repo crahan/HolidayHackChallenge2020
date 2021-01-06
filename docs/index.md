@@ -24,13 +24,13 @@ Even with less than 50 pages, there's still quite a bit of information to read t
 ## Answers
 
 !!! done "1. Uncover Santa's Gift List - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `Proxmark`
+    Proxmark
 
 !!! done "2. Investigate S3 Bucket - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `North Pole: The Frostiest Place on Earth`
+    North Pole: The Frostiest Place on Earth
 
 !!! done "3. Point-of-Sale Password Recovery - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `santapass`
+    santapass
 
 !!! done "4. Operate the Santavator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
     See [this example configuration](./img/objectives/o4/green_activated.png) using the hex nut found in front of the Santavator and the green light bulb found in the Courtyard.
@@ -39,7 +39,7 @@ Even with less than 50 pages, there's still quite a bit of information to read t
     Use `lf hid sim -r 2006e22f13` to unlock the door using Shinny Upatree's badge information.
 
 !!! done "6. Splunk Challenge - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `The Lollipop Guild`
+    The Lollipop Guild
 
 !!! done "7. Solve the Sleigh's CAN-D-BUS Problem - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
     `19B Equals 0000000F2057`
@@ -47,19 +47,19 @@ Even with less than 50 pages, there's still quite a bit of information to read t
     `080 Less 000000000000`
 
 !!! done "8. Broken Tag Generator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star:"
-    `JackFrostWasHere`
+    JackFrostWasHere
 
 !!! done "9. ARP Shenanigans - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star:"
-    `Tanta Kringle`
+    Tanta Kringle
 
 !!! done "10. Defeat Fingerprint Sensor - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `besanta`
+    besanta
 
 !!! done "11. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
-    `57066318f32f729d`
+    57066318f32f729d
 
 !!! done "12. Naughty/Nice List with Blockchain Investigation Part 2 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
-    `fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb`
+    fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb
 
 
 ## Map & Directory
