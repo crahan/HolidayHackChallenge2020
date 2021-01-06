@@ -7,18 +7,17 @@ Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchall
 
 There's 3 main sections: this page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I came across (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice). Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I came across (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice).
 
-!!! note "50-page submission limit"
+Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
+
+??? note "50-page submission limit"
     New this year is the requirement to keep the total write-up length under 50 pages. While I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams, my primary goal for this write-up is to help others learn and be a resource that remains relevant for a long time. I'll do my best to keep the irrelevant banter down to a minimum but there's no cutting corners when it comes to sharing knowledge and learning!
 
+??? tip "Navigation tip"
+    Even with less than 50 pages, there's still quite a bit of information to read through. To make things a little easier, you can use ++"P"++ or ++","++ to go to the previous section, ++"N"++ or ++"."++ to navigate to the next section, and ++"S"++, ++"F"++, or ++"/"++ to open up the search dialog.
 
-## Navigation
-
-Even with less than 50 pages, there's still quite a bit of information to read through. To make things a little easier, you can use ++"P"++ or ++","++ to go to the previous section, ++"N"++ or ++"."++ to navigate to the next section, and ++"S"++, ++"F"++, or ++"/"++ to open up the search dialog.
-
-!!! tip "Navigation tip"
-    If you keep pressing ++"N"++ or ++"."++ from this point forward, you'll hit all the content in the right order! :smile:
+    **TL;DR** if you keep pressing ++"N"++ or ++"."++ from this point forward, you'll hit all the content in the right order! :smile:
 
 
 ## Answers
