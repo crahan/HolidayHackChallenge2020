@@ -1,0 +1,1066 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Thomas Bouve">
+      
+      
+        <link rel="canonical" href="https://n00.be/HolidayHackChallenge2020/easter_eggs/">
+      
+      <link rel="shortcut icon" href="../img/misc/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Easter Eggs - 2020 SANS HHC Write-Up</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/asciinema-player.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#three-french-hens" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://n00.be/HolidayHackChallenge2020/" title="2020 SANS HHC Write-Up" class="md-header-nav__button md-logo" aria-label="2020 SANS HHC Write-Up">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M440.1 355.2l-39.2-23 34.1-9.3c8.4-2.3 13.4-11.1 11.1-19.6l-4.1-15.5c-2.2-8.5-10.9-13.6-19.3-11.3L343 298.2 271.2 256l71.9-42.2 79.7 21.7c8.4 2.3 17-2.8 19.3-11.3l4.1-15.5c2.2-8.5-2.7-17.3-11.1-19.6l-34.1-9.3 39.2-23c7.5-4.4 10.1-14.2 5.8-21.9l-7.9-13.9c-4.3-7.7-14-10.3-21.5-5.9l-39.2 23 9.1-34.7c2.2-8.5-2.7-17.3-11.1-19.6l-15.2-4.1c-8.4-2.3-17 2.8-19.3 11.3l-21.3 81-71.9 42.2v-84.5L306 70.4c6.1-6.2 6.1-16.4 0-22.6l-11.1-11.3c-6.1-6.2-16.1-6.2-22.2 0l-24.9 25.4V16c0-8.8-7-16-15.7-16h-15.7c-8.7 0-15.7 7.2-15.7 16v46.1l-24.9-25.4c-6.1-6.2-16.1-6.2-22.2 0L142.1 48c-6.1 6.2-6.1 16.4 0 22.6l58.3 59.3v84.5l-71.9-42.2-21.3-81c-2.2-8.5-10.9-13.6-19.3-11.3L72.7 84c-8.4 2.3-13.4 11.1-11.1 19.6l9.1 34.7-39.2-23c-7.5-4.4-17.1-1.8-21.5 5.9l-7.9 13.9c-4.3 7.7-1.8 17.4 5.8 21.9l39.2 23-34.1 9.1c-8.4 2.3-13.4 11.1-11.1 19.6L6 224.2c2.2 8.5 10.9 13.6 19.3 11.3l79.7-21.7 71.9 42.2-71.9 42.2-79.7-21.7c-8.4-2.3-17 2.8-19.3 11.3l-4.1 15.5c-2.2 8.5 2.7 17.3 11.1 19.6l34.1 9.3-39.2 23c-7.5 4.4-10.1 14.2-5.8 21.9L10 391c4.3 7.7 14 10.3 21.5 5.9l39.2-23-9.1 34.7c-2.2 8.5 2.7 17.3 11.1 19.6l15.2 4.1c8.4 2.3 17-2.8 19.3-11.3l21.3-81 71.9-42.2v84.5l-58.3 59.3c-6.1 6.2-6.1 16.4 0 22.6l11.1 11.3c6.1 6.2 16.1 6.2 22.2 0l24.9-25.4V496c0 8.8 7 16 15.7 16h15.7c8.7 0 15.7-7.2 15.7-16v-46.1l24.9 25.4c6.1 6.2 16.1 6.2 22.2 0l11.1-11.3c6.1-6.2 6.1-16.4 0-22.6l-58.3-59.3v-84.5l71.9 42.2 21.3 81c2.2 8.5 10.9 13.6 19.3 11.3L375 428c8.4-2.3 13.4-11.1 11.1-19.6l-9.1-34.7 39.2 23c7.5 4.4 17.1 1.8 21.5-5.9l7.9-13.9c4.6-7.5 2.1-17.3-5.5-21.7z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            2020 SANS HHC Write-Up
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Easter Eggs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://n00.be/HolidayHackChallenge2020/" title="2020 SANS HHC Write-Up" class="md-nav__button md-logo" aria-label="2020 SANS HHC Write-Up">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M440.1 355.2l-39.2-23 34.1-9.3c8.4-2.3 13.4-11.1 11.1-19.6l-4.1-15.5c-2.2-8.5-10.9-13.6-19.3-11.3L343 298.2 271.2 256l71.9-42.2 79.7 21.7c8.4 2.3 17-2.8 19.3-11.3l4.1-15.5c2.2-8.5-2.7-17.3-11.1-19.6l-34.1-9.3 39.2-23c7.5-4.4 10.1-14.2 5.8-21.9l-7.9-13.9c-4.3-7.7-14-10.3-21.5-5.9l-39.2 23 9.1-34.7c2.2-8.5-2.7-17.3-11.1-19.6l-15.2-4.1c-8.4-2.3-17 2.8-19.3 11.3l-21.3 81-71.9 42.2v-84.5L306 70.4c6.1-6.2 6.1-16.4 0-22.6l-11.1-11.3c-6.1-6.2-16.1-6.2-22.2 0l-24.9 25.4V16c0-8.8-7-16-15.7-16h-15.7c-8.7 0-15.7 7.2-15.7 16v46.1l-24.9-25.4c-6.1-6.2-16.1-6.2-22.2 0L142.1 48c-6.1 6.2-6.1 16.4 0 22.6l58.3 59.3v84.5l-71.9-42.2-21.3-81c-2.2-8.5-10.9-13.6-19.3-11.3L72.7 84c-8.4 2.3-13.4 11.1-11.1 19.6l9.1 34.7-39.2-23c-7.5-4.4-17.1-1.8-21.5 5.9l-7.9 13.9c-4.3 7.7-1.8 17.4 5.8 21.9l39.2 23-34.1 9.1c-8.4 2.3-13.4 11.1-11.1 19.6L6 224.2c2.2 8.5 10.9 13.6 19.3 11.3l79.7-21.7 71.9 42.2-71.9 42.2-79.7-21.7c-8.4-2.3-17 2.8-19.3 11.3l-4.1 15.5c-2.2 8.5 2.7 17.3 11.1 19.6l34.1 9.3-39.2 23c-7.5 4.4-10.1 14.2-5.8 21.9L10 391c4.3 7.7 14 10.3 21.5 5.9l39.2-23-9.1 34.7c-2.2 8.5 2.7 17.3 11.1 19.6l15.2 4.1c8.4 2.3 17-2.8 19.3-11.3l21.3-81 71.9-42.2v84.5l-58.3 59.3c-6.1 6.2-6.1 16.4 0 22.6l11.1 11.3c6.1 6.2 16.1 6.2 22.2 0l24.9-25.4V496c0 8.8 7 16 15.7 16h15.7c8.7 0 15.7-7.2 15.7-16v-46.1l24.9 25.4c6.1 6.2 16.1 6.2 22.2 0l11.1-11.3c6.1-6.2 6.1-16.4 0-22.6l-58.3-59.3v-84.5l71.9 42.2 21.3 81c2.2 8.5 10.9 13.6 19.3 11.3L375 428c8.4-2.3 13.4-11.1 11.1-19.6l-9.1-34.7 39.2 23c7.5 4.4 17.1 1.8 21.5-5.9l7.9-13.9c4.6-7.5 2.1-17.3-5.5-21.7z"/></svg>
+
+    </a>
+    2020 SANS HHC Write-Up
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Objectives
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Objectives" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Objectives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o1/" class="md-nav__link">
+      Gift List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o2/" class="md-nav__link">
+      S3 Bucket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o3/" class="md-nav__link">
+      Password Recovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o4/" class="md-nav__link">
+      Santavator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o5/" class="md-nav__link">
+      HID Lock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o6/" class="md-nav__link">
+      Splunk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o7/" class="md-nav__link">
+      CAN-D-BUS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o8/" class="md-nav__link">
+      Tag Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o9/" class="md-nav__link">
+      ARP Shenanigans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o10/" class="md-nav__link">
+      Fingerprint Sensor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o11/" class="md-nav__link">
+      Naughty/Nice List Pt.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../objectives/o12/" class="md-nav__link">
+      Naughty/Nice List Pt.2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Terminal Hints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Terminal Hints" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Terminal Hints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h2/" class="md-nav__link">
+      Kringle Kiosk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h3/" class="md-nav__link">
+      Linux Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h4a/" class="md-nav__link">
+      Unscape Tmux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h4b/" class="md-nav__link">
+      The Elf C0de
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h5a/" class="md-nav__link">
+      Speaker UNPrep
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h5b/" class="md-nav__link">
+      33.6kbps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h6/" class="md-nav__link">
+      Sort-o-Matic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h7/" class="md-nav__link">
+      CAN-Bus Investigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h8/" class="md-nav__link">
+      Redis Bug Hunt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h9/" class="md-nav__link">
+      Scapy Prepper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hints/h11/" class="md-nav__link">
+      Snowball Fight
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Easter Eggs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Easter Eggs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-french-hens" class="md-nav__link">
+    Three French Hens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#being-john-malkovich" class="md-nav__link">
+    Being John Malkovich
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-jersey-turnpike" class="md-nav__link">
+    New Jersey Turnpike
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zat-you-santa-claus" class="md-nav__link">
+    Zat You, Santa Claus?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#garden-party" class="md-nav__link">
+    Garden Party
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#santa-discounts" class="md-nav__link">
+    Santa Discounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jason" class="md-nav__link">
+    Jason
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portrait-painting" class="md-nav__link">
+    Portrait Painting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#painting-peephole-trope" class="md-nav__link">
+    Painting Peephole Trope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#castle-artwork" class="md-nav__link">
+    Castle Artwork
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxmark-email" class="md-nav__link">
+    Proxmark Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black-badge" class="md-nav__link">
+    Black Badge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wilhelm-scream" class="md-nav__link">
+    Wilhelm Scream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snowball-fight-error" class="md-nav__link">
+    Snowball Fight Error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-codes" class="md-nav__link">
+    WebSocket Codes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#richard-f-hall" class="md-nav__link">
+    Richard F. Hall
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay-frosty-catchphrase" class="md-nav__link">
+    Stay Frosty Catchphrase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-the-snacken" class="md-nav__link">
+    Release the Snacken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lollipop-guild" class="md-nav__link">
+    The Lollipop Guild
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naughtynice-reports" class="md-nav__link">
+    Naughty/Nice Reports
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Easter Eggs</h1>
+                
+                <p>It's amazing how many references and easter eggs you can find once you start looking around for them. Movie references, jokes, nods to popular culture, memes, secret areas, references to past Holiday Hack Challenge, and funny WebSocket response messages. Below are a few of them, in no particular order.</p>
+<h2 id="three-french-hens">Three French Hens<a class="headerlink" href="#three-french-hens" title="Permanent link">⚓︎</a></h2>
+<p>When the title of this year's event was <a href="https://twitter.com/KringleCon/status/1331629434865131523">announced on Twitter</a> a pattern emerged. Last year was named <em>KringleCon 2: Turtle Doves</em>, this time it's <em>KringleCon 3: French Hens</em>. The titles appear to be taken from the <a href="https://www.metrolyrics.com/twelve-days-of-christmas-lyrics-christmas-carols.html">Twelve Days of Christmas</a> carol.</p>
+<div class="admonition abstract">
+<p class="admonition-title">The Twelve Days Of Christmas</p>
+<p>...<br/>
+On the second day of Christmas<br/>
+My true love gave to me:<br/>
+<strong>Two turtle doves</strong><br/>
+...<br/>
+On the third day of Christmas<br/>
+My true love gave to me:<br/>
+<strong>Three french hens</strong><br/>
+...<br/>
+On the forth day of Christmas<br/>
+My true love gave to me:<br/>
+<strong>Four calling birds</strong><br/>
+...</p>
+</div>
+<h2 id="being-john-malkovich">Being John Malkovich<a class="headerlink" href="#being-john-malkovich" title="Permanent link">⚓︎</a></h2>
+<p>The idea of going to an in-between floor (i.e., 1.5) and ending up in the body of another person (i.e., Santa) is a direct reference to the movie <a href="https://en.wikipedia.org/wiki/Being_John_Malkovich">Being John Malkovich</a>. In the movie, directed by Spike Jonze and written by Charlie Kaufman, a puppeteer discovers a portal on a floor between the 7th and 8th that leads literally into the head of movie star John Malkovich, similar to how we go to a floor between the 1st and 2nd floors and ultimately end up being Santa. </p>
+<h2 id="new-jersey-turnpike">New Jersey Turnpike<a class="headerlink" href="#new-jersey-turnpike" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Directions to Santa's castle" src="../img/misc/njtp_route.png" /></p>
+<p>When the Holiday Hack Challenge website tells you to <em>hop on the New Jersey Turnpike to get to Santa's gondola for your ride to the North Pole</em>, you can take that pretty literally. Taking exit 7A and <a href="https://www.google.com/maps/dir/40.2023607,-74.5887366/2402+Alexandra+Ct,+Wall+Township,+NJ+07731,+USA/@40.1574196,-74.410594,31064m/data=!3m1!1e3!4m14!4m13!1m5!3m4!1m2!1d-74.5683648!2d40.1850402!3s0x89c160eb5383cfe3:0xc6d937e42824bd8!1m5!1m1!1s0x89c1812c891f19a3:0x1a85bb1101118d8c!2m2!1d-74.1266799!2d40.133793!3e0">following Interstate 195</a> to Shore Points, brings you close to the Counter Hack HQ, better known as Santa's castle. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
+<p>The New Jersey Turnpike also plays a key role in the movie <a href="./#being-john-malkovich">Being John Malkovich</a>. It's where the movie's main character ends up when he's ejected from John Malkovich's mind and body after about 15 minutes. </p>
+<h2 id="zat-you-santa-claus">Zat You, Santa Claus?<a class="headerlink" href="#zat-you-santa-claus" title="Permanent link">⚓︎</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f0oY7F8m4fo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>A reference to <em>Zat You, Santa Claus?</em> by <a href="https://www.youtube.com/watch?v=f0oY7F8m4fo">Louis Armstrong</a>.</p>
+<h2 id="garden-party">Garden Party<a class="headerlink" href="#garden-party" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Garden Party" src="../img/misc/garden_party.png" /></p>
+<p>To the North and slightly off to the East of the swag booth you can pass through the hedge to enter a secret area. The NPC behind the booth is named <em>npc-evanbooth</em>, Counter Hack's <a href="https://www.counterhack.com/expert-pen-testers">resident builder, architect, developer, and challenge designer</a>. The clip that's playing is the <a href="https://www.youtube.com/watch?v=3Nkb3g-yySs">original video</a> for what later became the <a href="https://knowyourmeme.com/memes/dimitri-finds-out">Dimitri Finds Out meme</a>. You can't go there as Santa though. </p>
+<h2 id="santa-discounts">Santa Discounts<a class="headerlink" href="#santa-discounts" title="Permanent link">⚓︎</a></h2>
+<p>When you talk to the SANS.edu and RSA Conference booth NPCs as Santa, they'll give you a discount code. Also, the NPCs manning the conference booths all have actual names. Can we get a round of applause for Brian, Peaches, Geek, Jeff, and Kulj, please? <img alt="👏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44f.svg" title=":clap:" /></p>
+<div class="admonition quote">
+<p class="admonition-title">Geek - SANS.edu booth</p>
+<p>Hi Santa!</p>
+<p>Because you give so much to the world, we’re giving you a code to waive your application fee to SANS.edu, the best college in cybersecurity.</p>
+<p>Use the code <code>SantaGoesToCollege</code> when you apply.</p>
+<p>Thanks for hacking for good!</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Kulj - RSA Conference booth</p>
+<p>Congratulations, Santa! You’ve unlocked $20 off a Full Summit Pass for the new RSAC 365 Virtual Summit.</p>
+<p>Use code <code>10SANSF59</code>. <a href="https://www.rsaconference.com/virtual-series/fds1-summit">Click to learn more</a>.</p>
+</div>
+<h2 id="jason">Jason<a class="headerlink" href="#jason" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Jason" src="../img/misc/jason_scaffolding.png" /></p>
+<p>Just like last year's event, Jason can be found in 2 different locations. First as the nail next to the bucket image named <code>jason 2.png</code> on the scaffolding in front of the castle and again as an ASCII art image of a plant located at <code>/opt/plant.txt</code>. The ASCII image can also be found when entering <code>plant</code> as a menu option in the <a href="../hints/h2/">Kringle Kiosk</a> Terminal Hint challenge. </p>
+<div class="highlight"><pre><span></span><code>  Hi, my name is Jason the Plant!
+
+  ( U
+   \| )
+  __|/
+  \    /
+   \__/ ejm96
+</code></pre></div>
+<p>Jason himself actually <a href="https://twitter.com/BanjoCrashland/status/1342507427632193538">tweeted a hint</a> for this Easter Egg on December 25, 2020.</p>
+<div class="admonition quote">
+<p class="admonition-title">Nail</p>
+<p>Job Hunting? Feeling Stuck?<br/>
+Join me for an interactive job hunting livestream!<br/>
+Any industry.<br/>
+Any type of job.<br/>
+No vendor pitches.<br/>
+Not selling anything.<br/>
+Just helping.<br/>
+https://www.twitch.tv/banjocrashland</p>
+</div>
+<h2 id="portrait-painting">Portrait Painting<a class="headerlink" href="#portrait-painting" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Santa portrait items" src="../img/misc/santa_portrait_items.jpg" /></p>
+<p>The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist daughter Jessica Skoudis (who is also mentioned in the final credits). The initials on the portrait not only refer to <em>Jack Frost: Santa</em>, as per the narrative, but are in fact Jessica's initials. The items on the desk are references to <a href="https://holidayhackchallenge.com/past-challenges/">past Holiday Hack Challenge events</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Item</th>
+<th align="left">Holiday Hack Challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Challenge coin</td>
+<td align="left">First introduced as an award in HHC 2019</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Tardis</td>
+<td align="left">Seen on the <a href="https://n00.be/HolidayHackChallenge2019/misc/interesting_ui/#dorm-access-code">dorm wall</a> in HHC 2019</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Cranberry Pi</td>
+<td align="left">First appeared in HHC 2018</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Gnome legs</td>
+<td align="left">Also <a href="https://twitter.com/edskoudis/status/675068303430295553">created by Jessica Skoudis</a> and featured in HHC 2015</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Enigma machine</td>
+<td align="left">Seen in <a href="../img/misc/hhc2012.jpg">an image</a> for HHC 2012</td>
+</tr>
+</tbody>
+</table>
+<h2 id="painting-peephole-trope">Painting Peephole Trope<a class="headerlink" href="#painting-peephole-trope" title="Permanent link">⚓︎</a></h2>
+<p>Someone peering through the eyes of a painting is a <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole">common TV trope</a> and is used in a <a href="https://www.youtube.com/watch?v=JGz_ymaGJPI">lot of movies and TV series</a>. The Scooby-Doo animated series <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole">used it extensively</a>, for example.</p>
+<div class="admonition quote">
+<p class="admonition-title">Scooby-Doo - TV Tropes</p>
+<p>It was common for Scooby-Doo to feature a scene of the characters moving past a portrait with moving eyes. A series of Cartoon Network promos for the show titled Scooby-Doo: Behind the Scenes had the characters lampshading the trope in the final promo "Those Meddling Kids, Together Again" and Velma jokingly asking why weren't there any haunted houses with landscape paintings.</p>
+</div>
+<p>Landscape paintings? Perfect segue into the next easter egg! <img alt="😀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f600.svg" title=":grinning:" /></p>
+<h2 id="castle-artwork">Castle Artwork<a class="headerlink" href="#castle-artwork" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Artwork puzzle" src="../img/misc/artwork_puzzle.png" /></p>
+<p>All the artwork spread across Santa's castle is cut from a single image. If you download all the textures from <code>https://2020.kringlecon.com/textures/art/f$i.png</code>, with <code>$i</code> ranging between 1 and 39, you can recreate a <a href="https://riseoftheguardians.fandom.com/wiki/Jack_Frost_(The_Guardians_of_Childhood)?file=JackFrost-PicBookWJ.jpg">Jack Frost painting</a> by <a href="https://theonidas.artstation.com/">Andrew Theophilopoulos</a>. </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="k">for</span> i in <span class="o">{</span><span class="m">1</span>..39<span class="o">}</span>
+<span class="k">do</span>
+    curl -s -O https://2020.kringlecon.com/textures/art/f<span class="nv">$i</span>.png
+<span class="k">done</span>
+</code></pre></div>
+</td></tr></table>
+<p>Looks like Jack Frost replaced all the paintings with artwork of himself! <img alt="😆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f606.svg" title=":laughing:" /></p>
+<h2 id="proxmark-email">Proxmark Email<a class="headerlink" href="#proxmark-email" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Proxmark email" src="../img/misc/proxmark_email.png" /></p>
+<p>In the Wrapping Room there's an email message hanging on the left wall from <a href="https://github.com/iceman1001">Iceman</a>, addressed to Chris Elgee.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proxmark email</p>
+<p>To: Chris Elgee<br/>
+Re: Proxmark in Holiday Hack Challenge</p>
+<p>Hey Chris!</p>
+<p>Proxmark3 is a open name, belonging to the
+community, no trademark as I know of. The
+copyright could arguably belong to Jonathan
+Westhus when he created the first versions
+some 14 years ago. He has never ex-
+pressed any claims for the name. So feel
+free to add it in your challenge :)</p>
+<p>/Iceman</p>
+</div>
+<h2 id="black-badge">Black Badge<a class="headerlink" href="#black-badge" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Black badge" src="../img/misc/black_badge.png" /></p>
+<p>Santa has a black conference badge which is a nod to the <a href="https://www.defcon.org/html/links/dc-black-badge.html">DEF CON Black Badge</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">DEF CON Black Badge</p>
+<p>The DEF CON Black Badge is a powerful talisman, awarded only to those who have emerged unbeaten from the crucible of elite DEF CON competition. Which competitions? The answer varies from year to year. This is in the nature of the talisman.  Those chosen by the Badge enter DEF CON free of charge for the duration of their natural life.</p>
+</div>
+<h2 id="wilhelm-scream">Wilhelm Scream<a class="headerlink" href="#wilhelm-scream" title="Permanent link">⚓︎</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cdbYsoEasio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In the <a href="../hints/h5b/">33.6kbps Terminal challenge</a>, the <code>SCHHRRHHRTHRTR</code> <a href="https://dialup.kringlecastle.com/audio/trn.mp3">sound</a> uses the famous <a href="https://www.youtube.com/watch?v=cdbYsoEasio">Wilhelm Scream</a>.</p>
+<h2 id="snowball-fight-error">Snowball Fight Error<a class="headerlink" href="#snowball-fight-error" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Snowball Fight error" src="../img/misc/snowball_fight_error.png" /></p>
+<p>The error screen when you lose a <a href="../hints/h11/">Snowball Fight</a> game displays a QR code which leads to the <a href="https://www.counterhack.com">CounterHack website</a> and the error code <code>501_PEBKAC_ERR_4EVA</code>, which translates to <a href="https://www.urbandictionary.com/define.php?term=pebkac">Problem Exists Between Keyboard and Chair</a>, Error, and Forever. In other words, user error. Pretty sure that if you contact the support elf and pass them the error code, they'd laugh at you. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<h2 id="websocket-codes">WebSocket Codes<a class="headerlink" href="#websocket-codes" title="Permanent link">⚓︎</a></h2>
+<p>The WebSocket at <code>wss://2020.kringlecon.com/ws</code> is a lot of fun to mess around with and others have gone above and beyond to write some <a href="https://github.com/pollev/santas_little_helper">amazing helper scripts</a> that let you navigate the game without using the web UI. The <code>WS_OHHIMARK</code> and <code>DENNIS_NEDRY</code> WebSocket response codes are references to the movies The Room and Jurassic Park, respectively.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">WS_OHHIMARK</label><div class="tabbed-content">
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/aekfPU0SwNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>The <code>WS_OHHIMARK</code> response code is a reference to the <a href="https://www.youtube.com/watch?v=aekfPU0SwNw">famous scene</a> from the movie The Room.</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">DENNIS_NEDRY</label><div class="tabbed-content">
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/RfiQYRn7fBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>The <code>DENNIS_NEDRY</code> error code is a reference to <a href="https://jurassicpark.fandom.com/wiki/Dennis_Nedry">Jurassic Park</a>.</p>
+</div>
+</div>
+<h2 id="richard-f-hall">Richard F. Hall<a class="headerlink" href="#richard-f-hall" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Richard F. Hall" src="../img/misc/richard_f_hall.png" /></p>
+<p>The billboard titled <em>Richard F. Hall - Custom Homes, LLC</em>, located next to the scaffolding in front of Santa's castle, is a reference to an <a href="https://www.richardfhallcustomhomes.com">actual company</a> in the Jersey Shore area. Looking at their portfolio, it's pretty clear why Santa would choose them to help with the castle expansion. That's some impressive work! <img alt="😲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f632.svg" title=":astonished:" /> </p>
+<h2 id="stay-frosty-catchphrase">Stay Frosty Catchphrase<a class="headerlink" href="#stay-frosty-catchphrase" title="Permanent link">⚓︎</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ht2RJvc4ExI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Jack Frost isn't the only one who likes to use the <em>Stay frosty</em> catchphrase. It's actually used in a number of movies. The most famous one probably being <a href="https://www.youtube.com/watch?v=ht2RJvc4ExI">Aliens</a> where <a href="https://avp.fandom.com/wiki/Dwayne_Hicks">Corporal Hicks</a>, played by Michael Biehn, uses it in a pep talk.</p>
+<div class="admonition quote">
+<p class="admonition-title">Corporal Hicks - Aliens</p>
+<p>Hey! I know we’re all in strung-out shape but stay frosty and alert. We can’t afford to let one of those bastards in here.</p>
+</div>
+<p>Colonel Stars, played by Jim Carrey, also says it in <a href="https://www.imdb.com/title/tt1650554/">Kickass 2</a>.</p>
+<div class="admonition quote">
+<p class="admonition-title">Colonel Stars - Kickass 2</p>
+<p>Stay frosty team. I used to eat punks like this for breakfast.</p>
+</div>
+<h2 id="release-the-snacken">Release the Snacken<a class="headerlink" href="#release-the-snacken" title="Permanent link">⚓︎</a></h2>
+<p>The vending machine's name is a reference to <em>release the Kraken</em>. <a href="https://en.wikipedia.org/wiki/Kraken">The kraken</a> is a legendary sea monster of gigantic size and cephalopod-like appearance in Scandinavian folklore. The phrase comes from the 1981 movie The Clash of the Titans (and its 2010 remake) and is known for being a <a href="https://knowyourmeme.com/memes/release-the-kraken">meme</a> as well.</p>
+<h2 id="the-lollipop-guild">The Lollipop Guild<a class="headerlink" href="#the-lollipop-guild" title="Permanent link">⚓︎</a></h2>
+<p>The adversary group that Santa feared would attack KringleCon is a reference to <a href="https://www.youtube.com/watch?v=XBsf8qsxs2M">The Wizard of Oz</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XBsf8qsxs2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="naughtynice-reports">Naughty/Nice Reports<a class="headerlink" href="#naughtynice-reports" title="Permanent link">⚓︎</a></h2>
+<p>Dumping the reports from the <a href="../objectives/o11/">Naughty/Nice blockchain</a> provides for some hilarious reading. Quite the welcome distraction once you've spent some time on <a href="../objectives/o11/">objective 11</a> and <a href="../objectives/o12/">objective 12</a>. Below are just a few of examples from the 1547 reports.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #10830630836554719419</p>
+<p>Unbelievably, for the second time this year, I saw Shamicka leaving less than a swallow of orange juice in the container and putting it back into the refrigerator.</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #6203725506778794240</p>
+<p>For the second time this month, we spotted Morad referring to someone as "bro".</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #809598375456514384</p>
+<p>We've noticed that Chaquetta seems to be regularly discussing "The Bachelorette" as though it was actually something worthwhile.</p>
+</div>
+<p>Some reports noted some excellent behavior as well though. <img alt="👌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44c.svg" title=":ok_hand:" /></p>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #8151363711045738907</p>
+<p>Happily, for the second time this year, I saw Hadassah not allowing their IOT devices to be accessible from the internet.</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #6864795698547819664</p>
+<p>Maury was spotted running a marathon and not bragging about it to anyone twice today.</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Elf-on-the-shelf #12595432874979467172</p>
+<p>Three time now, Banjamin was seen being a vegan, but never making a big deal out of it.</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../hints/h11/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Snowball Fight
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 <a href="https://n00.be">Thomas Bouve</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/crahan" target="_blank" rel="noopener" title="CraHan on Twitter" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/crahan" target="_blank" rel="noopener" title="CraHan on GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.instagram.com/crahan/" target="_blank" rel="noopener" title="CraHan on Instagram" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'toc.integrate'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../js/tables.js"></script>
+      
+        <script src="../js/asciinema-player.js"></script>
+      
+    
+  </body>
+</html>
