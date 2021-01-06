@@ -63,9 +63,9 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
 
 ## Map & Directory
 
-No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the dark hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard. [Jason](./easter_eggs.md#jason), located next to the bucket on the scaffolding on the front lawn, was added to the directory as well.
+No matter how hard I'd try, my graphical skills would never be able to do justice to the amazing [ASCII art](https://www.asciiart.eu/) map that's already provided by the [Kringle Kiosk](./hints/h2.md). Without ASCII there'd be no write-up, so it's only appropriate to showcase this artistic gem! Two minor additions to the map are the dark hallway leading to [Santa's portrait](./easter_eggs.md#santas-portrait) and the hidden [Garden Party](./easter_eggs.md#garden-party) area near the courtyard.
 
-=== "Map"
+??? info "Map"
 
     ```
      __       _    --------------
@@ -107,38 +107,34 @@ No matter how hard I'd try, my graphical skills would never be able to do justic
                ----------
     ```
 
-=== "Directory"
+??? info "Directory"
 
-    !!! tip "Quick tip"
-        You can sort the table data by clicking on the table headers.
-
-    | Name                  | Floor | Room                   | Terminal Hint                          |
-    | :-------------------- | :---- | : -------------------- | :------------------------------------- | 
-    | Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h10.md)         |
-    | Noel Boetie           | 1     | Wrapping Room          | -                                      |
-    | Ginger Breddie        | 1     | Castle Entry           | -                                      | 
-    | Minty Candycane       | 1.5   | Workshop               | [Sort-o-Matic](./hints/h6.md)          |
-    | Angel Candysalt       | 1     | Great Room             | -                                      | 
-    | Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11.md)       |
-    | Bushy Evergreen       | 2     | Talks Lobby            | [Speaker UNPrep](./hints/h5a.md)       |
-    | Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        |
-    | Jason                 | -     | Front Lawn             | -                                      | 
-    | Bubble Lightington    | 1     | Courtyard              | -                                      | 
-    | Jewel Loggins         | -     | Front Lawn             | -                                      | 
-    | Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          |
-    | Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4.md)          |
-    | Bow Ninecandle        | 2     | Talks Lobby            | -                                      | 
-    | Morcel Nougat         | 2     | Speaker UNPreparedness | -                                      | 
-    | Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) |
-    | Sparkle Redberry      | 1     | Castle Entry           | -                                      | 
-    | Jingle Ringford       | -     | NJTP                   | -                                      | 
-    | Piney Sappington      | 1     | Castle Entry           | -                                      | 
-    | Chimney Scissorsticks | 2     | Talks Lobby            | -                                      | 
-    | Fitzy Shortstack      | 1     | Kitchen                | [33.6kbps](./hints/h5b.md)             |
-    | Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         |
-    | Eve Snowshoes         | 3     | Santa's Balcony        | -                                      | 
-    | Shinny Upatree        | -     | Front Lawn             | [Kringle Kiosk](./hints/h2.md)         |
-    | Tinsel Upatree        | 3     | Santa's Office         | -                                      | 
+    | Name                  | Floor | Room                   | Terminal Hint                          | Related Objective                               |
+    | :-------------------- | :---- | : -------------------- | :------------------------------------- | :---------------------------------------------- |
+    | Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h4b.md)         | [Operate Santavator](./objectives/o4.md)        |
+    | Noel Boetie           | 1     | Wrapping Room          | -                                      | [Tag Generator](./objectives/o8.md)             |
+    | Ginger Breddie        | 1     | Castle Entry           | -                                      | -                                               |
+    | Minty Candycane       | 1.5   | Workshop               | [Sort-o-Matic](./hints/h6.md)          | [Splunk Challenge](./objectives/o6.md)          |
+    | Angel Candysalt       | 1     | Great Room             | -                                      | [Splunk Challenge](./objectives/o6.md)          |
+    | Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11.md)       | [Naughty/Nice List Part 1](./objectives/o11.md) |
+    | Bushy Evergreen       | 2     | Talks Lobby            | [Speaker UNPrep](./hints/h5a.md)       | [Open HID Lock](./objectives/o5.md)             |
+    | Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        | [Tag Generator](./objectives/o8.md)             |
+    | Bubble Lightington    | 1     | Courtyard              | -                                      | -                                               |
+    | Jewel Loggins         | -     | Front Lawn             | -                                      | -                                               |
+    | Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          | [Password Recovery](./objectives/o3.md)         |
+    | Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4a.md)         | [Operate Santavator](./objectives/o4.md)        |
+    | Bow Ninecandle        | 2     | Talks Lobby            | -                                      | -                                               |
+    | Morcel Nougat         | 2     | Speaker UNPreparedness | -                                      | -                                               |
+    | Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) | [CAN-D-BUS](./objectives/o7.md)                 |
+    | Sparkle Redberry      | 1     | Castle Entry           | -                                      | [Operate Santavator](./objectives/o4.md)        |
+    | Jingle Ringford       | -     | NJTP                   | -                                      | [Gift List](./objectives/o1.md)                 |
+    | Piney Sappington      | 1     | Castle Entry           | -                                      | -                                               |
+    | Chimney Scissorsticks | 2     | Talks Lobby            | -                                      | -                                               |
+    | Fitzy Shortstack      | 1     | Kitchen                | [33.6kbps](./hints/h5b.md)             | [Open HID Lock](./objectives/o5.md)             |
+    | Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         | [ARP Shenanigans](./objectives/o9.md)           |
+    | Eve Snowshoes         | 3     | Santa's Balcony        | -                                      | -                                               |
+    | Shinny Upatree        | -     | Front Lawn             | [Kringle Kiosk](./hints/h2.md)         | [Investigate S3 Bucket](./objectives/o2.md)     |
+    | Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Fingerprint sensor](./objectives/o10.md)       |
 
 
 
