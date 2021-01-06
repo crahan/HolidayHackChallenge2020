@@ -32,12 +32,10 @@ extra:
       link: https://www.instagram.com/crahan/
       name: CraHan on Instagram
 extra_css:
-  - css/asciinema-player.css
   - css/extra.css
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - js/tables.js
-  - js/asciinema-player.js
 markdown_extensions:
   - abbr
   - attr_list

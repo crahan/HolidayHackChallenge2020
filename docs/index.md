@@ -12,7 +12,7 @@ A few additional things worth pointing out are the [reverse shell](./objectives/
 Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
 !!! note "50-page submission limit"
-    I understand there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams. To find a good middle ground between preventing information overload and creating something that can stand on its own as a learning resource some parts, like the *navigation tip* below, are collapsed by default. Skipping over these will not take away from understanding the solution, but feel free to click on these enties to expand them.
+    Each year there's a huge number of write-ups that need to be reviewed by the SANS and Counter Hack teams. To find a good middle ground between preventing information overload and creating a write-up that can stand on its own as a learning resource some parts, like the *navigation tip* below, are collapsed by default. Skipping over these will not take away from understanding the overall solution, but feel free to expand them to get some additional information.
 
 ??? tip "Navigation tip"
     Even with less than 50 pages, there's still quite a bit of information to read through. To make things a little easier, you can use ++"P"++ or ++","++ to go to the previous section, ++"N"++ or ++"."++ to navigate to the next section, and ++"S"++, ++"F"++, or ++"/"++ to open up the search dialog.
@@ -52,7 +52,7 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
     Tanta Kringle
 
 !!! done "10. Defeat Fingerprint Sensor - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    besanta
+    GOSHGOLLY
 
 !!! done "11. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
     57066318f32f729d
