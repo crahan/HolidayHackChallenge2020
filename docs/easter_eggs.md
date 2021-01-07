@@ -237,7 +237,7 @@ The adversary group that Santa feared would attack KringleCon is a reference to 
 
 ## Naughty/Nice Reports
 
-Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on [objective 11](./objectives/o11.md) and [objective 12](./objectives/o12.md). Below are just a few of examples from the 1547 reports.
+Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11a.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on [objective 11a](./objectives/o11a.md) and [objective 11b](./objectives/o11b.md). Below are just a few of examples from the 1547 reports.
 
 !!! quote "Elf-on-the-shelf #10830630836554719419"
     Unbelievably, for the second time this year, I saw Shamicka leaving less than a swallow of orange juice in the container and putting it back into the refrigerator.
