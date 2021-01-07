@@ -32,7 +32,7 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
     santapass
 
 !!! done "4. Operate the Santavator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    See [this example configuration](./img/objectives/o4/green_activated.png) using the hex nut found in front of the Santavator and the green light bulb found in the Courtyard.
+    Create a [working configuration](./img/objectives/o4/green_activated.png) using items found in the castle or [bypass](./objectives/o4.md) the stream.
 
 !!! done "5. Open HID Lock - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
     Use `lf hid sim -r 2006e22f13` to unlock the door using Shinny Upatree's badge information.
@@ -52,7 +52,7 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
     Tanta Kringle
 
 !!! done "10. Defeat Fingerprint Sensor - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    GOSHGOLLY
+    Use the *besanta* token. The first thing Tinsel Upatree says is *GOSHGOLLY*
 
 !!! done "11. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
     57066318f32f729d
