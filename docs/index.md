@@ -80,7 +80,7 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
 | Noel Boetie           | 1.5   | Wrapping Room          | -                                      | [Tag Generator](./objectives/o8.md)             |
 | Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         | [ARP Shenanigans](./objectives/o9.md)           |
 | Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Fingerprint sensor](./objectives/o10.md)       |
-| Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11.md)       | [Naughty/Nice List Part 1](./objectives/o11a.md) and [Part 2](./objectives/o11b.md)|
+| Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11a.md)       | [Naughty/Nice List Part 1](./objectives/o11a.md) and [Part 2](./objectives/o11b.md)|
 
 
 

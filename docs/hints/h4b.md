@@ -1,6 +1,6 @@
 # The Elf C0de
 
-**Elf**: Shinny Upatree<br/>
+**Elf**: Ribb Bonbowford<br/>
 **Objective**: [Operate the Santavator](../objectives/o4.md)
 
 ## Request
