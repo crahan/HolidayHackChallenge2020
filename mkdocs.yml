@@ -85,6 +85,6 @@ nav:
   - CAN-Bus Investigation: 'hints/h7.md'
   - Redis Bug Hunt:  'hints/h8.md'
   - Scapy Prepper: 'hints/h9.md'
-  - Snowball Fight: 'hints/h11.md'
+  - Snowball Fight: 'hints/h11a.md'
 - Easter Eggs: 'easter_eggs.md'
 - ASCII Map: 'map.md'
