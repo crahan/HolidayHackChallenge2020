@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print(f'First block has index {c2.blocks[0].index}')
     print(f'Last block has index {c2.blocks[-1].index}')
     
-    # dump all the nonces from the blockchain
+    # get the nonce values from the blocks
     nonce_list = []
     for block in c2.blocks:
         nonce_list.append(block.nonce)
