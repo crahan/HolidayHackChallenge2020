@@ -39,7 +39,7 @@ The New Jersey Turnpike also plays a key role in the movie [Being John Malkovich
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oY7F8m4fo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-A reference to *Zat You, Santa Claus?* by [Louis Armstrong](https://www.youtube.com/watch?v=f0oY7F8m4fo).
+A direct reference to the song *Zat You, Santa Claus?* by [Louis Armstrong](https://www.youtube.com/watch?v=f0oY7F8m4fo).
 
 
 ## Garden Party
@@ -126,18 +126,7 @@ Landscape paintings? Perfect segue into the next easter egg! :grinning:
 
 ![Artwork puzzle](./img/misc/artwork_puzzle.png)
 
-All the artwork spread across Santa's castle is cut from a single image. If you download all the textures from `https://2020.kringlecon.com/textures/art/f$i.png`, with `$i` ranging between 1 and 39, you can recreate a [Jack Frost painting](https://riseoftheguardians.fandom.com/wiki/Jack_Frost_(The_Guardians_of_Childhood)?file=JackFrost-PicBookWJ.jpg) by [Andrew Theophilopoulos](https://theonidas.artstation.com/). 
-
-```bash linenums="1"
-#!/usr/bin/env bash
-
-for i in {1..39}
-do
-    curl -s -O https://2020.kringlecon.com/textures/art/f$i.png
-done
-```
-
-Looks like Jack Frost replaced all the paintings with artwork of himself! :laughing:
+All the artwork spread across Santa's castle is cut from a single image. If you download all the textures from `https://2020.kringlecon.com/textures/art/f{1-39}.png`, you can recreate a [Jack Frost painting](https://riseoftheguardians.fandom.com/wiki/Jack_Frost_(The_Guardians_of_Childhood)?file=JackFrost-PicBookWJ.jpg) by [Andrew Theophilopoulos](https://theonidas.artstation.com/). Looks like Jack Frost replaced all the paintings with a piece of himself! Badum-TSS! :laughing:
 
 
 ## Proxmark Email

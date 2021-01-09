@@ -129,7 +129,7 @@ Trial and error tells us that the encrypted value of a character depends on the 
     pWFLz5zSWJ1YbNtlgophDlgKdTzAYdIdjOx0OoJ6JItvtUjtVXmFSQw4lCgPE6x7
     ```
 
-Both strings can now be used to decrypt the password by taking each character from the password, finding the 8-character block in *Encrypted* where this character is located at the same position as in the password, and using the character's overall position in the *Encrypted* string to retrieve the character at the same location in the *Plaintext* string.  [`decode_password.py`](../tools/hints/h5a/decode_password.py) helps to automate this process and decrypts the vending machines password stored in `/home/elf/vending-machines.json` to `CandyCane1`.
+Both strings can now be used to decrypt the password by taking each character from the password, finding the 8-character block in *Encrypted* where this character is located at the same position as in the password, and using the character's overall position in the *Encrypted* string to retrieve the character at the same location in the *Plaintext* string.  [`decode_password.py`](../tools/hints/h5a/decode_password.py) helps to automate this process and decrypts the password stored in `/home/elf/vending-machines.json` to `CandyCane1`. [Release the Snacken](../easter_eggs.md#release-the-snacken)! :popcorn:
 
 ```python linenums="1"
 def decrypt(passwd):
