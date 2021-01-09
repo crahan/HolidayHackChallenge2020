@@ -54,10 +54,10 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
 !!! done "10. Defeat Fingerprint Sensor - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
     Use the *besanta* token. The first thing Tinsel Upatree says is *GOSHGOLLY*
 
-!!! done "11. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
+!!! done "11a. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
     57066318f32f729d
 
-!!! done "12. Naughty/Nice List with Blockchain Investigation Part 2 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
+!!! done "11b. Naughty/Nice List with Blockchain Investigation Part 2 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
     fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb
 
 
