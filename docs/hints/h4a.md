@@ -24,7 +24,13 @@
 
 ## Solution
 
-Solution here...
+Listing the available Tmux sessions using `tmux list-sessions` reveals a single session.
+
+![List Tmux sessions](../img/hints/h4a/terminal.png)
+
+Attach the session using either `tmux a` or `tmux attach -t 0`.
+
+![List Tmux sessions](../img/hints/h4a/solution.png)
 
 
 ## Response
