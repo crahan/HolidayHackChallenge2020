@@ -3,10 +3,18 @@
 **Elf**: Fitzy Shortstack<br/>
 **Objective**: [Open HID Lock](../objectives/o5.md)
 
+
 ## Request
 
 ??? quote "Fitzy Shortstack"
     ...
+
+
+## Hints
+
+??? hint ""
+    ...
+
 
 ## Solution
 
