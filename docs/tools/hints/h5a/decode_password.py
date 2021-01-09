@@ -20,7 +20,7 @@ ENCRYPTED = (
 )
 
 def decrypt(passwd):
-    # each character has 8 possible encrypted versions depending on its position.
+    # each character has 8 possible encrypted variations depending on its position.
     decrypted = ''
     for position, char in enumerate(passwd):
         for idx in range(position%8, len(ENCRYPTED), 8):

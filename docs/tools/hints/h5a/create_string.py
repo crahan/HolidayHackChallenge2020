@@ -10,7 +10,7 @@ if __name__ == '__main__':
     for c in range(ord('A'), ord('Z')+1):
         str_ += chr(c)*8
 
-    # 0-9 repeated 8 times per char (0000000099999999...)
+    # 0-9 repeated 8 times per char (0000000011111111...)
     for c in range(ord('0'), ord('9')+1):
         str_ += chr(c)*8
 

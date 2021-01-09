@@ -131,17 +131,6 @@ Trial and error tells us that the encrypted value of a character depends on the 
 
 Both strings can now be used to decrypt the password by taking each character from the password, finding the 8-character block in *Encrypted* where this character is located at the same position as in the password, and using the character's overall position in the *Encrypted* string to retrieve the character at the same location in the *Plaintext* string.  [`decode_password.py`](../tools/hints/h5a/decode_password.py) helps to automate this process and decrypts the password stored in `/home/elf/vending-machines.json` to `CandyCane1`. [Release the Snacken](../easter_eggs.md#release-the-snacken)! :popcorn:
 
-```python linenums="1"
-def decrypt(passwd):
-    # each character has 8 possible encrypted versions depending on its position.
-    decrypted = ''
-    for position, char in enumerate(passwd):
-        for i in range(position%8, len(ENCRYPTED), 8):
-            if char == ENCRYPTED[i]:
-                decrypted += PLAINTEXT[i]
-    return(decrypted)
-```
-
 ![Vending machines on](../img/hints/h5a/vending_machines_on.png)
 
 !!! done "Answer"
