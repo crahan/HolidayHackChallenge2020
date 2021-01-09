@@ -1,12 +1,13 @@
 # The Elf C0de
 
 **Elf**: Ribb Bonbowford<br/>
+**Direct link**: [elfcode website](https://elfcode.kringlecastle.com/?challenge=elfcode&id=51d07db3-42ed-476e-a175-2d331eb19031)<br/>
 **Objective**: [Operate the Santavator](../objectives/o4.md)
 
 
 ## Request
 
-??? quote "Ribb Bonbowford"
+!!! quote "Ribb Bonbowford"
     ...
 
 
@@ -38,5 +39,5 @@ Solution here...
 
 ## Response
 
-??? quote "Ribb Bonbowford"
+!!! quote "Ribb Bonbowford"
     ...

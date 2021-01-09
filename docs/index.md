@@ -41,9 +41,9 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
     The Lollipop Guild
 
 !!! done "7. Solve the Sleigh's CAN-D-BUS Problem - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `19B Equals 0000000F2057`
-
     `080 Less 000000000000`
+
+    `19B Equals 0000000F2057`
 
 !!! done "8. Broken Tag Generator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star:"
     JackFrostWasHere

@@ -1,12 +1,13 @@
 # Speaker UNPrep
 
 **Elf**: Bushy Evergreen<br/>
+**Direct link**: [speaker terminal](https://docker2020.kringlecon.com/?challenge=speaker&id=245995c5-d1c7-4983-b8e2-5a59bc27e062)<br/>
 **Objective**: [Open HID Lock](../objectives/o5.md)
 
 
 ## Request
 
-??? quote "Bushy Evergreen"
+!!! quote "Bushy Evergreen"
     ...
 
 
@@ -29,5 +30,5 @@ Solution here...
 
 ## Response
 
-??? quote "Bushy Evergreen"
+!!! quote "Bushy Evergreen"
     ...
