@@ -672,7 +672,7 @@ Tangle Coalbox, in the Speaker UNPreparedness room. has been talking with attend
 <div class="admonition note">
 <p class="admonition-title">Two libraries, same outcome</p>
 <p>Tom Liston's <a href="https://github.com/tliston/mt19937"><code>mt19937.py</code></a> script is an implementation of a 32-bit MT19937 PRNG. The nonces in the <code>blockchain.dat</code> file however are 64-bit integers. A little bit of extra work is required to first convert the 64-bit nonces to 32-bit integers.</p>
-<p>An alternative 32-bit Mersenne Twister Python implementation which already supports multiples of 32-bit integer sizes is Kimiyuki Onaka's <a href="https://github.com/kmyk/mersenne-twister-predictor">mersenne-twister-predictor</a> library. The final <a href="../../tools/objectives/o11a/generate_nonce.py"><code>generate_nonce.py</code></a> script solves the challenge using both libraries to help explain how a 32-bit Mersenne Twister PRNG state can be recreated using 64-bit integers and how we can then use the PRNG to predict the next 64-bit values.</p>
+<p>An alternative 32-bit Mersenne Twister Python implementation which already supports multiples of 32-bit integer sizes is Kimiyuki Onaka's <a href="https://github.com/kmyk/mersenne-twister-predictor">mersenne-twister-predictor</a> library. The final <a href="../../tools/objectives/o11a/generate_nonce.py"><code>generate_nonce.py</code></a> script solves the challenge using both libraries to help explain how a 32-bit Mersenne Twister PRNG state can be recreated using 64-bit integers and how we can then use the 32-bit PRNG to predict the next 64-bit values.</p>
 </div>
 <p>Open the <code>blockchain.dat</code> file (line 3) and read all the nonce values into a list (lines 12-13).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -808,7 +808,7 @@ Tangle Coalbox, in the Speaker UNPreparedness room. has been talking with attend
 </code></pre></div>
 </td></tr></table>
 </div>
-<p>Run the script to verify that everything is working as intended.</p>
+<p>Run the <a href="../../tools/objectives/o11a/generate_nonce.py"><code>generate_nonce.py</code></a> script to verify that everything is working as intended.</p>
 <p><img alt="PRNG clone and verify" src="../../img/objectives/o11a/prng_clone_and_verify.png" /></p>
 <p>The 5 generated values from both cloned PRNGs match up with the 5 final nonce values from the <code>blockchain.dat</code> file. The final part of the script uses the <code>kmyk</code> (line 6) and <code>tliston</code> (line 8) PRNGs to predict the next 4 nonces up to block 130000.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
