@@ -65,21 +65,21 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
 
 | Name                  | Floor | Room                   | Terminal Hint                          | Related Objective                               |
 | :-------------------- | :---- | : -------------------- | :------------------------------------- | :---------------------------------------------- |
-| Jingle Ringford       | -     | NJTP                   | -                                      | [Gift List](./objectives/o1.md)                 |
+| Jingle Ringford       | -     | NJTP                   | -                                      | [Uncover Santa's Gift List](./objectives/o1.md)                 |
 | Shinny Upatree        | -     | Front Lawn             | [Kringle Kiosk](./hints/h2.md)         | [Investigate S3 Bucket](./objectives/o2.md)     |
-| Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          | [Password Recovery](./objectives/o3.md)         |
-| Sparkle Redberry      | 1     | Castle Entry           | -                                      | [Operate Santavator](./objectives/o4.md)        |
-| Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4a.md)         | [Operate Santavator](./objectives/o4.md)        |
-| Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h4b.md)         | [Operate Santavator](./objectives/o4.md)        |
+| Sugarplum Mary        | 1     | Courtyard              | [Linux Primer](./hints/h3.md)          | [PoS Password Recovery](./objectives/o3.md)         |
+| Sparkle Redberry      | 1     | Castle Entry           | -                                      | [Operate the Santavator](./objectives/o4.md)        |
+| Pepper Minstix        | -     | Front Lawn             | [Unscape Tmux](./hints/h4a.md)         | [Operate the Santavator](./objectives/o4.md)        |
+| Ribb Bonbowford       | 1     | Dining Room            | [The Elf C0de](./hints/h4b.md)         | [Operate the Santavator](./objectives/o4.md)        |
 | Bushy Evergreen       | 2     | Talks Lobby            | [Speaker UNPrep](./hints/h5a.md)       | [Open HID Lock](./objectives/o5.md)             |
 | Fitzy Shortstack      | 1     | Kitchen                | [33.6kbps](./hints/h5b.md)             | [Open HID Lock](./objectives/o5.md)             |
 | Angel Candysalt       | 1     | Great Room             | -                                      | [Splunk Challenge](./objectives/o6.md)          |
 | Minty Candycane       | 1.5   | Workshop               | [Sort-o-Matic](./hints/h6.md)          | [Splunk Challenge](./objectives/o6.md)          |
-| Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) | [CAN-D-BUS](./objectives/o7.md)                 |
-| Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        | [Tag Generator](./objectives/o8.md)             |
-| Noel Boetie           | 1.5   | Wrapping Room          | -                                      | [Tag Generator](./objectives/o8.md)             |
+| Wunorse Openslae      | R     | NetWars Room           | [CAN-Bus Investigation](./hints/h7.md) | [CAN-D-BUS Problem](./objectives/o7.md)                 |
+| Holly Evergreen       | 1     | Kitchen                | [Redis Bug Hunt](./hints/h8.md)        | [Broken Tag Generator](./objectives/o8.md)             |
+| Noel Boetie           | 1.5   | Wrapping Room          | -                                      | [Broken Tag Generator](./objectives/o8.md)             |
 | Alabaster Snowball    | R     | NetWars Room           | [Scapy Prepper](./hints/h9.md)         | [ARP Shenanigans](./objectives/o9.md)           |
-| Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Fingerprint sensor](./objectives/o10.md)       |
+| Tinsel Upatree        | 3     | Santa's Office         | -                                      | [Defeat Fingerprint sensor](./objectives/o10.md)       |
 | Tangle Coalbox        | 1     | Speaker UNPreparedness | [Snowball Fight](./hints/h11a.md)       | [Naughty/Nice List Part 1](./objectives/o11a.md) and [Part 2](./objectives/o11b.md)|
 
 
