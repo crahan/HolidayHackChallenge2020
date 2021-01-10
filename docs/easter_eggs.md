@@ -39,7 +39,7 @@ The New Jersey Turnpike also plays a key role in the movie [Being John Malkovich
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oY7F8m4fo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-A direct reference to the song *Zat You, Santa Claus?* by [Louis Armstrong](https://www.youtube.com/watch?v=f0oY7F8m4fo).
+A direct reference to the song [*Zat You, Santa Claus?*](https://www.youtube.com/watch?v=f0oY7F8m4fo) by Louis Armstrong.
 
 
 ## Garden Party
@@ -101,7 +101,7 @@ Jason himself actually [tweeted a hint](https://twitter.com/BanjoCrashland/statu
 
 ![Santa portrait items](./img/misc/santa_portrait_items.jpg)
 
-The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist daughter Jessica Skoudis (who is also mentioned in the final credits). The initials on the portrait not only refer to *Jack Frost: Santa*, as per the narrative, but are in fact Jessica's initials. The items on the desk are references to [past Holiday Hack Challenge events](https://holidayhackchallenge.com/past-challenges/).
+The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist daughter Jessica Skoudis (who is also mentioned in the final credits). The initials on the portrait not only refer to *Jack Frost: Santa*, as per the narrative, but are in fact Jessica's initials. The items on the desk are references to [past Holiday Hack Challenges](https://holidayhackchallenge.com/past-challenges/).
 
 | #  | Item           | Holiday Hack Challenge                                                                                              |
 | :- | :------------- | :-------------------------------------------------------------------------------------------------------------------|
@@ -114,7 +114,7 @@ The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist d
 
 ## Painting Peephole Trope
 
-Someone peering through the eyes of a painting is a [common TV trope](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole) and is used in a [lot of movies and TV series](https://www.youtube.com/watch?v=JGz_ymaGJPI). The Scooby-Doo animated series used it extensively, for example.
+Someone peering through the eyes of a painting is a [common TV trope](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole) and is used in a [lot of movies and TV series](https://www.youtube.com/watch?v=JGz_ymaGJPI).
 
 !!! quote "Scooby-Doo - TV Tropes"
     It was common for Scooby-Doo to feature a scene of the characters moving past a portrait with moving eyes. A series of Cartoon Network promos for the show titled Scooby-Doo: Behind the Scenes had the characters lampshading the trope in the final promo "Those Meddling Kids, Together Again" and Velma jokingly asking why weren't there any haunted houses with landscape paintings.
@@ -133,7 +133,7 @@ All the artwork spread across Santa's castle is cut from a single image. If you 
 
 ![Proxmark email](./img/misc/proxmark_email.png)
 
-In the Wrapping Room there's an email message hanging on the left wall from [Iceman](https://github.com/iceman1001), addressed to Chris Elgee.
+In the Wrapping Room there's an [email message](https://2020.kringlecon.com/textures/proxmark-email.png) hanging on the left wall from [Iceman](https://github.com/iceman1001), addressed to Chris Elgee.
 
 !!! abstract "Proxmark email"
     To: Chris Elgee<br/>
@@ -158,14 +158,14 @@ In the Wrapping Room there's an email message hanging on the left wall from [Ice
 
 Santa has a black conference badge which is a nod to the [DEF CON Black Badge](https://www.defcon.org/html/links/dc-black-badge.html).
 
-!!! abstract "DEF CON Black Badge"
+!!! quote "DEF CON Black Badge"
     The DEF CON Black Badge is a powerful talisman, awarded only to those who have emerged unbeaten from the crucible of elite DEF CON competition. Which competitions? The answer varies from year to year. This is in the nature of the talisman.  Those chosen by the Badge enter DEF CON free of charge for the duration of their natural life.
 
 ## Wilhelm Scream
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cdbYsoEasio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In the [33.6kbps Terminal challenge](./hints/h5b.md), the `SCHHRRHHRTHRTR` [sound](https://dialup.kringlecastle.com/audio/trn.mp3) uses the famous [Wilhelm Scream](https://www.youtube.com/watch?v=cdbYsoEasio).
+In the [33.6kbps](./hints/h5b.md) terminal challenge, the [*SCHHRRHHRTHRTR*](https://dialup.kringlecastle.com/audio/trn.mp3) sound uses the famous [Wilhelm Scream](https://www.youtube.com/watch?v=cdbYsoEasio).
 
 
 ## Snowball Fight Error
@@ -206,27 +206,22 @@ Jack Frost isn't the only one who likes to use the *Stay frosty* catchphrase. It
 !!! quote "Corporal Hicks - Aliens"
     Hey! I know we’re all in strung-out shape but stay frosty and alert. We can’t afford to let one of those bastards in here.
 
-Colonel Stars, played by Jim Carrey, also says it in [Kickass 2](https://www.imdb.com/title/tt1650554/).
-
-!!! quote "Colonel Stars - Kickass 2"
-    Stay frosty team. I used to eat punks like this for breakfast.
-
 
 ## Release the Snacken
 
-The vending machine's name is a reference to *release the Kraken*. [The kraken](https://en.wikipedia.org/wiki/Kraken) is a legendary sea monster of gigantic size and cephalopod-like appearance in Scandinavian folklore. The phrase comes from the 1981 movie The Clash of the Titans (and its 2010 remake) and is known for being a [meme](https://knowyourmeme.com/memes/release-the-kraken) as well.
+The vending machine's name is a reference to *release the Kraken*. The [kraken](https://en.wikipedia.org/wiki/Kraken) is a legendary sea monster of gigantic size and cephalopod-like appearance in Scandinavian folklore. The phrase comes from the 1981 movie The Clash of the Titans (and its 2010 remake) and is known for being a [meme](https://knowyourmeme.com/memes/release-the-kraken) as well.
 
 
 ## The Lollipop Guild
 
-The adversary group that Santa feared would attack KringleCon is a reference to [The Wizard of Oz](https://www.youtube.com/watch?v=XBsf8qsxs2M).
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XBsf8qsxs2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The adversary group that Santa feared would attack KringleCon is a reference to [The Wizard of Oz](https://www.youtube.com/watch?v=XBsf8qsxs2M).
 
 
 ## Naughty/Nice Reports
 
-Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11a.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on [objective 11a](./objectives/o11a.md) and [objective 11b](./objectives/o11b.md). Below are just a few of examples from the 1547 reports.
+Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11a.md) provides for some hilarious reading. Quite the welcome distraction once you've spent some time on the final objectives. Below are just a few examples from the 1547 + 1 available reports.
 
 !!! quote "Elf-on-the-shelf #10830630836554719419"
     Unbelievably, for the second time this year, I saw Shamicka leaving less than a swallow of orange juice in the container and putting it back into the refrigerator.
