@@ -114,7 +114,7 @@ The portrait features Ed Skoudis as Santa Claus and was painted by Ed's artist d
 
 ## Painting Peephole Trope
 
-Someone peering through the eyes of a painting is a [common TV trope](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole) and is used in a [lot of movies and TV series](https://www.youtube.com/watch?v=JGz_ymaGJPI). The Scooby-Doo animated series [used it extensively](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole), for example.
+Someone peering through the eyes of a painting is a [common TV trope](https://tvtropes.org/pmwiki/pmwiki.php/Main/PortraitPaintingPeephole) and is used in a [lot of movies and TV series](https://www.youtube.com/watch?v=JGz_ymaGJPI). The Scooby-Doo animated series used it extensively, for example.
 
 !!! quote "Scooby-Doo - TV Tropes"
     It was common for Scooby-Doo to feature a scene of the characters moving past a portrait with moving eyes. A series of Cartoon Network promos for the show titled Scooby-Doo: Behind the Scenes had the characters lampshading the trope in the final promo "Those Meddling Kids, Together Again" and Velma jokingly asking why weren't there any haunted houses with landscape paintings.
