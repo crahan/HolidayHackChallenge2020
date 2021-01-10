@@ -18,7 +18,7 @@
     
     
       
-        <title>S3 Bucket - 2020 SANS HHC Write-Up</title>
+        <title>Investigate S3 Bucket - 2020 SANS HHC Write-Up</title>
       
     
     
@@ -43,8 +43,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
     
@@ -102,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              S3 Bucket
+              Investigate S3 Bucket
             
           </span>
         </div>
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -244,12 +242,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        S3 Bucket
+        Investigate S3 Bucket
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
     
       
@@ -301,7 +299,7 @@
 
   <li class="md-nav__item">
     <a href="../o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -314,7 +312,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -327,7 +325,7 @@
 
   <li class="md-nav__item">
     <a href="../o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -340,7 +338,7 @@
 
   <li class="md-nav__item">
     <a href="../o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -353,7 +351,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -366,7 +364,7 @@
 
   <li class="md-nav__item">
     <a href="../o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -392,7 +390,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -404,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -417,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -589,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -613,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,30 +643,30 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h2/">Kringle Kiosk</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>When you unwrap the over-wrapped file, what text string is inside the package? Talk to Shinny Upatree in front of the castle for hints on this challenge.</p>
 </div>
-<details class="quote"><summary>Shinny Upatree</summary><p>Say, we've been having an issue with an Amazon S3 bucket.</p>
-<p>Do you think you could help find Santa's package file?</p>
-<p>Jeepers, it seems there's always a leaky bucket in the news. You'd think we could find our own files!</p>
-<p>Digininja has a great guide, if you're new to S3 searching.</p>
-<p>He even released a tool for the task - what a guy!</p>
-<p>The package wrapper Santa used is reversible, but it may take you some trying.</p>
-<p>Good luck, and thanks for pitching in!</p>
+<details class="quote"><summary>Shinny Upatree</summary><p>Say, we've been having an issue with an Amazon S3 bucket.<br/>
+Do you think you could help find Santa's package file?<br/>
+Jeepers, it seems there's always a leaky bucket in the news. You'd think we could find our own files!<br/>
+Digininja has a great guide, if you're new to S3 searching.<br/>
+He even released a tool for the task - what a guy!<br/>
+The package wrapper Santa used is reversible, but it may take you some trying.<br/>
+Good luck, and thanks for pitching in!</p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Find Santa's Package - Shinny Upatree</summary><p>Find Santa's package file from the cloud storage provider. Check Josh Wright's <a href="https://www.youtube.com/watch?v=t4UzXx5JHk0">talk</a> for more tips!</p>
+<details class="hint"><summary>Find Santa's Package</summary><p>Find Santa's package file from the cloud storage provider. Check Josh Wright's <a href="https://www.youtube.com/watch?v=t4UzXx5JHk0">talk</a> for more tips!</p>
 </details>
-<details class="hint"><summary>Santa's Wrapper3000 - Shinny Upatree</summary><p>Santa's Wrapper3000 is pretty buggy. It uses several compression tools, binary to ASCII conversion, and other tools to wrap packages.</p>
+<details class="hint"><summary>Santa's Wrapper3000</summary><p>Santa's Wrapper3000 is pretty buggy. It uses several compression tools, binary to ASCII conversion, and other tools to wrap packages.</p>
 </details>
-<details class="hint"><summary>Finding S3 Buckets - Shinny Upatree</summary><p>Robin Wood wrote up a guide about <a href="https://digi.ninja/blog/whats_in_amazons_buckets.php">finding these open S3 buckets</a>.</p>
+<details class="hint"><summary>Finding S3 Buckets</summary><p>Robin Wood wrote up a guide about <a href="https://digi.ninja/blog/whats_in_amazons_buckets.php">finding these open S3 buckets</a>.</p>
 </details>
-<details class="hint"><summary>Leaky AWS S3 Buckets - Shinny Upatree</summary><p>It seems like there's a new story every week about data exposed through unprotected <a href="https://www.computerweekly.com/news/252491842/Leaky-AWS-S3-bucket-once-again-at-centre-of-data-breach">Amazon S3 buckets</a>.</p>
+<details class="hint"><summary>Leaky AWS S3 Buckets</summary><p>It seems like there's a new story every week about data exposed through unprotected <a href="https://www.computerweekly.com/news/252491842/Leaky-AWS-S3-bucket-once-again-at-centre-of-data-breach">Amazon S3 buckets</a>.</p>
 </details>
-<details class="hint"><summary>Bucket_finder.rb - Shinny Upatree</summary><p>He even wrote a tool to <a href="https://digi.ninja/projects/bucket_finder.php">search for unprotected buckets</a>!</p>
+<details class="hint"><summary>Bucket_finder.rb</summary><p>He even wrote a tool to <a href="https://digi.ninja/projects/bucket_finder.php">search for unprotected buckets</a>!</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
-<p><img alt="Image" src="../../img/objectives/o2/o2_terminal1.png" /></p>
+<p><img alt="Greeting" src="../../img/objectives/o2/o2_terminal1.png" /></p>
 <details class="info"><summary>Updated greeting</summary><p>During the event the message displayed when opening the terminal was updated with some additional hints.</p>
 <div class="highlight"><pre><span></span><code>Hints: Use the file command to identify a file type. You can also examine
 tool help using the man command. Search all man pages for a string such as
@@ -665,8 +676,8 @@ To see this help again, run cat /etc/motd.
 </code></pre></div>
 </details>
 <p>First we need to find the S3 bucket that contains Santa's package file. Navigate to the <code>bucket_finder</code> folder which contains a <code>bucket_finder.rb</code> script and a sample <code>wordlist</code> with some sample bucket names. Running <code>bucket_finder.rb wordlist</code> will find some buckets, but none will be publicly accessible.</p>
-<p><img alt="Image" src="../../img/objectives/o2/o2_terminal2.png" /></p>
-<p>The message that's displayed when you first connect to the terminal conveniently highlights the <em>Wrapper3000</em> string, so add that to the <code>wordlist</code> file and execute the command <code>bucket_finder.rb wordlist --download</code>. This will not only check for publicly accessible S3 buckets matching the strings specified in the <code>wordlist</code> file, but it'll also download any files it comes across.</p>
+<p><img alt="Find S3 buckets" src="../../img/objectives/o2/o2_terminal2.png" /></p>
+<p>The welcome message displayed when you connect to the terminal highlights the <em>Wrapper3000</em> string, so add a couple of variations of the word to the <code>wordlist</code> file and execute the command <code>bucket_finder.rb wordlist --download</code>. This not only checks for publicly accessible S3 buckets matching the strings specified in the <code>wordlist</code> file, but also downloads the data.</p>
 <details class="caution"><summary>Be nice!</summary><p>During the event the <code>bucket_finder.rb</code> script was updated to limit the number of entries in the wordlist to 50.</p>
 <div class="highlight"><pre><span></span><code>HO HO HO
 The people at AWS are on the nice list this year! You shouldn&#39;t use such a long
@@ -675,7 +686,7 @@ small wordlist to find the missing bucket! Run &#39;cat /etc/motd&#39; to see it
 SANTA
 </code></pre></div>
 </details>
-<p><img alt="Image" src="../../img/objectives/o2/o2_terminal3.png" /></p>
+<p><img alt="S3 bucket found" src="../../img/objectives/o2/o2_terminal3.png" /></p>
 <p>Now that the <code>package</code> file has been <a href="../../artifacts/objectives/o2/package.txt">downloaded</a> to <code>/home/elf/bucket_finder/wrapper3000/package</code>, we can start the process of unpacking it. We first need to determine the file type though. Run <code>file package</code> which will tell you the contents of the file is <em>ASCII text, with very long lines</em>. <code>cat package</code> will show you the contents.</p>
 <div class="admonition abstract">
 <p class="admonition-title">/home/elf/bucket_finder/wrapper3000/package</p>
@@ -745,6 +756,7 @@ BQSwUGAAAAAAEAAQBiAAAA9QEAAAAA
 </tbody>
 </table>
 <p>Finally, after 7 steps, <code>cat package.txt</code> gives us the answer. <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
+<p><img alt="Answer" src="../../img/objectives/o2/o2_terminal4.png" /></p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
 <p>North Pole: The Frostiest Place on Earth</p>
@@ -776,7 +788,7 @@ BQSwUGAAAAAAEAAQBiAAAA9QEAAAAA
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Gift List
+                Uncover Santa's Gift List
               </div>
             </div>
           </a>
@@ -788,7 +800,7 @@ BQSwUGAAAAAAEAAQBiAAAA9QEAAAAA
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Password Recovery
+                PoS Password Recovery
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -857,8 +869,6 @@ BQSwUGAAAAAAEAAQBiAAAA9QEAAAAA
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

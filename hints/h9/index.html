@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -68,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#scapy-prepper" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -216,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -229,7 +232,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -242,7 +245,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -255,7 +258,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -268,7 +271,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -281,7 +284,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -294,7 +297,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -307,7 +310,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -333,7 +336,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -345,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o11/" class="md-nav__link">
+    <a href="../../objectives/o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -358,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o12/" class="md-nav__link">
+    <a href="../../objectives/o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -524,10 +527,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Scapy Prepper
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Scapy Prepper
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -539,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../h11/" class="md-nav__link">
+    <a href="../h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -563,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -576,9 +637,170 @@
               
                 
                 
-                  <h1>Scapy Prepper</h1>
-                
-                
+                <h1 id="scapy-prepper">Scapy Prepper<a class="headerlink" href="#scapy-prepper" title="Permanent link">⚓︎</a></h1>
+<p><strong>Elf</strong>: Alabaster Snowball<br/>
+<strong>Direct link</strong>: <a href="https://docker2020.kringlecon.com/?challenge=scapy&amp;id=6be34f0d-8ae4-41a6-a85b-d50624c5c19c">scapy terminal</a><br/>
+<strong>Objective</strong>: <a href="../../objectives/o9/">ARP Shenanigans</a></p>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Alabaster Snowball</p>
+<p>Welcome to the roof! Alabaster Snowball here.<br/>
+I'm watching some elves play NetWars!<br/>
+Feel free to try out our Scapy Present Packet Prepper!<br/>
+If you get stuck, you can <code>help()</code> to see how to get tasks and hints.</p>
+</div>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<details class="abstract"><summary>Welcome message</summary><div class="highlight"><pre><span></span><code>╔════════════════════════════════════════════════════════════════╗
+║  ___ ___ ___ ___ ___ _  _ _____   ___  _   ___ _  _____ _____  ║
+║ | _ \ _ \ __/ __| __| \| |_   _| | _ \/_\ / __| |/ / __|_   _| ║
+║ |  _/   / _|\__ \ _|| .` | | |   |  _/ _ \ (__| &#39; &lt;| _|  | |   ║
+║ |_| |_|_\___|___/___|_|\_| |_|   |_|/_/ \_\___|_|\_\___| |_|   ║
+║                ___                                             ║
+║               | _ \_ _ ___ _ __ _ __  ___ _ _                  ║
+║               |  _/ &#39;_/ -_) &#39;_ \ &#39;_ \/ -_) &#39;_|                 ║
+║               |_| |_| \___| .__/ .__/\___|_|                   ║
+║                           |_|  |_|                             ║
+║                (Packets prepared with scapy)                   ║
+╚════════════════════════════════════════════════════════════════╝
+Type &quot;yes&quot; to begin.
+</code></pre></div>
+</details>
+<p>Similar to how the <a href="../h3/">Linux Primer</a> helps you to learn some common shell commands, this challenge is meant to help you get acquainted with the inner workings of the <a href="https://scapy.net/">Scapy</a> Python library. Knowing how to use Scapy to inspect and create network packets will become important when solving the <a href="../../objectives/o9/">ARP Shenanigans</a> challenge.</p>
+<div class="admonition done">
+<p class="admonition-title">Question 1</p>
+<p>Welcome to the "Present Packet Prepper" interface! The North Pole could use your help preparing present packets for shipment.<br/>
+Start by running the <code>task.submit()</code> function passing in a string argument of 'start'.<br/>
+Type <code>task.help()</code> for help on this question.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 2</p>
+<p>Submit the class object of the scapy module that sends packets at layer 3 of the OSI model.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">send</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 3</p>
+<p>Submit the class object of the scapy module that sniffs network packets and returns those packets in a list.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">sniff</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 4</p>
+<p>Submit the NUMBER only from the choices below that would successfully send a TCP packet and then return the first sniffed response packet to be stored in a variable named <code>pkt</code>:</p>
+<ol>
+<li><code>pkt = sr1(IP(dst="127.0.0.1")/TCP(dport=20))</code></li>
+<li><code>pkt = sniff(IP(dst="127.0.0.1")/TCP(dport=20))</code></li>
+<li><code>pkt = sendp(IP(dst="127.0.0.1")/TCP(dport=20))</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 5</p>
+<p>Submit the class object of the scapy module that can read pcap or pcapng files and return a list of packets.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">rdpcap</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 6</p>
+<p>The variable <code>UDP_PACKETS</code> contains a list of UDP packets. Submit the NUMBER only from the choices below that correctly prints a summary of <code>UDP_PACKETS</code>:</p>
+<ol>
+<li><code>UDP_PACKETS.print()</code></li>
+<li><code>UDP_PACKETS.show()</code></li>
+<li><code>UDP_PACKETS.list()</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 7</p>
+<p>Submit only the first packet found in <code>UDP_PACKETS</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">UDP_PACKETS</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 8</p>
+<p>Submit only the entire TCP layer of the second packet in <code>TCP_PACKETS</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">TCP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">TCP</span><span class="p">])</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 9</p>
+<p>Change the source IP address of the first packet found in <code>UDP_PACKETS</code> to 127.0.0.1 and then submit this modified packet.</p>
+<div class="highlight"><pre><span></span><code><span class="n">UDP_PACKETS</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">IP</span><span class="p">]</span><span class="o">.</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span>
+<span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">UDP_PACKETS</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 10</p>
+<p>Submit the password <code>task.submit('elf_password')</code> of the user alabaster as found in the packet list <code>TCP_PACKETS</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">TCP_PACKETS</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">TCP_PACKETS</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">Raw</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">)</span>
+
+<span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="s1">&#39;echo&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 11</p>
+<p>The ICMP_PACKETS variable contains a packet list of several icmp echo-request and icmp echo-reply packets. Submit only the ICMP chksum value from the second packet in the <code>ICMP_PACKETS</code> list.</p>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">ICMP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">ICMP</span><span class="p">]</span><span class="o">.</span><span class="n">chksum</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 12</p>
+<p>Submit the number of the choice below that would correctly create a ICMP echo request packet with a destination IP of 127.0.0.1 stored in the variable named <code>pkt</code>:</p>
+<ol>
+<li><code>pkt = Ether(src='127.0.0.1')/ICMP(type="echo-request")</code></li>
+<li><code>pkt = IP(src='127.0.0.1')/ICMP(type="echo-reply")</code></li>
+<li><code>pkt = IP(dst='127.0.0.1')/ICMP(type="echo-request")</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 13</p>
+<p>Create and then submit a UDP packet with a dport of 5000 and a dst IP of 127.127.127.127. (all other packet attributes can be unspecified).</p>
+<div class="highlight"><pre><span></span><code><span class="n">packet</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">()</span><span class="o">/</span><span class="n">IP</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="s1">&#39;127.127.127.127&#39;</span><span class="p">)</span><span class="o">/</span><span class="n">UDP</span><span class="p">(</span><span class="n">dport</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 14</p>
+<p>Create and then submit a UDP packet with a <code>dport</code> of 53, a <code>dst</code> IP of 127.2.3.4, and is a DNS query with a <code>qname</code> of "elveslove.santa". (all other packet attributes can be unspecified).</p>
+<div class="highlight"><pre><span></span><code><span class="n">packet</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">()</span><span class="o">/</span><span class="n">IP</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="s1">&#39;127.2.3.4&#39;</span><span class="p">)</span><span class="o">/</span><span class="n">UDP</span><span class="p">(</span><span class="n">dport</span><span class="o">=</span><span class="mi">53</span><span class="p">)</span><span class="o">/</span><span class="n">DNS</span><span class="p">(</span><span class="n">qd</span><span class="o">=</span><span class="n">DNSQR</span><span class="p">(</span><span class="n">qname</span><span class="o">=</span><span class="s2">&quot;elveslove.santa&quot;</span><span class="p">))</span>
+<span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Question 15</p>
+<p>The variable <code>ARP_PACKETS</code> contains an ARP request and response packets. The ARP response (the second packet) has 3 incorrect fields in the ARP layer. Correct the second packet in <code>ARP_PACKETS</code> to be a proper ARP response and then task.<code>submit(ARP_PACKETS)</code> for inspection.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ARP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ARP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">op</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">ARP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span><span class="o">=</span><span class="s1">&#39;00:13:46:0b:22:ba&#39;</span>
+<span class="n">ARP_PACKETS</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwdst</span><span class="o">=</span><span class="s1">&#39;00:16:ce:6e:8b:24&#39;</span>
+<span class="n">task</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">ARP_PACKETS</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>After answering all questions correctly you'll be a certified <em>Scapy Present Packet Prepper</em> operator! <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
+<p><img alt="Completed" src="../../img/hints/h9/completed.png" /></p>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Alabaster Snowball</p>
+<p>Great job! Thanks!<br/>
+Those skills might be useful to you later on!<br/>
+I've been trying those skills out myself on this other terminal.<br/>
+I'm pretty sure I can use tcpdump to sniff some packets.<br/>
+Then I'm going to try a machine-in-the-middle attack.<br/>
+Next, I'll spoof a DNS response to point the host to my terminal.<br/>
+Then I want to respond to its HTTP request with something I'll cook up.<br/>
+I'm almost there, but I can't quite get it. I could use some help!<br/>
+For privacy reasons though, I can't let you access this other terminal.<br/>
+I do plan to ask Santa for a hand with it next time he's nearby, though.</p>
+</div>
                 
               
               
@@ -612,7 +834,7 @@
           </a>
         
         
-          <a href="../h11/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../h11a/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -687,8 +909,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

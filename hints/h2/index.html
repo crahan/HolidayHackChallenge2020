@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -68,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#kringle-kiosk" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -216,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -229,7 +232,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -242,7 +245,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -255,7 +258,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -268,7 +271,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -281,7 +284,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -294,7 +297,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -307,7 +310,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -333,7 +336,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -345,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o11/" class="md-nav__link">
+    <a href="../../objectives/o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -358,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o12/" class="md-nav__link">
+    <a href="../../objectives/o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -407,10 +410,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Kringle Kiosk
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Kringle Kiosk
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -539,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../h11/" class="md-nav__link">
+    <a href="../h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -563,6 +618,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -576,9 +644,88 @@
               
                 
                 
-                  <h1>Kringle Kiosk</h1>
-                
-                
+                <h1 id="kringle-kiosk">Kringle Kiosk<a class="headerlink" href="#kringle-kiosk" title="Permanent link">⚓︎</a></h1>
+<p><strong>Elf</strong>: Shinny Upatree<br/>
+<strong>Direct link</strong>: <a href="https://docker2020.kringlecon.com/?challenge=shell&amp;id=4f2daf97-8808-4e06-a007-54e0c2463bed">shell terminal</a><br/>
+<strong>Objective</strong>: <a href="../../objectives/o2/">Investigate S3 Bucket</a></p>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Shinny Upatree</p>
+<p>Hiya hiya - I'm Shinny Upatree!<br/>
+Check out this cool KringleCon kiosk!<br/>
+You can get a map of the castle, learn about where the elves are, and get your own badge printed right on-screen!<br/>
+Be careful with that last one though. I heard someone say it's "ingestible." Or something...<br/>
+Do you think you could check and see if there is an issue?</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="hint"><summary>Command Injection</summary><p>There's probably some kind of <a href="https://owasp.org/www-community/attacks/Command_Injection">command injection</a> vulnerability in the menu terminal.</p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<details class="abstract"><summary>Welcome message</summary><div class="highlight"><pre><span></span><code>Welcome to our castle, we&#39;re so glad to have you with us!
+Come and browse the kiosk; though our app&#39;s a bit suspicious.
+Poke around, try running bash, please try to come discover,
+Need our devs who made our app pull/patch to help recover?
+
+Escape the menu by launching /bin/bash
+
+Press enter to continue...
+</code></pre></div>
+</details>
+<p>The objective is to escape the menu and run <code>/bin/bash</code>. Shinny hints at the badge printer being problematic so open that menu option. Completely ignore the warning about special characters and enter a few anyway. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<p><img alt="Ignore warning" src="../../img/hints/h2/ignore_warning.png" /></p>
+<p>It looks like our text is used unmodified as the input for <code>/usr/games/cowsay</code>. Leverage this vulnerability by adding a <code>;</code> to end the <code>cowsay</code> command and then run the <code>/bin/bash</code> as requested in the welcome message.</p>
+<p><img alt="Solution" src="../../img/hints/h2/solution.png" /></p>
+<div class="admonition done">
+<p class="admonition-title">Answer</p>
+<p>Enter <code>;/bin/bash</code> as your badge name.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Finding Jason!</p>
+<p>The <code>/home/shinny/welcome.sh</code> script contains a hidden <code>plant</code> menu option (line 11) which will display the contents of <code>/opt/plant.txt</code>. There's an additional ASCII image of a mailbox at <code>/opt/mailbox.txt</code> but that file isn't used in the menu script.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># read input from the keyboard and take a action</span>
+read_options<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local</span> choice
+  <span class="nb">read</span> -r -p <span class="s2">&quot;Enter choice [1 - 5] &quot;</span> choice
+  <span class="k">case</span> <span class="nv">$choice</span> in
+  <span class="m">1</span>*<span class="o">)</span> one <span class="p">;;</span>
+  <span class="m">2</span>*<span class="o">)</span> two <span class="p">;;</span>
+  <span class="m">3</span>*<span class="o">)</span> three <span class="p">;;</span>
+  <span class="m">4</span>*<span class="o">)</span> four <span class="nv">$choice</span> <span class="p">;;</span>
+  <span class="m">1</span><span class="o">)</span> <span class="nb">exit</span> <span class="m">0</span> <span class="p">;;</span>
+<span class="hll">  plant<span class="o">)</span> surprise c<span class="p">;;</span>
+</span>  *<span class="o">)</span> <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RED</span><span class="si">}</span><span class="s2">Error...</span><span class="si">${</span><span class="nv">STD</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> sleep <span class="m">2</span> <span class="p">;;</span>
+  <span class="k">esac</span>
+<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Oh hi, <a href="../../easter_eggs/#jason">Jason</a>! <img alt="😛" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f61b.svg" title=":stuck_out_tongue:" /></p>
+<p><img alt="Jason the Plant" src="../../img/hints/h2/jason.png" /></p>
+</div>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Shinny Upatree</p>
+<p>Golly - wow! You sure found the flaw for us!<br/>
+Say, we've been having an issue with an Amazon S3 bucket.<br/>
+Do you think you could help find Santa's package file?<br/>
+Jeepers, it seems there's always a leaky bucket in the news. You'd think we could find our own files!<br/>
+Digininja has a great guide, if you're new to S3 searching.<br/>
+He even released a tool for the task - what a guy!<br/>
+The package wrapper Santa used is reversible, but it may take you some trying.<br/>
+Good luck, and thanks for pitching in!</p>
+</div>
                 
               
               
@@ -597,7 +744,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../objectives/o12/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../objectives/o11b/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -687,8 +834,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

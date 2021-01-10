@@ -1,0 +1,857 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Thomas Bouve">
+      
+      
+        <link rel="canonical" href="https://n00.be/HolidayHackChallenge2020/objectives/o11b/">
+      
+      <link rel="shortcut icon" href="../../img/misc/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Naughty/Nice List Pt.2 - 2020 SANS HHC Write-Up</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#naughtynice-list-with-blockchain-investigation-part-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://n00.be/HolidayHackChallenge2020/" title="2020 SANS HHC Write-Up" class="md-header-nav__button md-logo" aria-label="2020 SANS HHC Write-Up">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M440.1 355.2l-39.2-23 34.1-9.3c8.4-2.3 13.4-11.1 11.1-19.6l-4.1-15.5c-2.2-8.5-10.9-13.6-19.3-11.3L343 298.2 271.2 256l71.9-42.2 79.7 21.7c8.4 2.3 17-2.8 19.3-11.3l4.1-15.5c2.2-8.5-2.7-17.3-11.1-19.6l-34.1-9.3 39.2-23c7.5-4.4 10.1-14.2 5.8-21.9l-7.9-13.9c-4.3-7.7-14-10.3-21.5-5.9l-39.2 23 9.1-34.7c2.2-8.5-2.7-17.3-11.1-19.6l-15.2-4.1c-8.4-2.3-17 2.8-19.3 11.3l-21.3 81-71.9 42.2v-84.5L306 70.4c6.1-6.2 6.1-16.4 0-22.6l-11.1-11.3c-6.1-6.2-16.1-6.2-22.2 0l-24.9 25.4V16c0-8.8-7-16-15.7-16h-15.7c-8.7 0-15.7 7.2-15.7 16v46.1l-24.9-25.4c-6.1-6.2-16.1-6.2-22.2 0L142.1 48c-6.1 6.2-6.1 16.4 0 22.6l58.3 59.3v84.5l-71.9-42.2-21.3-81c-2.2-8.5-10.9-13.6-19.3-11.3L72.7 84c-8.4 2.3-13.4 11.1-11.1 19.6l9.1 34.7-39.2-23c-7.5-4.4-17.1-1.8-21.5 5.9l-7.9 13.9c-4.3 7.7-1.8 17.4 5.8 21.9l39.2 23-34.1 9.1c-8.4 2.3-13.4 11.1-11.1 19.6L6 224.2c2.2 8.5 10.9 13.6 19.3 11.3l79.7-21.7 71.9 42.2-71.9 42.2-79.7-21.7c-8.4-2.3-17 2.8-19.3 11.3l-4.1 15.5c-2.2 8.5 2.7 17.3 11.1 19.6l34.1 9.3-39.2 23c-7.5 4.4-10.1 14.2-5.8 21.9L10 391c4.3 7.7 14 10.3 21.5 5.9l39.2-23-9.1 34.7c-2.2 8.5 2.7 17.3 11.1 19.6l15.2 4.1c8.4 2.3 17-2.8 19.3-11.3l21.3-81 71.9-42.2v84.5l-58.3 59.3c-6.1 6.2-6.1 16.4 0 22.6l11.1 11.3c6.1 6.2 16.1 6.2 22.2 0l24.9-25.4V496c0 8.8 7 16 15.7 16h15.7c8.7 0 15.7-7.2 15.7-16v-46.1l24.9 25.4c6.1 6.2 16.1 6.2 22.2 0l11.1-11.3c6.1-6.2 6.1-16.4 0-22.6l-58.3-59.3v-84.5l71.9 42.2 21.3 81c2.2 8.5 10.9 13.6 19.3 11.3L375 428c8.4-2.3 13.4-11.1 11.1-19.6l-9.1-34.7 39.2 23c7.5 4.4 17.1 1.8 21.5-5.9l7.9-13.9c4.6-7.5 2.1-17.3-5.5-21.7z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            2020 SANS HHC Write-Up
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Naughty/Nice List Pt.2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://n00.be/HolidayHackChallenge2020/" title="2020 SANS HHC Write-Up" class="md-nav__button md-logo" aria-label="2020 SANS HHC Write-Up">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M440.1 355.2l-39.2-23 34.1-9.3c8.4-2.3 13.4-11.1 11.1-19.6l-4.1-15.5c-2.2-8.5-10.9-13.6-19.3-11.3L343 298.2 271.2 256l71.9-42.2 79.7 21.7c8.4 2.3 17-2.8 19.3-11.3l4.1-15.5c2.2-8.5-2.7-17.3-11.1-19.6l-34.1-9.3 39.2-23c7.5-4.4 10.1-14.2 5.8-21.9l-7.9-13.9c-4.3-7.7-14-10.3-21.5-5.9l-39.2 23 9.1-34.7c2.2-8.5-2.7-17.3-11.1-19.6l-15.2-4.1c-8.4-2.3-17 2.8-19.3 11.3l-21.3 81-71.9 42.2v-84.5L306 70.4c6.1-6.2 6.1-16.4 0-22.6l-11.1-11.3c-6.1-6.2-16.1-6.2-22.2 0l-24.9 25.4V16c0-8.8-7-16-15.7-16h-15.7c-8.7 0-15.7 7.2-15.7 16v46.1l-24.9-25.4c-6.1-6.2-16.1-6.2-22.2 0L142.1 48c-6.1 6.2-6.1 16.4 0 22.6l58.3 59.3v84.5l-71.9-42.2-21.3-81c-2.2-8.5-10.9-13.6-19.3-11.3L72.7 84c-8.4 2.3-13.4 11.1-11.1 19.6l9.1 34.7-39.2-23c-7.5-4.4-17.1-1.8-21.5 5.9l-7.9 13.9c-4.3 7.7-1.8 17.4 5.8 21.9l39.2 23-34.1 9.1c-8.4 2.3-13.4 11.1-11.1 19.6L6 224.2c2.2 8.5 10.9 13.6 19.3 11.3l79.7-21.7 71.9 42.2-71.9 42.2-79.7-21.7c-8.4-2.3-17 2.8-19.3 11.3l-4.1 15.5c-2.2 8.5 2.7 17.3 11.1 19.6l34.1 9.3-39.2 23c-7.5 4.4-10.1 14.2-5.8 21.9L10 391c4.3 7.7 14 10.3 21.5 5.9l39.2-23-9.1 34.7c-2.2 8.5 2.7 17.3 11.1 19.6l15.2 4.1c8.4 2.3 17-2.8 19.3-11.3l21.3-81 71.9-42.2v84.5l-58.3 59.3c-6.1 6.2-6.1 16.4 0 22.6l11.1 11.3c6.1 6.2 16.1 6.2 22.2 0l24.9-25.4V496c0 8.8 7 16 15.7 16h15.7c8.7 0 15.7-7.2 15.7-16v-46.1l24.9 25.4c6.1 6.2 16.1 6.2 22.2 0l11.1-11.3c6.1-6.2 6.1-16.4 0-22.6l-58.3-59.3v-84.5l71.9 42.2 21.3 81c2.2 8.5 10.9 13.6 19.3 11.3L375 428c8.4-2.3 13.4-11.1 11.1-19.6l-9.1-34.7 39.2 23c7.5 4.4 17.1 1.8 21.5-5.9l7.9-13.9c4.6-7.5 2.1-17.3-5.5-21.7z"/></svg>
+
+    </a>
+    2020 SANS HHC Write-Up
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Objectives
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Objectives" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Objectives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o1/" class="md-nav__link">
+      Uncover Santa's Gift List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o2/" class="md-nav__link">
+      Investigate S3 Bucket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o3/" class="md-nav__link">
+      PoS Password Recovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o4/" class="md-nav__link">
+      Operate the Santavator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o5/" class="md-nav__link">
+      Open HID Lock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o6/" class="md-nav__link">
+      Splunk Challenge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o7/" class="md-nav__link">
+      CAN-D-BUS Problem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o8/" class="md-nav__link">
+      Broken Tag Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o9/" class="md-nav__link">
+      ARP Shenanigans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o10/" class="md-nav__link">
+      Defeat Fingerprint Sensor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../o11a/" class="md-nav__link">
+      Naughty/Nice List Pt.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Naughty/Nice List Pt.2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Naughty/Nice List Pt.2
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Terminal Hints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Terminal Hints" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Terminal Hints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h2/" class="md-nav__link">
+      Kringle Kiosk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h3/" class="md-nav__link">
+      Linux Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h4a/" class="md-nav__link">
+      Unscape Tmux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h4b/" class="md-nav__link">
+      The Elf C0de
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h5a/" class="md-nav__link">
+      Speaker UNPrep
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h5b/" class="md-nav__link">
+      33.6kbps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h6/" class="md-nav__link">
+      Sort-o-Matic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h7/" class="md-nav__link">
+      CAN-Bus Investigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h8/" class="md-nav__link">
+      Redis Bug Hunt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h9/" class="md-nav__link">
+      Scapy Prepper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../hints/h11a/" class="md-nav__link">
+      Snowball Fight
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../easter_eggs/" class="md-nav__link">
+      Easter Eggs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="naughtynice-list-with-blockchain-investigation-part-2">Naughty/Nice List with Blockchain Investigation Part 2<a class="headerlink" href="#naughtynice-list-with-blockchain-investigation-part-2" title="Permanent link">⚓︎</a></h1>
+<p><strong>Difficulty</strong>: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></span><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></span><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></span><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></span><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></span><br/>
+<strong>Direct link</strong>: <a href="../../artifacts/objectives/o11a/blockchain.dat">blockchain.dat</a><br/>
+<strong>Terminal hint</strong>: <a href="../../hints/h11a/">Snowball Fight</a></p>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Request</p>
+<p>The SHA256 of Jack's altered block is: 58a3b9335a6ceb0234c12d35a0564c4e f0e90152d0eb2ce2082383b38028a90f. If you're clever, you can recreate the original version of that block by changing the values of only 4 bytes. Once you've recreated the original block, what is the SHA256 of that block?</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="hint"><summary>Imposter Block Event</summary><p>Shinny Upatree swears that he doesn't remember writing the contents of the document found in that block. Maybe looking closely at the documents, you might find something interesting.</p>
+</details>
+<details class="hint"><summary>Unique Hash Collision</summary><p>If Jack was somehow able to change the contents of the block AND the document without changing the hash... that would require a very <a href="https://github.com/cr-marcstevens/hashclash">UNIque hash COLLision</a>.</p>
+</details>
+<details class="hint"><summary>Blockchain ... Chaining</summary><p>A blockchain works by "chaining" blocks together - each new block includes a hash of the previous block. That previous hash value is included in the data that is hashed - and that hash value will be in the next block. So there's no way that Jack could change an existing block without it messing up the chain...</p>
+</details>
+<details class="hint"><summary>Minimal Changes</summary><p>Apparently Jack was able to change just 4 bytes in the block to completely change everything about it. It's like some sort of <a href="https://speakerdeck.com/ange/colltris">evil game</a> to him.</p>
+</details>
+<details class="hint"><summary>Block Investigation</summary><p>The idea that Jack could somehow change the data in a block without invalidating the whole chain just collides with the concept of hashes and blockchains. While there's no way it could happen, maybe if you look at the block that seems like it got changed, it might help.</p>
+</details>
+<details class="hint"><summary>Blockchain Talk</summary><p>Qwerty Petabyte is giving <a href="https://www.youtube.com/watch?v=7rLMl88p-ec">a talk</a> about blockchain tomfoolery!</p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Understanding the Naughty/Nice Blockchain format</p>
+<p>Professor Qwerty Petabyte <a href="https://www.youtube.com/watch?v=7rLMl88p-ec">explains the architecture</a> and technical background of the Naughty/Nice Blockchain in great detail but two key points to remember are (1) that each block in the blockchain contains the MD5 hash of the previous signed block data (i.e., block data + signature) and (2) that the signature is created based on the MD5 of the block data.</p>
+</div>
+<h3>Dumping the block</h3>
+<p>Before determining what exactly happened to Jack's altered block we first need to find it and save the signed block data to a file. Grab the <a href="https://download.holidayhackchallenge.com/2020/blockchain.dat"><code>blockchain.dat</code></a> file from the desk in Santa's office and the <code>naughty_nice.py</code> script from the <a href="https://download.holidayhackchallenge.com/2020/OfficialNaughtyNiceBlockchainEducationPack.zip">official Naughty/Nice Blockchain education pack</a>. We need the latter to read the <code>blockchain.dat</code> file and export block data to a file.</p>
+<p>Use <a href="../../tools/objectives/o11b/dump_block.py"><code>dump_blocks.py</code></a> to load the <code>blockchain.dat</code> file, find the block with the matching SHA256 value, print the block details, and save the signed block data and any attached documents to <a href="../../artifacts/objectives/o11b/129459.dat"><code>129459.dat</code></a>, <a href="../../artifacts/objectives/o11b/129459.pdf"><code>129459.pdf</code></a>, and <a href="../../artifacts/objectives/o11b/129459.bin"><code>129459.bin</code></a>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Chain Index: 129459
+              Nonce: a9447e5771c704f4
+                PID: 0000000000012fd1
+                RID: 000000000000020f
+     Document Count: 2
+<span class="hll">              Score: ffffffff (4294967295)
+</span><span class="hll">               Sign: 1 (Nice)
+</span>         Data item: 1
+               Data Type: ff (Binary blob)
+             Data Length: 0000006c
+                    Data: b&#39;ea465340303a6079d3df2762be68467c27f...&#39;
+         Data item: 2
+<span class="hll">               Data Type: 05 (PDF)
+</span><span class="hll">             Data Length: 00009f57
+</span><span class="hll">                    Data: b&#39;255044462d312e330a2525c1cec7c5210a0...&#39;
+</span>               Date: 03/24
+               Time: 13:21:41
+       PreviousHash: 4a91947439046c2dbaa96db38e924665
+  Data Hash to Sign: 347979fece8d403e06f89f8633b5231a
+          Signature: b&#39;MJIxJy2iFXJRCN1EwDsqO9NzE2Dq1qlvZuFFlljm...&#39;
+</code></pre></div>
+</td></tr></table>
+<p>The block data contains the highest possible nice score (lines 6-7) and a <a href="../../artifacts/objectives/o11b/129459.pdf">glowing PDF report</a> about Jack Frost (lines 13-15). Any tampering with the blockchain should cause a verification failure, which it doesn't. It seems like the MD5 hash of the unsigned block data, the signature, and the md5 hash of the signed block data didn't change at all. More on that later.</p>
+<p>The objective also mentions that only 4 bytes were modified. The <code>sign</code> field, which indicates if the score is naughty or nice, only takes up 1 byte. Replacing a whole PDF file would requires far more than the remaining 3 bytes.</p>
+<h3>Manipulating the PDF</h3>
+<p>In reality, the PDF document wasn't replaced at all. It <a href="https://github.com/corkami/collisions#pdf">already contained</a> both the <a href="../../artifacts/objectives/o11b/129459_orig.pdf">scathing report</a> and its <a href="../../artifacts/objectives/o11b/129459.pdf">glowing alternative</a> prior to being added to the blockchain. You can toggle between both versions by changing the object the PDF catalog points to. The default value of <em>2</em> will display the nice content. Changing the value to <em>3</em> will render the PDF starting from a different object tree and show the original report which is far less positive. <img alt="😏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60f.svg" title=":smirk:" /></p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Modified PDF</label><div class="tabbed-content">
+<p><img alt="Modified PDF" class="border" src="../../img/objectives/o11b/pdf_modified.png" /></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Original PDF</label><div class="tabbed-content">
+<p><img alt="Original PDF" class="border" src="../../img/objectives/o11b/pdf_original.png" /></p>
+</div>
+</div>
+<h3>Enter... hash collissions!</h3>
+<p>While it's now clear what was changed, we still need to find 2 of the 4 modified bytes and explain how changing the <code>sign</code> from <em>0</em> to <em>1</em> and the PDF catalog from <em>3</em> to <em>2</em> didn't change the MD5 hash of the data, triggering a verification failure of the blockchain as a result. That's where hash collisions, and more specifically <a href="https://speakerdeck.com/ange/colltris?slide=101">UniColl</a>, come into the picture.</p>
+<p><img alt="UniColl" class="border" src="../../img/objectives/o11b/unicoll_slide.png" /></p>
+<p>Using a UniColl hash collision, 2 sets of data can be created which share the same MD5 yet differ by 2 bytes. While the location of these 2 bytes is predefined (i.e. the 10th char of the prefix and the 10th char of the 2nd block) adding redundant data to the prefix ensures the data we want to modify neatly aligns with the location of the first byte. That's why the PDF catalog entry is set to <code>&lt;&lt;/Type/Catalog/_Go_Away/Santa/Pages 2 0 R</code> instead of <code>&lt;&lt;/Type/Catalog/Pages 2 0 R</code>. The <code>_Go_Away/Santa/</code> part was added to align the catalog reference with the first collision byte. Jack got lucky with the <code>sign</code> value as the block's data structure puts that byte in the expected location out of the box. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<p>A second important characteristic of a UniColl hash collision is that the way both bytes change is predefined as well. The 10th byte of the prefix will either be +1 or -1, while the 10th byte of the second block will change by the same amount but in the other direction. In other words, increasing <code>sign</code> from 0 to 1 requires the 10th byte of the second block to decrease by 1.</p>
+<h3>Recreating the original block</h3>
+<p>We can now modify the signed data block we extracted from the blockchain and revert it to the state it was in when Shinny Upatree was tricked into adding Jack's tampered PDF to the blockchain. The below images show the locations and values of the 2 collision bytes for both the <code>sign</code> field and the PDF catalog entry. The tampered version of the signed block data (i.e., <a href="../../artifacts/objectives/o11b/129459.dat"><code>129459.dat</code></a>) is shown at the top while the pre-tamper original is shown on the bottom (i.e., <a href="../../artifacts/objectives/o11b/129459_orig.dat"><code>129459_orig.dat</code></a>).</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">First UniColl collision (sign)</label><div class="tabbed-content">
+<p><img alt="sign UniColl collision" src="../../img/objectives/o11b/unicoll_sign.png" /></p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Second UniColl collision (PDF catalog)</label><div class="tabbed-content">
+<p><img alt="PDF catalog UniColl collision" src="../../img/objectives/o11b/unicoll_pdf.png" /></p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">What about the signature?</p>
+<p>Because of the UniColl hash collisions the MD5 hash of the unsigned block data remains the same regardless of the the 4-byte change. This causes the signature to remain valid as it's created using the MD5 hash of the unsigned block data. As the signature is <a href="https://speakerdeck.com/ange/colltris?slide=79">appended at the end</a> of the unsigned block data, the MD5 of the signed block data (which is stored as part of the next block in the chain) remains the same as well.</p>
+</div>
+<p>Finally, calculate the SHA256 of the original signed block data.</p>
+<p><img alt="Calculate hashes" src="../../img/objectives/o11b/hashes.png" /></p>
+<div class="admonition done">
+<p class="admonition-title">Answer</p>
+<p>fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../o11a/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Naughty/Nice List Pt.1
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../hints/h2/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Kringle Kiosk
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 <a href="https://n00.be">Thomas Bouve</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/crahan" target="_blank" rel="noopener" title="CraHan on Twitter" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/crahan" target="_blank" rel="noopener" title="CraHan on GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.instagram.com/crahan/" target="_blank" rel="noopener" title="CraHan on Instagram" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.instant', 'toc.integrate'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../js/tables.js"></script>
+      
+    
+  </body>
+</html>

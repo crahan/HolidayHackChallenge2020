@@ -18,7 +18,7 @@
     
     
       
-        <title>Splunk - 2020 SANS HHC Write-Up</title>
+        <title>Splunk Challenge - 2020 SANS HHC Write-Up</title>
       
     
     
@@ -43,8 +43,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
     
@@ -102,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Splunk
+              Splunk Challenge
             
           </span>
         </div>
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -236,7 +234,7 @@
 
   <li class="md-nav__item">
     <a href="../o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -249,7 +247,7 @@
 
   <li class="md-nav__item">
     <a href="../o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -262,7 +260,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -275,7 +273,7 @@
 
   <li class="md-nav__item">
     <a href="../o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -296,12 +294,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Splunk
+        Splunk Challenge
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Splunk
+      Splunk Challenge
     </a>
     
       
@@ -353,7 +351,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -366,7 +364,7 @@
 
   <li class="md-nav__item">
     <a href="../o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -392,7 +390,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -404,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -417,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -589,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -613,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,18 +643,18 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h6/">Sort-o-Matic</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>Access the Splunk terminal in the Great Room. What is the name of the adversary group that Santa feared would attack KringleCon?</p>
 </div>
-<details class="quote"><summary>Angel Candysalt</summary><p>Hey Santa, there’s some crazy stuff going on that we can see through our Splunk infrastructure.</p>
-<p>You better login and see what’s up.</p>
+<details class="quote"><summary>Angel Candysalt</summary><p>Hey Santa, there’s some crazy stuff going on that we can see through our Splunk infrastructure.<br/>
+You better login and see what’s up.</p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Adversary Emulation and Splunk - Minty Candycane</summary><p>Dave Herrald talks about emulating advanced adversaries and <a href="https://www.youtube.com/watch?v=RxVgEFt08kU">hunting them with Splunk</a>.</p>
+<details class="hint"><summary>Adversary Emulation and Splunk</summary><p>Dave Herrald talks about emulating advanced adversaries and <a href="https://www.youtube.com/watch?v=RxVgEFt08kU">hunting them with Splunk</a>.</p>
 </details>
-<details class="hint"><summary>Splunk Basics - Minty Candycane</summary><p>There was a great <a href="https://www.youtube.com/watch?v=qbIhHhRKQCw">Splunk talk</a> at KringleCon 2 that's still available!</p>
+<details class="hint"><summary>Splunk Basics</summary><p>There was a great <a href="https://www.youtube.com/watch?v=qbIhHhRKQCw">Splunk talk</a> at KringleCon 2 that's still available!</p>
 </details>
-<details class="hint"><summary>Data Decoding and Investigation - Minty Candycane</summary><p>Defenders often need to manipulate data to decRypt, deCode, and refourm it into something that is useful. <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a> is extremely useful here!</p>
+<details class="hint"><summary>Data Decoding and Investigation</summary><p>Defenders often need to manipulate data to decRypt, deCode, and refourm it into something that is useful. <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a> is extremely useful here!</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
 <div class="admonition quote">
@@ -655,11 +666,8 @@
 <p class="admonition-title">Question</p>
 <p>How many distinct MITRE ATT&amp;CK techniques did Alice emulate?</p>
 </div>
-<details class="quote"><summary>Alice Bluebird</summary><p>I stored every simulation in its own index so you can just use a Splunk search like</p>
-<div class="highlight"><pre><span></span><code>| tstats count where index=* by index`
-</code></pre></div>
-<p>for starters!</p>
-<p>I expect some of the elves in the SOC to confuse techniques with sub-techniques. </p>
+<details class="quote"><summary>Alice Bluebird</summary><p>I stored every simulation in its own index so you can just use a Splunk search like <code>| tstats count where index=* by index</code> for starters!<br/>
+I expect some of the elves in the SOC to confuse techniques with sub-techniques. </p>
 </details>
 <p>Use the proposed <code>| tstats count where index=* by index</code> Splunk query and add query logic to grab the first 5 character from the index field and store it in a <code>technique</code> variable, remove any values which don't start with a 't', and finally drop any duplicates. The <em>Statistics</em> header will show the total result count.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -687,8 +695,8 @@
 | rex field=index &quot;(?&lt;technique&gt;t\d+)[\.\-].0*&quot; 
 | stats dc(technique)
 </code></pre></div>
-<p>Training question 2 is almost too easy, especially if they use that search I just shared.</p>
-<p>I just really want those elves to understand what a Splunk index is, though. I'd expect them to Google it, but had to point a few of them to this <a href="https://docs.splunk.com/Splexicon:Index">definition</a>.</p>
+<p>Training question 2 is almost too easy, especially if they use that search I just shared.<br/>
+I just really want those elves to understand what a Splunk index is, though. I'd expect them to Google it, but had to point a few of them to this <a href="https://docs.splunk.com/Splexicon:Index">definition</a>.</p>
 </details>
 <p>Similar to the previous question. Search for all index names beginning with <code>t1059.003</code> and sort the results alphabetically.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -708,9 +716,9 @@
 <p class="admonition-title">Question</p>
 <p>One technique that Santa had us simulate deals with 'system information discovery'. What is the full name of the registry key that is queried to determine the MachineGuid?</p>
 </div>
-<details class="quote"><summary>Alice Bluebird</summary><p>Now we can talk about some interesting stuff. What's actually in those emulation indexes! </p>
-<p>I'm assuming they watched the Splunk KringleCon talk and picked up on how to search MITRE's site, and that they should check out the atomics for that technique in the Atomic Red Team github repo.</p>
-<p>I want them to be comfortable searching in places like <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team</a></p>
+<details class="quote"><summary>Alice Bluebird</summary><p>Now we can talk about some interesting stuff. What's actually in those emulation indexes!<br/>
+I'm assuming they watched the Splunk KringleCon talk and picked up on how to search MITRE's site, and that they should check out the atomics for that technique in the Atomic Red Team github repo.<br/>
+I want them to be comfortable searching in places like <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team</a></p>
 </details>
 <p>Answering this question doesn't require a Splunk query and is all about searching <a href="https://attack.mitre.org/techniques/">MITRE ATT&amp;CK Techniques</a> and <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team Atomics</a> resources. A seach for <em>system information discovery</em> on the MITRE ATT&amp;CK website yields technique ID T1082.</p>
 <p><img alt="Question 3 MITRE ATT&amp;CK search results" class="border" src="../../img/objectives/o6/training_q3a.png" /></p>
@@ -725,11 +733,9 @@
 <p class="admonition-title">Question</p>
 <p>According to events recorded by the Splunk Attack Range, when was the first OSTAP related atomic test executed? (Please provide the alphanumeric UTC timestamp.)</p>
 </div>
-<details class="quote"><summary>Alice Bluebird</summary><p>Those folks over at Red Canary sure do like using OSTAP in their atomics, don't they? </p>
-<p>I suppose the SOC elves might overthink this one. Splunk Attack Range keeps track of the simulations that are run in</p>
-<div class="highlight"><pre><span></span><code>index=attack
-</code></pre></div>
-<p>You can then search that index for specific keywords... </p>
+<details class="quote"><summary>Alice Bluebird</summary><p>Those folks over at Red Canary sure do like using OSTAP in their atomics, don't they?<br/>
+I suppose the SOC elves might overthink this one. Splunk Attack Range keeps track of the simulations that are run in <code>index=attack</code><br/>
+You can then search that index for specific keywords... </p>
 </details>
 <p>All we need to do is search for <em>OSTAP</em> across the whole <em>attack</em> index and sort the results by timestamp.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -789,10 +795,7 @@
 <p class="admonition-title">Question</p>
 <p>According to x509 certificate events captured by Zeek (formerly Bro), what is the serial number of the TLS certificate assigned to the Windows domain controller in the attack range?</p>
 </div>
-<details class="quote"><summary>Alice Bluebird</summary><p>I did not know if I should leave this one in here because it uses the old name for Zeek! In the meantime, I wanted them to look at something like</p>
-<div class="highlight"><pre><span></span><code>index=* sourcetype=bro* 
-</code></pre></div>
-<p>and check out the SSL/TLS certs that are captured in the x509-related sourcetype. </p>
+<details class="quote"><summary>Alice Bluebird</summary><p>I did not know if I should leave this one in here because it uses the old name for Zeek! In the meantime, I wanted them to look at something like <code>index=* sourcetype=bro*</code> and check out the SSL/TLS certs that are captured in the x509-related sourcetype. </p>
 </details>
 <p>Execute the search query provided by Alice and use the fields to the left of the search results to filter on <code>certificate.subject</code>, which is the most likely certificate field to contain a full hostname. Select the entry matching the Windows Domain Controller (i.e. <em>win-dc</em>) in the attack range (i.e., <em>attackrange.local</em>).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -814,18 +817,16 @@
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Alice Bluebird</p>
-<p>This last one is encrypted using your favorite phrase! The base64 encoded ciphertext is:</p>
-<div class="highlight"><pre><span></span><code>7FXjP1lyfKbyDK/MChyf36h7
-</code></pre></div>
-<p>It's encrypted with an old algorithm that uses a key. We don't care about RFC 7465 up here! I leave it to the elves to determine which one!</p>
+<p>This last one is encrypted using your favorite phrase! The base64 encoded ciphertext is: <code>7FXjP1lyfKbyDK/MChyf36h7</code><br/>
+It's encrypted with an old algorithm that uses a key. We don't care about RFC 7465 up here! I leave it to the elves to determine which one!</p>
 </div>
 <p>Dave Herrald's <a href="https://www.youtube.com/watch?v=RxVgEFt08kU">Adversary Emulation and Automation</a> talk hints at Santa's favorite phrase supposedly being <em>Stay Frosty</em>. Although, we now know that's most likely because Jack Frost has been walking around pretending to be Santa. </p>
-<p><img alt="Image" src="../../img/objectives/o6/favorite_phrase.png" /></p>
+<p><img alt="Favorite phrase" src="../../img/objectives/o6/favorite_phrase.png" /></p>
 <p><a href="https://tools.ietf.org/html/rfc7465">RFC 7465</a> or <em>Prohibiting RC4 Cipher Suites</em> tells us which cipher was used to encrypt the information. Use <a href="(https://gchq.github.io/CyberChef/)">Cyber Chef</a> to decode the BASE64-encoded string (1) and run the output (2) through an RC4 recipe with <em>Stay Frosty</em> as the passphrase (3).</p>
-<p><img alt="Image" class="border" src="../../img/objectives/o6/cyber_chef_solution.png" /></p>
+<p><img alt="Cyber Chef" class="border" src="../../img/objectives/o6/cyber_chef_solution.png" /></p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
-<p>The Lollipop Guild</p>
+<p><a href="../../easter_eggs/#the-lollipop-guild">The Lollipop Guild</a></p>
 </div>
                 
               
@@ -854,7 +855,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                HID Lock
+                Open HID Lock
               </div>
             </div>
           </a>
@@ -866,7 +867,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CAN-D-BUS
+                CAN-D-BUS Problem
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -935,8 +936,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

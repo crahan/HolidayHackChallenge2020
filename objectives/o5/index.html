@@ -18,7 +18,7 @@
     
     
       
-        <title>HID Lock - 2020 SANS HHC Write-Up</title>
+        <title>Open HID Lock - 2020 SANS HHC Write-Up</title>
       
     
     
@@ -43,8 +43,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
     
@@ -102,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              HID Lock
+              Open HID Lock
             
           </span>
         </div>
@@ -223,7 +221,7 @@
 
   <li class="md-nav__item">
     <a href="../o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -236,7 +234,7 @@
 
   <li class="md-nav__item">
     <a href="../o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -249,7 +247,7 @@
 
   <li class="md-nav__item">
     <a href="../o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -262,7 +260,7 @@
 
   <li class="md-nav__item">
     <a href="../o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -283,12 +281,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        HID Lock
+        Open HID Lock
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      HID Lock
+      Open HID Lock
     </a>
     
       
@@ -347,7 +345,7 @@
 
   <li class="md-nav__item">
     <a href="../o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -360,7 +358,7 @@
 
   <li class="md-nav__item">
     <a href="../o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -373,7 +371,7 @@
 
   <li class="md-nav__item">
     <a href="../o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -399,7 +397,7 @@
 
   <li class="md-nav__item">
     <a href="../o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -411,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o11/" class="md-nav__link">
+    <a href="../o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -424,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../o12/" class="md-nav__link">
+    <a href="../o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -596,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../hints/h11/" class="md-nav__link">
+    <a href="../../hints/h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -620,6 +618,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -639,25 +650,25 @@
 <strong>Terminal hint</strong>: <a href="../../hints/h5a/">Speaker UNPrep</a> and <a href="../../hints/h5b/">33.6kbps</a></p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Objective</p>
+<p class="admonition-title">Request</p>
 <p>Open the HID lock in the Workshop. Talk to Bushy Evergreen near the talk tracks for hints on this challenge. You may also visit Fitzy Shortstack in the kitchen for tips.</p>
 </div>
-<details class="quote"><summary>Bushy Evergreen</summary><p>Some people scan other people's badges and try those codes at locked doors.</p>
-<p>Other people scan one or two and just try to vary room numbers.</p>
-<p>Do whatever works best for you!</p>
+<details class="quote"><summary>Bushy Evergreen</summary><p>Some people scan other people's badges and try those codes at locked doors.<br/>
+Other people scan one or two and just try to vary room numbers.<br/>
+Do whatever works best for you!</p>
 </details>
 <details class="quote"><summary>Fitzy Shortstack</summary><p>You know, Santa really seems to trust Shinny Upatree...</p>
 </details>
 <h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
-<details class="hint"><summary>Reading Badges with Proxmark - Bushy Evergreen</summary><p>You can use a Proxmark to capture the facility code and ID value of HID ProxCard badge by running <code>lf hid read</code> when you are close enough to someone with a badge.</p>
+<details class="hint"><summary>Reading Badges with Proxmark</summary><p>You can use a Proxmark to capture the facility code and ID value of HID ProxCard badge by running <code>lf hid read</code> when you are close enough to someone with a badge.</p>
 </details>
-<details class="hint"><summary>Impersonating Badges with Proxmark - Bushy Evergreen</summary><p>You can also use a Proxmark to impersonate a badge to unlock a door, if the badge you impersonate has access. <code>`lf hid sim -r 2006......</code></p>
+<details class="hint"><summary>Impersonating Badges with Proxmark</summary><p>You can also use a Proxmark to impersonate a badge to unlock a door, if the badge you impersonate has access. <code>`lf hid sim -r 2006......</code></p>
 </details>
-<details class="hint"><summary>What's a Proxmark? - Bushy Evergreen</summary><p>The Proxmark is a multi-function RFID device, capable of capturing and replaying RFID events.</p>
+<details class="hint"><summary>What's a Proxmark?</summary><p>The Proxmark is a multi-function RFID device, capable of capturing and replaying RFID events.</p>
 </details>
-<details class="hint"><summary>Short List of Essential Proxmark Commands - Bushy Evergreen</summary><p>There's a <a href="https://gist.github.com/joswr1ght/efdb669d2f3feb018a22650ddc01f5f2">short list of essential Proxmark commands</a> also available.</p>
+<details class="hint"><summary>Short List of Essential Proxmark Commands</summary><p>There's a <a href="https://gist.github.com/joswr1ght/efdb669d2f3feb018a22650ddc01f5f2">short list of essential Proxmark commands</a> also available.</p>
 </details>
-<details class="hint"><summary>Proxmark Talk - Bushy Evergreen</summary><p>Larry Pesce knows a thing or two about <a href="https://www.youtube.com/watch?v=647U85Phxgo">HID attacks</a>. He's the author of a course on wireless hacking!</p>
+<details class="hint"><summary>Proxmark Talk</summary><p>Larry Pesce knows a thing or two about <a href="https://www.youtube.com/watch?v=647U85Phxgo">HID attacks</a>. He's the author of a course on wireless hacking!</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
 <p>To solve this challenge we need to find a Proxmark device, roam around Santa's castle to scan NPC badges, and use the collected information to open the HID lock in the workshop. The Proxmark device can be found next to the table in the Wrapping Room and after picking it up you'll be able to access the <a href="https://docker2020.kringlecon.com/?challenge=proxmark&amp;id=df38b481-ab8f-4ef4-b281-31ea6483eb95">Proxmark CLI</a> via the item list on your conference badge.</p>
@@ -731,8 +742,8 @@
 <p><img alt="Being Santa Claus" src="../../img/objectives/o5/being_santa_claus.png" /></p>
 <div class="admonition quote">
 <p class="admonition-title">Santa</p>
-<p>what the hell is this</p>
-<p>I hear another Santa in my head</p>
+<p>what the hell is this<br/>
+I hear another Santa in my head</p>
 </div>
 <p>You can now roam around as Santa and use the elevator to get to Santa's Office. This also unlocks a whole new set of narratives between Santa and the other NPCs, like the <a href="../../easter_eggs/#santa-discounts">conference booths</a>. Things are starting to make a little more sense now. It appears that Jack Frost has been impersonating Santa and causing all kinds of trouble! <img alt="😮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f62e.svg" title=":open_mouth:" /></p>
                 
@@ -762,7 +773,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Santavator
+                Operate the Santavator
               </div>
             </div>
           </a>
@@ -774,7 +785,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Splunk
+                Splunk Challenge
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -843,8 +854,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

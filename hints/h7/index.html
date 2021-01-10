@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -68,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#can-bus-investigation" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -216,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -229,7 +232,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -242,7 +245,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -255,7 +258,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -268,7 +271,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -281,7 +284,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -294,7 +297,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -307,7 +310,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -333,7 +336,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -345,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o11/" class="md-nav__link">
+    <a href="../../objectives/o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -358,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o12/" class="md-nav__link">
+    <a href="../../objectives/o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -498,10 +501,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CAN-Bus Investigation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       CAN-Bus Investigation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -539,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../h11/" class="md-nav__link">
+    <a href="../h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -563,6 +618,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -576,9 +644,89 @@
               
                 
                 
-                  <h1>CAN-Bus Investigation</h1>
-                
-                
+                <h1 id="can-bus-investigation">CAN-Bus Investigation<a class="headerlink" href="#can-bus-investigation" title="Permanent link">⚓︎</a></h1>
+<p><strong>Elf</strong>: Wunorse Openslae<br/>
+<strong>Direct link</strong>: <a href="https://docker2020.kringlecon.com/?challenge=canbus&amp;id=104b0e42-dfab-4c26-91da-99ded97b9c03">canbus terminal</a><br/>
+<strong>Objective</strong>: <a href="../../objectives/o7/">Solve the Sleigh's CAN-D-BUS Problem</a></p>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Wunorse Openslae</p>
+<p>Hiya hiya - I'm Wunorse Openslae!<br/>
+I've been playing a bit with CAN bus. Are you a car hacker?<br/>
+I'd love it if you could take a look at this terminal for me.<br/>
+I'm trying to figure out what the unlock code is in this CAN bus log.<br/>
+When it was grabbing this traffic, I locked, unlocked, and locked the doors one more time.<br/>
+It ought to be a simple matter of just filtering out the noise until we get down to those three actions.<br/>
+Need more of a nudge? Check out Chris Elgee's <a href="https://www.youtube.com/watch?v=96u-uHRBI0I">talk</a> on CAN traffic!</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="hint"><summary>CAN Bus Talk</summary><p>Chris Elgee is talking about how <a href="https://www.youtube.com/watch?v=96u-uHRBI0I">CAN traffic</a> works right now!</p>
+</details>
+<details class="hint"><summary>Filtering Text</summary><p>You can hide lines you don't want to see with commands like <code>cat file.txt | grep -v badstuff</code></p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<details class="abstract"><summary>Welcome message</summary><div class="highlight"><pre><span></span><code>MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX00OkxxddcddxxkOO0XWMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMWXOxoc:c.;cccccc.ccccc:.:c:ldxOXMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMXkoc&#39;,ccccc:.:ccccc.ccccc.;cccc,&#39;::cdOXMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMM0xc:cccc,&#39;:cccc::ccccccccccccccc:.;cccccc:lxXMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMNkl,&#39;,:ccccc;;ccccccccccccccccccccc::cccccc:,&#39;,:lOWMMMMMMMMMMMMM
+MMMMMMMMMMMMNxccccc;&#39;;cccccccccccccccccccccccccccccccccc;&#39;:cccccckWMMMMMMMMMMM
+MMMMMMMMMMNdcccccc:..;cccccccccccccccccccccccccccccccccccccccccccc:kWMMMMMMMMM
+MMMMMMMMM0c,,,,:cccc;..;cccccccccccccccccccccccccccccccccccccc:,,,;:lKMMMMMMMM
+MMMMMMMWd:cccc;:cccccc;..,cccccccccccccccccccccccccccccccccccc;:cccccckMMMMMMM
+MMMMMMNlcccccccccccccccc:..,:ccccccccccccccccccccccccccccccccccccccccc:oWMMMMM
+MMMMMNc,,,,,:ccccccccccccc:..&#39;:cccccccccccccccccccccccccccccccccc:,,,,,;oWMMMM
+MMMMWoccccc::ccccccccccccccc:&#39;.&#39;:cccccccccccccccccccccccccccccccc::ccccccxMMMM
+MMMMkccccccccccccccccccccccccc:&#39;..:cccccccccccccccccccccccccccccccccccccc:0MMM
+MMMN::cccccccccccccccccccccccccc:&#39;..:cccccccccccccccccccccccccccccccccccc:cWMM
+MMMk,,,,,:cccccccccccccccccccccccc:,..;ccccccccccccccccccccccccccccc:,,,,,;0MM
+MMMlccccccccccccccccccccccccccccccccc,.;cccccccccccccccccccccccccccccccccccdMM
+MMW:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccclMM
+MMWOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO0MM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+Welcome to the CAN bus terminal challenge!
+In your home folder, there&#39;s a CAN bus capture from Santa&#39;s sleigh. Some of
+the data has been cleaned up, so don&#39;t worry - it isn&#39;t too noisy. What you
+will see is a record of the engine idling up and down. Also in the data are
+a LOCK signal, an UNLOCK signal, and one more LOCK. Can you find the UNLOCK?
+We&#39;d like to encode another key mechanism.
+
+Find the decimal portion of the timestamp of the UNLOCK code in candump.log
+and submit it to ./runtoanswer!  (e.g., if the timestamp is 123456.112233,
+please submit 112233)
+</code></pre></div>
+</details>
+<p>Start by reviewing the contents of the <code>candump.log</code> log in your home folder to understand the log format (line 1). Next, follow a process of elimination by filtering out the noisy signals using <code>grep -v</code> until only the LOCK/UNLOCK log entries are left.</p>
+<p>The solution below uses an alternative approach by extracting, sorting, and counting all CAN IDs using <code>cut</code>, <code>sort</code>, and <code>uniq</code> to find the ID that only occurs 3 times (line 2). Then using <code>grep</code> to extract the full log entries to retrieve the timestamps (line 3).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>head -2 candump.log
+cut -c 27-30 candump.log | sort | uniq -c
+grep 19B# candump.log
+</code></pre></div>
+</td></tr></table>
+<p><img alt="Completed" src="../../img/hints/h7/completed.png" /></p>
+<div class="admonition done">
+<p class="admonition-title">Answer</p>
+<p>122520</p>
+</div>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Wunorse Openslae</p>
+<p>Great work! You found the code!<br/>
+I wonder if I can use this knowledge to work out some kind of universal unlocker...<br/>
+... to be used only with permission, of course!<br/>
+Say, do you have any thoughts on what might fix Santa's sleigh?<br/>
+Turns out: Santa's sleigh uses a variation of CAN bus that we call CAN-D bus.<br/>
+And there's something naughty going on in that CAN-D bus.<br/>
+The brakes seem to shudder when I put some pressure on them, and the doors are acting oddly.<br/>
+I'm pretty sure we need to filter out naughty CAN-D-ID codes.<br/>
+There might even be some valid IDs with invalid data bytes.<br/>
+For security reasons, only Santa is allowed access to the sled and its CAN-D bus.<br/>
+I'll hit him up next time he's nearby.</p>
+</div>
                 
               
               
@@ -687,8 +835,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>

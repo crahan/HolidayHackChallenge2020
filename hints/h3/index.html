@@ -44,8 +44,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/asciinema-player.css">
-    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -68,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#linux-primer" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -216,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o1/" class="md-nav__link">
-      Gift List
+      Uncover Santa's Gift List
     </a>
   </li>
 
@@ -229,7 +232,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o2/" class="md-nav__link">
-      S3 Bucket
+      Investigate S3 Bucket
     </a>
   </li>
 
@@ -242,7 +245,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o3/" class="md-nav__link">
-      Password Recovery
+      PoS Password Recovery
     </a>
   </li>
 
@@ -255,7 +258,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o4/" class="md-nav__link">
-      Santavator
+      Operate the Santavator
     </a>
   </li>
 
@@ -268,7 +271,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o5/" class="md-nav__link">
-      HID Lock
+      Open HID Lock
     </a>
   </li>
 
@@ -281,7 +284,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o6/" class="md-nav__link">
-      Splunk
+      Splunk Challenge
     </a>
   </li>
 
@@ -294,7 +297,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o7/" class="md-nav__link">
-      CAN-D-BUS
+      CAN-D-BUS Problem
     </a>
   </li>
 
@@ -307,7 +310,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o8/" class="md-nav__link">
-      Tag Generator
+      Broken Tag Generator
     </a>
   </li>
 
@@ -333,7 +336,7 @@
 
   <li class="md-nav__item">
     <a href="../../objectives/o10/" class="md-nav__link">
-      Fingerprint Sensor
+      Defeat Fingerprint Sensor
     </a>
   </li>
 
@@ -345,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o11/" class="md-nav__link">
+    <a href="../../objectives/o11a/" class="md-nav__link">
       Naughty/Nice List Pt.1
     </a>
   </li>
@@ -358,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../objectives/o12/" class="md-nav__link">
+    <a href="../../objectives/o11b/" class="md-nav__link">
       Naughty/Nice List Pt.2
     </a>
   </li>
@@ -420,10 +423,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linux Primer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Linux Primer
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -539,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../h11/" class="md-nav__link">
+    <a href="../h11a/" class="md-nav__link">
       Snowball Fight
     </a>
   </li>
@@ -563,6 +611,19 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../map/" class="md-nav__link">
+      ASCII Map
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -576,9 +637,66 @@
               
                 
                 
-                  <h1>Linux Primer</h1>
-                
-                
+                <h1 id="linux-primer">Linux Primer<a class="headerlink" href="#linux-primer" title="Permanent link">⚓︎</a></h1>
+<p><strong>Elf</strong>: Sugarplum Mary<br/>
+<strong>Direct link</strong>: <a href="https://docker2020.kringlecon.com/?challenge=linux&amp;id=e69a5b41-605a-4051-900f-e94472c9b85a">linux terminal</a><br/>
+<strong>Objective</strong>: <a href="../../objectives/o3/">Point-of-Sale Password Recovery</a></p>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Sugarplum Mary</p>
+<p>Sugarplum Mary? That's me!<br/>
+I was just playing with this here terminal and learning some Linux!<br/>
+It's a great intro to the Bash terminal.<br/>
+If you get stuck at any point, type <code>hintme</code> to get a nudge!<br/>
+Can you make it to the end?</p>
+</div>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<details class="abstract"><summary>Welcome message</summary><div class="highlight"><pre><span></span><code>The North Pole 🍭 Lollipop Maker:
+All the lollipops on this system have been stolen by munchkins.
+Capture munchkins by following instructions here and 🍭&#39;s will appear in the green bar below.
+Run the command &quot;hintme&quot; to receive a hint.
+</code></pre></div>
+</details>
+<p>Many of the terminal hints at KringleCon are designed to help you get acquainted with a specific technology or tool. In this case the <a href="https://www.gnu.org/software/bash/">Bash</a> command shell and some common shell commands. The answers section below provides a copy/pastable overview of each of the commands. All entries link to <a href="https://explainshell.com/">explainshell.com</a> which provides a detailed explanation of the command and its parameters.</p>
+<div class="admonition done">
+<p class="admonition-title">Answers</p>
+<ol>
+<li>Perform a directory listing: <a href="https://explainshell.com/explain?cmd=ls+-l"><code>ls -l</code></a></li>
+<li>Find the munchkin inside the munchkin: <a href="https://explainshell.com/explain?cmd=cat+munchkin_19315479765589239"><code>cat munchkin_19315479765589239</code></a></li>
+<li>Remove the munchkin in your home dir: <a href="https://explainshell.com/explain?cmd=rm+munchkin_19315479765589239"><code>rm munchkin_19315479765589239</code></a></li>
+<li>Print the present working dir: <a href="https://explainshell.com/explain?cmd=pwd"><code>pwd</code></a></li>
+<li>Find the hidden munchkin: <a href="https://explainshell.com/explain?cmd=find+.+-iname+*munchkin*"><code>find . -iname *munchkin*</code></a></li>
+<li>Find the munchkin in your command history: <a href="https://explainshell.com/explain?cmd=history+%7C+grep+-i+munchkin"><code>history | grep -i munchkin</code></a></li>
+<li>Find the munchkin in your env vars: <a href="https://explainshell.com/explain?cmd=env+%7C+grep+-i+munchkin"><code>env | grep -i munchkin</code></a></li>
+<li>Head into the workshop: <a href="https://explainshell.com/explain?cmd=cd+workshop"><code>cd workshop</code></a></li>
+<li>Find which toolbox the munchkin is in: <a href="https://explainshell.com/explain?cmd=grep+-iR+munchkin+*"><code>grep -iR munchkin *</code></a></li>
+<li>Run the <code>lollipop_engine</code> binary: <a href="https://explainshell.com/explain?cmd=chmod+755+lollipop_engine%3B+.%2Flollipop_engine"><code>chmod 755 lollipop_engine; ./lollipop_engine</code></a></li>
+<li><code>cd</code> into electrical and rename <code>blown_fuse0</code> to <code>fuse0</code>: <a href="https://explainshell.com/explain?cmd=cd+electrical%2F%3B+mv+blown_fuse0+fuse0"><code>cd electrical/; mv blown_fuse0 fuse0</code></a></li>
+<li>Make a symbolic link named <code>fuse1</code> that points to <code>fuse0</code>: <a href="https://explainshell.com/explain?cmd=ln+-s+fuse0+fuse1"><code>ln -s fuse0 fuse1</code></a></li>
+<li>Make a copy of <code>fuse1</code> named <code>fuse2</code>: <a href="https://explainshell.com/explain?cmd=cp+fuse1+fuse2"><code>cp fuse1 fuse2</code></a></li>
+<li>Add <em>MUNCHKIN_REPELLENT</em> into the file <code>fuse2</code><a href="https://explainshell.com/explain?cmd=echo++MUNCHKIN_REPELLENT+%3E+fuse2"><code>echo  MUNCHKIN_REPELLENT &gt; fuse2</code></a></li>
+<li>Find the munchkin somewhere in <code>/opt/munchkin_den</code>: <a href="https://explainshell.com/explain?cmd=find+%2Fopt%2Fmunchkin_den%2F+-iname+*munchkin*"><code>find /opt/munchkin_den/ -iname *munchkin*</code></a></li>
+<li>Find the file in <code>/opt/munchkin_den</code> that is owned by the user <code>munchkin</code>: <a href="https://explainshell.com/explain?cmd=find+%2Fopt%2Fmunchkin_den%2F+-user+munchkin"><code>find /opt/munchkin_den/ -user munchkin</code></a></li>
+<li>Find the file created by munchkins &gt;108 Kb and &lt;110 Kb in <code>/opt/munchkin_den</code>: <a href="https://explainshell.com/explain?cmd=find+%2Fopt%2Fmunchkin_den%2F+-size+%2B108k+-a+-size+-110k"><code>find /opt/munchkin_den/ -size +108k -a -size -110k</code></a></li>
+<li>List running processes to find another munchkin: <a href="https://explainshell.com/explain?cmd=ps+ax+%7C+grep+-i+munchkin"><code>ps ax | grep -i munchkin</code></a></li>
+<li>Use a command to have the only listening port display: <a href="https://explainshell.com/explain?cmd=netstat+-tunlp"><code>netstat -tunlp</code></a></li>
+<li>Interact with this server to retrieve the last munchkin: <a href="https://explainshell.com/explain?cmd=curl+http%3A%2F%2F0.0.0.0%3A54321"><code>curl http://0.0.0.0:54321</code></a></li>
+<li>Stop the <code>14516_munchkin</code> process: <a href="https://explainshell.com/explain?cmd=kill+3045"><code>kill 3045</code></a></li>
+</ol>
+</div>
+<p><img alt="Solution" src="../../img/hints/h3/solution.png" /></p>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Sugarplum Mary</p>
+<p>You did it - great! Maybe you can help me configure my postfix mail server on Gentoo!<br/>
+Just kidding!<br/>
+Hey, wouldja' mind helping me get into my point-of-sale terminal?<br/>
+It's down, and we kinda' need it running.<br/>
+Problem is: it is asking for a password. I never set one!<br/>
+Can you help me figure out what it is so I can get set up?<br/>
+Shinny says this might be an Electron application.<br/>
+I hear there's a way to extract an ASAR file from the binary, but I haven't looked into it yet.<br/></p>
+</div>
                 
               
               
@@ -687,8 +805,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
         <script src="../../js/tables.js"></script>
-      
-        <script src="../../js/asciinema-player.js"></script>
       
     
   </body>
