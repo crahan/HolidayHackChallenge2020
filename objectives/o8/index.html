@@ -673,7 +673,7 @@ Can you help me figure out what's wrong?<br/></p>
 <p class="admonition-title">Quick 'n dirty or reverse shell?</p>
 <p>You can either solve this with minimal effort or you can go for a reverse shell. We'll explore both options! <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 </div>
-<h3>Path Traversal</h3>
+<h3>Short solution</h3>
 <p>Start by analyzing the <a href="https://tag-generator.kringlecastle.com/js/app.js"><code>app.js</code></a> JavaScript code. After a successful file upload the uploaded image will be accessible via the <code>/image?id=</code> endpoint with <code>id</code> being a randomly generated value that identifies the image (line 7). </p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -716,7 +716,6 @@ Can you help me figure out what's wrong?<br/></p>
 <span class="p">},</span>
 </code></pre></div>
 </td></tr></table>
-<h3>Short solution</h3>
 <p>The <code>/image?id=</code> endpoint appears to be vulnerable to a <a href="https://owasp.org/www-community/attacks/Path_Traversal">path traversal attack</a>, allowing us to read files on the remote system. Since the objective is to read the value of an environment variable and pretty much everything on Linux is considered a file, a request to <code>/image?id=../../../proc/1/environ</code> will return the information we need in the HTTP response, including <code>GREETZ</code>. <img alt="😜" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f61c.svg" title=":stuck_out_tongue_winking_eye:" /></p>
 <p><img alt="Short solution" src="../../img/objectives/o8/solution_short.png" /></p>
 <h3>Longer solution</h3>
