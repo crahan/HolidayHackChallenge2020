@@ -3,11 +3,11 @@
 ## Introduction
 
 ![Going on an adventure](./img/misc/going_on_an_adventure.gif){: align=left }
-Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchallenge.com/2020/) write-up. This is now the third time I've had the privilege of traveling to the North Pole to attend KringleCon and help out Santa and the elves in solving all sorts of hacking shennanigans. It has really become one of those event I look forward to with a lot of anticipation each year! :hugging_face: 
+Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchallenge.com/2020/) write-up. This is now the third time I've had the privilege of traveling to the North Pole to attend [KringleCon](https://2020.kringlecon.com) and help out Santa and the elves with solving all sorts of hacking shennanigans. It has really become the main CTF event I look forward to with a lot of anticipation each year! :hugging_face: 
 
-There's 3 main sections: this page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
+There's 3 main sections. This page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) obtained on the Broken Tag Generator challenge, the large but very much incomplete list of [Easter eggs](./easter_eggs.md) (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice!), and the [tools](https://github.com/crahan/HolidayHackChallenge2020/tree/main/docs/tools) folder with all the custom scripts.
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) obtained on the Broken Tag Generator challenge, the large but very much incomplete list of [Easter eggs](./easter_eggs.md) (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice!), and the [custom scripts](https://github.com/crahan/HolidayHackChallenge2020/tree/main/docs/tools) that helped solve some of the challenges.
 
 Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
