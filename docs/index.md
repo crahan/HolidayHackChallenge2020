@@ -7,7 +7,7 @@ Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchall
 
 There's 3 main sections: this page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) I was able to obtain on the Broken Tag Generator challenge and the large (but definitely incomplete) list of [Easter eggs](./easter_eggs.md) and references I came across (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice).
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md) obtained on the Broken Tag Generator challenge, the large but very much incomplete list of [Easter eggs](./easter_eggs.md) (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice!), and the [tools](https://github.com/crahan/HolidayHackChallenge2020/tree/main/docs/tools) folder with all the custom scripts.
 
 Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
