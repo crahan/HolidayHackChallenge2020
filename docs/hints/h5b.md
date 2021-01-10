@@ -33,7 +33,19 @@ pickup.addEventListener('click', () => {
 });
 ```
 
-Follow the order defined by the different `phase` boolean condition statements in [`dialup.js`](https://dialup.kringlecastle.com/dialup.js) to recreate the final secret value as `39cajd3j2jc329dz4hhddhbvan3djjzz`. The script submits the `secret` and a `resourceID` using a HTTP GET request to ensure the challenge is marked completed for the logged in player. To solve the challenge and receive credit in your badge, open a web browser JavaScript console and use `secret="39cajd3j2jc329dz4hhddhbvan3djjzz"` to set the `secret` variable (1). Submit the data by copy/pasting the JQuery GET request found at the end of [`dialup.js`](https://dialup.kringlecastle.com/dialup.js) (2).
+Follow the order defined by the different `phase` boolean condition statements in [`dialup.js`](https://dialup.kringlecastle.com/dialup.js) to recreate the final secret value as `39cajd3j2jc329dz4hhddhbvan3djjzz`. The correct order of events, CSS classes, and JavaScript variables are outlined below.
+
+| Phase | Action              | CSS class            | JS variable      | Secret added   |
+| :---- | :------------------ | :------------------- | :--------------- | :------------- |
+| 1     | Pickup the receiver | `.pickup`            | `pickup`         | `39cajd`       |
+| 2, 3  | Dial 7568347        | `.dtmf0` to `.dtmf9` | `btn0` to `btn9` | -              |
+| 4     | "baa DEE brrrr"     | `.respCrEsCl`        | `btnrespCrEsCl`  | `3j2jc`        |
+| 5     | "aaah"              | `.ack`               | `ack`            | `329dz`        |
+| 6     | "WEWEWEwrwrrwrr"    | `.cm_cj`             | `cm_cj`          | `4hhdd`        |
+| 7     | "beDURRdunditty"    | `.l1_l2_info`        | `l1_l2_info`     | `hbvan3`       |
+| 8     | "SCHHHRRHHRTHRTR"   | `.trn`               | `trn`            | `djjzz`        |
+
+The script submits the `secret` and a `resourceID` using a HTTP GET request to ensure the challenge is marked completed for the logged in player. To solve the challenge and receive credit in your badge, open a web browser JavaScript console and use `secret="39cajd3j2jc329dz4hhddhbvan3djjzz"` to set the `secret` variable (1). Submit the data by copy/pasting the JQuery GET request found at the end of [`dialup.js`](https://dialup.kringlecastle.com/dialup.js) (2).
 
 ![Completed](../img/hints/h5b/completed.png){: class=border }
 

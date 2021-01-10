@@ -42,6 +42,9 @@ Attach the session using either `tmux a` or `tmux attach -t 0`.
 
 ![List Tmux sessions](../img/hints/h4a/solution.png)
 
+!!! done "Answer"
+    `tmux a`
+
 
 ## Response
 
