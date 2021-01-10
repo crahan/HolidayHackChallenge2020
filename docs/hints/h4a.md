@@ -18,13 +18,23 @@
 
 ## Hints
 
-??? hint "Tmux Cheat Sheet - Pepper Minstix"
-    There's a handy tmux reference available at [](https://tmuxcheatsheet.com/)!
+??? hint "Tmux Cheat Sheet"
+    There's a handy tmux reference available at [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)!
 
 
 ## Solution
 
-Listing the available Tmux sessions using `tmux list-sessions` reveals a single session.
+??? abstract "Welcome message"
+    ```text
+    Can you help me?
+
+    I was playing with my birdie (she's a Green Cheek!) in something called tmux,
+    then I did something and it disappeared!
+
+    Can you help me find her? We were so attached!!
+
+    Listing the available Tmux sessions using `tmux list-sessions` reveals a single session.
+    ```
 
 ![List Tmux sessions](../img/hints/h4a/terminal.png)
 
