@@ -9,7 +9,7 @@ Hi and welcome to my [2020 SANS Holiday Hack Challenge](https://holidayhackchall
 
 There's 3 main sections. This page which contains the introduction, answers, and overall narrative. [Objectives](./objectives/o1.md) contains the write-ups for the main objectives for which an answer had to be submitted and [Terminal hints](./hints/h2.md) has the write-ups for the additional side challenges which provide you with hints to help solve the main objectives.
 
-A few additional things worth pointing out are the [reverse shell](./objectives/o8.md#solution) obtained on the Broken Tag Generator challenge, the large but very much incomplete list of [Easter eggs](./easter_eggs.md) (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice!), and the [custom scripts](https://github.com/crahan/HolidayHackChallenge2020/tree/main/docs/tools) that helped solve some of the challenges.
+A few additional things worth pointing out are the [reverse shell](./objectives/o8.md#reverse-shell) obtained on the Broken Tag Generator challenge, the large but very much incomplete list of [Easter eggs](./easter_eggs.md) (e.g., Garden Party, the story behind all those landscape paintings, the New Jersy Turnpike exit, Jason is back... twice!), and the [custom scripts](https://github.com/crahan/HolidayHackChallenge2020/tree/main/docs/tools) that helped solve some of the challenges.
 
 Finally, I hope you have as much fun reading this write-up as I had writing it! :smiley:
 
@@ -25,42 +25,41 @@ Finally, I hope you have as much fun reading this write-up as I had writing it! 
 ## Answers
 
 !!! done "1. Uncover Santa's Gift List - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    Proxmark
+    [Proxmark](./objectives/o1.md)
 
 !!! done "2. Investigate S3 Bucket - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    North Pole: The Frostiest Place on Earth
+    [North Pole: The Frostiest Place on Earth](./objectives/o2.md)
 
 !!! done "3. Point-of-Sale Password Recovery - :fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    santapass
+    [santapass](./objectives/o3.md)
 
 !!! done "4. Operate the Santavator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    Create a [working configuration](./img/objectives/o4/green_activated.png) using items found in the castle or [bypass](./objectives/o4.md) the stream.
+    Create a [working configuration](./objectives/o4.md) using items found in the castle or [bypass](./objectives/o4.md#bypassing-the-santavator) the stream.
 
 !!! done "5. Open HID Lock - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star::fontawesome-regular-star:"
-    Use `lf hid sim -r 2006e22f13` to unlock the door using Shinny Upatree's badge information.
+    Use [`lf hid sim -r 2006e22f13`](./objectives/o5.md) to unlock the door using Shinny Upatree's badge information.
 
 !!! done "6. Splunk Challenge - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    The Lollipop Guild
+    [The Lollipop Guild](./objectives/o6.md)
 
 !!! done "7. Solve the Sleigh's CAN-D-BUS Problem - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    `080 Less 000000000000`
-
-    `19B Equals 0000000F2057`
+    [`080 Less 000000000000`](./objectives/o7.md)<br/>
+    [`19B Equals 0000000F2057`](./objectives/o7.md)
 
 !!! done "8. Broken Tag Generator - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star:"
-    JackFrostWasHere
+    [JackFrostWasHere](./objectives/o8.md)
 
 !!! done "9. ARP Shenanigans - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star:"
-    Tanta Kringle
+    [Tanta Kringle](./objectives/o9.md)
 
 !!! done "10. Defeat Fingerprint Sensor - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-regular-star::fontawesome-regular-star:"
-    Use the *besanta* token. The first thing Tinsel Upatree says is *GOSHGOLLY*
+    Use the [*besanta*](./objectives/o10.md) token. The first thing Tinsel Upatree says is *GOSHGOLLY*
 
 !!! done "11a. Naughty/Nice List with Blockchain Investigation Part 1 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
-    57066318f32f729d
+    [57066318f32f729d](./objectives/o11a.md)
 
 !!! done "11b. Naughty/Nice List with Blockchain Investigation Part 2 - :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:"
-    fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb
+    [fff054f33c2134e0230efb29dad515064ac97aa8c68d33c58c01213a0d408afb](./objectives/o11b.md)
 
 
 ## Challenges
