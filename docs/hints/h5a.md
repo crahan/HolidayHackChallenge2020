@@ -23,7 +23,7 @@
     For polyalphabetic ciphers, if you have control over inputs and visibilty of outputs, lookup tables can save the day.    
 
 ??? hint "Letting a Program Decrypt for You"
-    *While you have to use the `lights` program in `/home/elf/` to turn the lights on, you can delete parts in `/home/elf/lab/.*`.
+    While you have to use the `lights` program in `/home/elf/` to turn the lights on, you can delete parts in `/home/elf/lab/`.
 
 
 ## Solution
@@ -75,17 +75,17 @@ The password is stored in plaintext in the `door` binary and can be extracted us
     There's another instance of the program and configuration in ~/lab/ you can play around with.<br/>
     What if we set the user name to an encrypted value?
 
-The username and password for the `light` application are read from the `lights.conf` configuration file. Any parameter starting with `E$` is considered encrypted and automatically decrypted. To retrieve the password, edit `/home/elf/lab/lights.conf` and copy the encrypted password into the `username` field. Running `/home/elf/lab/light` will now cause the application to decrypt the encrypted username value so it can be shown as part of the welcome message.
+The username and password for the `light` application are read from the `lights.conf` configuration file. Any configuration value starting with `E$` is considered encrypted and automatically decrypted. To retrieve the password, edit `/home/elf/lab/lights.conf` and copy the encrypted password into the `username` field. Running `/home/elf/lab/light` will now cause the application to decrypt the encrypted username value so it can be shown as part of the welcome message.
 
 ![Lights on](../img/hints/h5a/lights_on.png)
 
-To turn the lights on, use the recovered password with the production version located at `/home/elf/light`.
+To turn the lights on, use the recovered password with the production version of the app, located at `/home/elf/light`.
 
 !!! done "Answer"
     Computer-TurnLightsOn
 
 ??? quote "Bushy Evergreen"
-    Wow - that worked? I mean, it worked! Hooray for opportunistic decryption, I guess!
+    Wow - that worked? I mean, it worked! Hooray for opportunistic decryption, I guess!<br/>
     Oh, did I mention that the Proxmark can simulate badges? Cool, huh?<br/>
     There are lots of references online to help.<br/>
     In fact, there's a talk going on right now!
@@ -129,9 +129,11 @@ Trial and error tells us that the encrypted value of a character depends on the 
     pWFLz5zSWJ1YbNtlgophDlgKdTzAYdIdjOx0OoJ6JItvtUjtVXmFSQw4lCgPE6x7
     ```
 
-Both strings can now be used to decrypt the password by taking each character from the password, finding the 8-character block in *Encrypted* where this character is located at the same position as in the password, and using the character's overall position in the *Encrypted* string to retrieve the character at the same location in the *Plaintext* string.  [`decode_password.py`](../tools/hints/h5a/decode_password.py) helps to automate this process and decrypts the password stored in `/home/elf/vending-machines.json` to `CandyCane1`. [Release the Snacken](../easter_eggs.md#release-the-snacken)! :popcorn:
+Both strings can now be used to decrypt the password by taking each character from the password, finding the 8-character block in *Encrypted* where this character is located at the same position as in the password, and using the character's overall position in the *Encrypted* string to retrieve the character at the same location in the *Plaintext* string.  [`decode_password.py`](../tools/hints/h5a/decode_password.py) helps to automate this process and decrypts the password stored in `/home/elf/vending-machines.json` to *CandyCane1*.
 
 ![Vending machines on](../img/hints/h5a/vending_machines_on.png)
+
+[Release the Snacken](../easter_eggs.md#release-the-snacken)! :popcorn:
 
 !!! done "Answer"
     CandyCane1

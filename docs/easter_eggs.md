@@ -177,7 +177,7 @@ The error screen when you lose a [Snowball Fight](./hints/h11a.md) game displays
 
 ## WebSocket Codes
 
-The WebSocket at `wss://2020.kringlecon.com/ws` is a lot of fun to mess around with and others have gone above and beyond to write some [amazing helper scripts](https://github.com/pollev/santas_little_helper) that let you navigate the game without using the web UI. The `WS_OHHIMARK` and `DENNIS_NEDRY` WebSocket response codes are references to the movies The Room and Jurassic Park, respectively.
+The WebSocket at `wss://2020.kringlecon.com/ws` is a lot of fun to play around with and others have gone above and beyond to write some [amazing helper scripts](https://github.com/pollev/santas_little_helper) that let you navigate the game without using the web UI. The `WS_OHHIMARK` and `DENNIS_NEDRY` WebSocket response codes are references to the movies The Room and Jurassic Park, respectively.
 
 === "WS_OHHIMARK"
     <iframe width="560" height="315" src="https://www.youtube.com/embed/aekfPU0SwNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -229,16 +229,10 @@ Dumping the reports from the [Naughty/Nice blockchain](./objectives/o11a.md) pro
 !!! quote "Elf-on-the-shelf #6203725506778794240"
     For the second time this month, we spotted Morad referring to someone as "bro".
 
-!!! quote "Elf-on-the-shelf #809598375456514384"
-    We've noticed that Chaquetta seems to be regularly discussing "The Bachelorette" as though it was actually something worthwhile.
-
-Some reports noted some excellent behavior as well though. :ok_hand:
+Some reports noted some excellent behavior as well though. :thumbsup:
 
 !!! quote "Elf-on-the-shelf #8151363711045738907"
     Happily, for the second time this year, I saw Hadassah not allowing their IOT devices to be accessible from the internet.
 
 !!! quote "Elf-on-the-shelf #6864795698547819664"
     Maury was spotted running a marathon and not bragging about it to anyone twice today.
-
-!!! quote "Elf-on-the-shelf #12595432874979467172"
-    Three time now, Banjamin was seen being a vegan, but never making a big deal out of it.

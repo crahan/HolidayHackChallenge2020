@@ -32,9 +32,9 @@
     then I did something and it disappeared!
 
     Can you help me find her? We were so attached!!
-
-    Listing the available Tmux sessions using `tmux list-sessions` reveals a single session.
     ```
+
+Listing the available Tmux sessions using `tmux list-sessions` reveals a single session.
 
 ![List Tmux sessions](../img/hints/h4a/terminal.png)
 
