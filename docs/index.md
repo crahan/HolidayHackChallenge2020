@@ -1,3 +1,5 @@
+# Welcome
+
 ![Being Santa Claus](./img/misc/being_santa_clause.png)
 
 ## Introduction
