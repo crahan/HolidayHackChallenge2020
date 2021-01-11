@@ -41,6 +41,8 @@
 
 ## Solution
 
+Only the first 6 levels count towards solving the challenge. Bonus levels 7 and 8 are not required (but a lot of fun). Some of the scripts include additional empty lines to enhance readability, but all solutions still fit within the maximum line requirements. 
+
 ### Main levels
 
 !!! done "Level 1"
@@ -49,8 +51,6 @@
     elf.moveLeft(10)
     elf.moveUp(10)
     ```
-
-
 
 !!! done "Level 2"
     ![Level 1](../img/hints/h4b/level_2_small.png){: align=left }
@@ -115,6 +115,7 @@
     elf.tell_munch(thekey)
     elf.moveUp(2)
     ```
+
 
 ### Bonus levels
 
