@@ -709,16 +709,16 @@ There might even be some valid IDs with invalid data bytes.</p>
 </tr>
 </tbody>
 </table>
-<p><img alt="Rogue lock/unlock codes" src="../../img/objectives/o7/rogue_lock_unlock_codes.png" /></p>
 <p>The <em>Lock</em> and <em>Unlock</em> buttons should generate 2 message values for ID <code>19B</code>. However, when you filter out everything except for ID <code>19B</code> you'll notice that out of nowhere additional <code>0000000F2057</code> message values appear on the CAN-D bus. We can't have anything happen with the sleigh doors at high altitudes so those need to be filtered out using <code>19B Equals 0000000F2057</code>.</p>
-<p><img alt="Negative break message values" src="../../img/objectives/o7/negative_brake_values.png" /></p>
+<p><img alt="Rogue lock/unlock codes" src="../../img/objectives/o7/rogue_lock_unlock_codes.png" /></p>
 <p>The second issue is that, when we pump the brakes, spurious negative message values appear on the CAN-D bus for ID <code>080</code>. Either you keep your foot off the brakes and the message value is <code>000000</code> or you press the brakes and the value gradually goes up to <code>000064</code>. Negative values don't make sense, so we filter those out by adding <code>080 Less 000000000000</code>.</p>
+<p><img alt="Negative break message values" src="../../img/objectives/o7/negative_brake_values.png" /></p>
 <p>Once both exclusions are in place a <em>Sleigh deFrosted!</em> message appears, indicating success.</p>
 <p><img alt="Sleigh defrosted" src="../../img/objectives/o7/sleigh_defrosted.png" /></p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
-<p><code>080 Less 000000000000</code></p>
-<p><code>19B Equals 0000000F2057</code></p>
+<p><code>080 Less 000000000000</code><br/>
+<code>19B Equals 0000000F2057</code></p>
 </div>
                 
               

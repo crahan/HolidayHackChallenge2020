@@ -652,7 +652,7 @@ Fortunately, I speak dial-up. However, I can't quite remember the handshake sequ
 Maybe you can help me out? The phone number is 756-8347; you can use this blue phone.</p>
 </div>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
-<p>One option to solve this challenge is to iterate through all possible combinations manually. A quicker alternative is to check <a href="https://dialup.kringlecastle.com/dialup.js"><code>dialup.js</code></a> and see that the script defines an event listener for each button that appends part of a code to a <code>secret</code> variable. </p>
+<p>One option to solve this challenge is to iterate through all possible combinations manually. A quicker alternative is to check <a href="https://dialup.kringlecastle.com/dialup.js"><code>dialup.js</code></a> and see that the script defines several event listeners that each append part of a code to a <code>secret</code> variable. </p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -737,9 +737,9 @@ Maybe you can help me out? The phone number is 756-8347; you can use this blue p
 </tr>
 </tbody>
 </table>
-<p>The script submits the <code>secret</code> and a <code>resourceID</code> using a HTTP GET request to ensure the challenge is marked completed for the logged in player. To solve the challenge and receive credit in your badge, open a web browser JavaScript console and use <code>secret="39cajd3j2jc329dz4hhddhbvan3djjzz"</code> to set the <code>secret</code> variable (1). Submit the data by copy/pasting the JQuery GET request found at the end of <a href="https://dialup.kringlecastle.com/dialup.js"><code>dialup.js</code></a> (2).</p>
+<p>The script submits <code>secret</code> and <code>resourceID</code> using a HTTP GET request to ensure the challenge is marked completed for the logged in player. To solve the challenge and receive credit in your badge, open a web browser JavaScript console and use <code>secret="39cajd3j2jc329dz4hhddhbvan3djjzz"</code> to set the <code>secret</code> variable (1). Submit the data by copy/pasting the JQuery GET request found at the end of <a href="https://dialup.kringlecastle.com/dialup.js"><code>dialup.js</code></a> (2).</p>
 <p><img alt="Completed" class="border" src="../../img/hints/h5b/completed.png" /></p>
-<p>When you take the manual route, you'll hear a female voice stating <em>Your lights have been updated.</em> when sending the right sequence. In addition, when selecting the <a href="https://dialup.kringlecastle.com/audio/trn.mp3"><em>SCHHRRHHRTHRTR</em></a> sound, you'll also be able to enjoy a variation of the famous <a href="../../easter_eggs/#wilhelm-scream">Wilhelm scream</a> where Wilhelm sounds as if he's being forced through an Espresso maker. <img alt="😲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f632.svg" title=":astonished:" /></p>
+<p>When you take the manual route, you'll hear a female voice stating <em>Your lights have been updated</em> after sending the right sequence. In addition, when selecting the <a href="https://dialup.kringlecastle.com/audio/trn.mp3"><em>SCHHRRHHRTHRTR</em></a> sound, you'll also be able to enjoy a variation of the famous <a href="../../easter_eggs/#wilhelm-scream">Wilhelm scream</a> where Wilhelm sounds as if he's being forced through an Espresso maker. <img alt="😲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f632.svg" title=":astonished:" /></p>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">⚓︎</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Fitzy Shortstack</p>

@@ -775,7 +775,7 @@ You can then search that index for specific keywords... </p>
 <p class="admonition-title">Question</p>
 <p>Alice ran a simulation of an attacker abusing Windows registry run keys. This technique leveraged a multi-line batch file that was also used by a few other techniques. What is the final command of this multi-line batch file used as part of this simulation?</p>
 </div>
-<p><a href="https://github.com/redcanaryco/atomic-red-team/blob/9c90036704c70fa2b043fb04402514bcfe9c7cc4/atomics/T1547.001/T1547.001.md">T1547.001</a> contains information related to <em>Registry Run Keys / Startup Folder</em>. Search all indexes beginning with <em>T1547.001</em> for process command lines matching <em>*.bat*</em>. One entry contains a PowerShell download of <code>https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat</code>.</p>
+<p><a href="https://attack.mitre.org/techniques/T1547/001/">T1547.001</a> contains information related to <em>Registry Run Keys / Startup Folder</em>. Search all indexes beginning with <em>T1547.001</em> for process command lines matching <em>*.bat*</em>. One entry contains a PowerShell download of <code>https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat</code>.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>index=T1547.001*

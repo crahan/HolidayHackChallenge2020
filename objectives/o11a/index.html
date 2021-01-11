@@ -674,7 +674,7 @@ Tangle Coalbox, in the Speaker UNPreparedness room. has been talking with attend
 <p>Tom Liston's <a href="https://github.com/tliston/mt19937"><code>mt19937.py</code></a> script is an implementation of a 32-bit MT19937 PRNG. The nonces in the <code>blockchain.dat</code> file however are 64-bit integers. A little bit of extra work is required to first convert the 64-bit nonces to 32-bit integers.</p>
 <p>An alternative 32-bit Mersenne Twister Python implementation which already supports multiples of 32-bit integer sizes is Kimiyuki Onaka's <a href="https://github.com/kmyk/mersenne-twister-predictor">mersenne-twister-predictor</a> library. The final <a href="../../tools/objectives/o11a/generate_nonce.py"><code>generate_nonce.py</code></a> script solves the challenge using both libraries to help explain how a 32-bit Mersenne Twister PRNG state can be recreated using 64-bit integers and how we can then use the 32-bit PRNG to predict the next 64-bit values.</p>
 </div>
-<p>Open the <code>blockchain.dat</code> file (line 3) and read all the nonce values into a list (lines 12-13).</p>
+<p>To generate the nonce for block 130000, open <a href="https://download.holidayhackchallenge.com/2020/blockchain.dat"><code>blockchain.dat</code></a> (line 3) and read all the nonce values into a list (lines 12-13).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -702,7 +702,7 @@ Tangle Coalbox, in the Speaker UNPreparedness room. has been talking with attend
 </span><span class="hll">        <span class="n">nonce_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">block</span><span class="o">.</span><span class="n">nonce</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>Create two MT19937 PRNGs. One using <a href="ttps://github.com/kmyk/mersenne-twister-predictor">Kimiyuki Onaka's library</a> (<code>kmyk</code>) and one based on <a href="https://github.com/tliston/mt19937">Tom's sample code</a> (<code>tliston</code>).</p>
+<p>Create two MT19937 PRNGs. One using <a href="https://github.com/kmyk/mersenne-twister-predictor">Kimiyuki Onaka's library</a> (<code>kmyk</code>) and one based on <a href="https://github.com/tliston/mt19937">Tom's sample code</a> (<code>tliston</code>).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3

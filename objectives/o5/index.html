@@ -671,12 +671,12 @@ Do whatever works best for you!</p>
 <details class="hint"><summary>Proxmark Talk</summary><p>Larry Pesce knows a thing or two about <a href="https://www.youtube.com/watch?v=647U85Phxgo">HID attacks</a>. He's the author of a course on wireless hacking!</p>
 </details>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
-<p>To solve this challenge we need to find a Proxmark device, roam around Santa's castle to scan NPC badges, and use the collected information to open the HID lock in the workshop. The Proxmark device can be found next to the table in the Wrapping Room and after picking it up you'll be able to access the <a href="https://docker2020.kringlecon.com/?challenge=proxmark&amp;id=df38b481-ab8f-4ef4-b281-31ea6483eb95">Proxmark CLI</a> via the item list on your conference badge.</p>
+<p>To solve this challenge we need to find a Proxmark device, roam around Santa's castle to scan NPC badges, and use the collected information to open the HID lock in the Workshop. The Proxmark device can be found next to the table in the Wrapping Room and after picking it up you'll be able to access the <a href="https://docker2020.kringlecon.com/?challenge=proxmark&amp;id=df38b481-ab8f-4ef4-b281-31ea6483eb95">Proxmark CLI</a> via the item list on your conference badge.</p>
 <p><img alt="Proxmark" src="../../img/objectives/o5/proxmark.png" /></p>
 <p>As per Bushy Evergreen's hint we can either go around scanning all the NPC badges or we can scan just a few and then fill in the blanks. As Larry Pesce mentions in his <a href="https://www.youtube.com/watch?v=647U85Phxgo">HID attacks</a> HID cards are often sold with sequential ID numbers. So all we really need is just enough information to determine that sequence.</p>
 <p>To scan a badge, stand next to an NPC, open the Proxmark CLI and type <code>lf search</code> or <code>lf hid read</code>. If the NPC has a badge these commands will return the HID card information such as the facility code (FC), and the card ID. </p>
 <p><img alt="Proxmark" src="../../img/objectives/o5/search_scan.png" /></p>
-<p>Walking around the castle we can compile the following list of badge IDs.</p>
+<p>Walking around the castle scanning badges allows us to compile the following list of badge IDs.</p>
 <table>
 <thead>
 <tr>
@@ -732,10 +732,10 @@ Do whatever works best for you!</p>
 <p>As noted previously, there is no need to scan all of the badges in the above table. If you happen to scan Noel Boetie's old badge and Shinny Upatree's badge it'd be clear that the most likely badge ID sequence is 6020 to 6025.</p>
 <p>Now that we have some badge ID values we can head back to the Workshop Room. Stand next to the HID lock, open the Proxmark CLI, and simulate a badge using its Wiegand value. For example, to simulate Sparkle Redberry's badge use <code>lf hid sim -r 2006e22f0d</code>. Alternatively, if you're extrapolating badge IDs based on collected information, you can use <code>lf hid sim -w H10301 --fc 113 --cn 6024</code> to simulate Holly Evergreen's badge. Simply iterate over all badge IDs until the door unlocks.</p>
 <p><img alt="Proxmark" src="../../img/objectives/o5/door_unlocked.png" /></p>
-<p>If you've already solved the <a href="../../hints/h5b/">33.6kbps</a> terminal hint then Fitzy Shortstack will have told you that <em>Santa really seems to trust Shinny Upatree</em> which confirms our solution. Shinny Upatree's badge is indeed the one that opens the door.</p>
+<p>If you've already solved the <a href="../../hints/h5b/">33.6kbps</a> terminal challenge then Fitzy Shortstack will have told you that <em>Santa really seems to trust Shinny Upatree</em> which confirms our solution. Shinny Upatree's badge is indeed the one that opens the door.</p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
-<p>Use <code>lf hid sim -r 2006e22f13</code> or <code>lf hid sim -w H10301 --fc 113 --cn 6025</code> to unlock the door using Shinny Upatree's badge information.</p>
+<p>Use <code>lf hid sim -r 2006e22f13</code> to unlock the door using Shinny Upatree's badge information.</p>
 </div>
 <h2 id="being-santa-claus">Being Santa Claus<a class="headerlink" href="#being-santa-claus" title="Permanent link">⚓︎</a></h2>
 <p>Walk to the end of the dark hallway. The two lights at the end are <a href="../../easter_eggs/#painting-peephole-trope">peephole</a> cutouts for the eyes in the portrait hanging behind Santa in the Entryway. If you move forward towards the light you will end up in Santa's body. This is a direct reference to the movie Being John Malkovich and is explained in more detail in the <a href="../../easter_eggs/#being-john-malkovich">Easter Egg</a> section. It's also where the idea for <a href="../../img/misc/being_santa_clause.png">this image</a> came from. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
@@ -745,7 +745,7 @@ Do whatever works best for you!</p>
 <p>what the hell is this<br/>
 I hear another Santa in my head</p>
 </div>
-<p>You can now roam around as Santa and use the elevator to get to Santa's Office. This also unlocks a whole new set of narratives between Santa and the other NPCs, like the <a href="../../easter_eggs/#santa-discounts">conference booths</a>. Things are starting to make a little more sense now. It appears that Jack Frost has been impersonating Santa and causing all kinds of trouble! <img alt="😮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f62e.svg" title=":open_mouth:" /></p>
+<p>You can now roam around as Santa and use the elevator to get to Santa's Office. This also unlocks a whole new set of narratives between Santa and the other NPCs, like the <a href="../../easter_eggs/#santa-discounts">conference booths</a>. Things are starting to make a little more sense now. It appears that Jack Frost has been impersonating Santa and stirring up all kinds of trouble! <img alt="😮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f62e.svg" title=":open_mouth:" /></p>
                 
               
               

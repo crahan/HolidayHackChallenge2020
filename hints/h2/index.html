@@ -673,7 +673,7 @@ Press enter to continue...
 </details>
 <p>The objective is to escape the menu and run <code>/bin/bash</code>. Shinny hints at the badge printer being problematic so open that menu option. Completely ignore the warning about special characters and enter a few anyway. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <p><img alt="Ignore warning" src="../../img/hints/h2/ignore_warning.png" /></p>
-<p>It looks like our text is used unmodified as the input for <code>/usr/games/cowsay</code>. Leverage this vulnerability by adding a <code>;</code> to end the <code>cowsay</code> command and then run the <code>/bin/bash</code> as requested in the welcome message.</p>
+<p>It looks like our text is used unmodified as the input for <code>/usr/games/cowsay</code>. Leverage this <a href="https://owasp.org/www-community/attacks/Command_Injection">command injection</a> vulnerability by adding a <code>;</code> to the end of the <code>cowsay</code> command followed by <code>/bin/bash</code> as requested in the welcome message.</p>
 <p><img alt="Solution" src="../../img/hints/h2/solution.png" /></p>
 <div class="admonition done">
 <p class="admonition-title">Answer</p>
@@ -681,7 +681,7 @@ Press enter to continue...
 </div>
 <div class="admonition note">
 <p class="admonition-title">Finding Jason!</p>
-<p>The <code>/home/shinny/welcome.sh</code> script contains a hidden <code>plant</code> menu option (line 11) which will display the contents of <code>/opt/plant.txt</code>. There's an additional ASCII image of a mailbox at <code>/opt/mailbox.txt</code> but that file isn't used in the menu script.</p>
+<p>The <a href="../../artifacts/hints/h2/welcome.sh"><code>/home/shinny/welcome.sh</code></a> script contains a hidden <code>plant</code> menu option (line 11) which will display the contents of <code>/opt/plant.txt</code>. There's an additional ASCII image of a mailbox at <code>/opt/mailbox.txt</code> but that file isn't used in the menu script.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3

